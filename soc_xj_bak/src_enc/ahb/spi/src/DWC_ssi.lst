@@ -1,0 +1,22 @@
+// component: (top level)
+// library: work
+// files:
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_cc_constants.vh
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_bcm_params.vh
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_all_includes.vh
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_bcm06.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_bcm21.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_bcm57.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_rxsr_mst.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_txsr_mst.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_ahb_biu.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_regfile.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_sclkgen.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_fifo.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_shift.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_mstfsm.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_dma.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi_intctl.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi.v
+/home/zzy/dwcore/i_DWC_ssi/src/DWC_ssi-undef.v
+

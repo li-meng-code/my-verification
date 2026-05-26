@@ -1,0 +1,1359 @@
+
+`ifdef ACLK_PERIOD
+   `undef ACLK_PERIOD
+`endif
+`ifdef AFSMTOCR_RS
+   `undef AFSMTOCR_RS
+`endif
+`ifdef AHB_ADDR_WIDTH
+   `undef AHB_ADDR_WIDTH
+`endif
+`ifdef AHB_DATA_WIDTH
+   `undef AHB_DATA_WIDTH
+`endif
+`ifdef AHB_SLVIF_ADDR_PAR
+   `undef AHB_SLVIF_ADDR_PAR
+`endif
+`ifdef AHB_SLVIF_DATA_PAR
+   `undef AHB_SLVIF_DATA_PAR
+`endif
+`ifdef AHB_SLV_BASE_ADDR
+   `undef AHB_SLV_BASE_ADDR
+`endif
+`ifdef APB_DATA_WIDTH
+   `undef APB_DATA_WIDTH
+`endif
+`ifdef APB_DATA_WIDTH_16
+   `undef APB_DATA_WIDTH_16
+`endif
+`ifdef APB_DATA_WIDTH_32
+   `undef APB_DATA_WIDTH_32
+`endif
+`ifdef APB_DATA_WIDTH_8
+   `undef APB_DATA_WIDTH_8
+`endif
+`ifdef AR_PYLD0_USER_WIDTH
+   `undef AR_PYLD0_USER_WIDTH
+`endif
+`ifdef AR_PYLD1_USER_WIDTH
+   `undef AR_PYLD1_USER_WIDTH
+`endif
+`ifdef AW_PYLD0_USER_WIDTH
+   `undef AW_PYLD0_USER_WIDTH
+`endif
+`ifdef AW_PYLD1_USER_WIDTH
+   `undef AW_PYLD1_USER_WIDTH
+`endif
+`ifdef AXIDMACR_RS
+   `undef AXIDMACR_RS
+`endif
+`ifdef AXIE_INT_INDX
+   `undef AXIE_INT_INDX
+`endif
+`ifdef AXIFSMP_INT_INDX
+   `undef AXIFSMP_INT_INDX
+`endif
+`ifdef AXIFSMT_INT_INDX
+   `undef AXIFSMT_INT_INDX
+`endif
+`ifdef AXIP_INT_INDX
+   `undef AXIP_INT_INDX
+`endif
+`ifdef AXI_DMA_SAFETY_EN
+   `undef AXI_DMA_SAFETY_EN
+`endif
+`ifdef BACK2BACK_DUT
+   `undef BACK2BACK_DUT
+`endif
+`ifdef BAUDR_RS
+   `undef BAUDR_RS
+`endif
+`ifdef BCM_SYNC_TYPE
+   `undef BCM_SYNC_TYPE
+`endif
+`ifdef B_PYLD0_USER_WIDTH
+   `undef B_PYLD0_USER_WIDTH
+`endif
+`ifdef CTRLR0_REG_RES
+   `undef CTRLR0_REG_RES
+`endif
+`ifdef CTRLR0_RS
+   `undef CTRLR0_RS
+`endif
+`ifdef CTRLR1_RS
+   `undef CTRLR1_RS
+`endif
+`ifdef DFS_W
+   `undef DFS_W
+`endif
+`ifdef DMACR_RS
+   `undef DMACR_RS
+`endif
+`ifdef DM_FIFO_W
+   `undef DM_FIFO_W
+`endif
+`ifdef DR_RS
+   `undef DR_RS
+`endif
+`ifdef DWC_BCM06_NO_DIAG_N
+   `undef DWC_BCM06_NO_DIAG_N
+`endif
+`ifdef DWC_HAS_ECC_DIAG_EN
+   `undef DWC_HAS_ECC_DIAG_EN
+`endif
+`ifdef DWC_NEW_SYNC_TECH_MAP
+   `undef DWC_NEW_SYNC_TECH_MAP
+`endif
+`ifdef DWC_NO_CDC_INIT
+   `undef DWC_NO_CDC_INIT
+`endif
+`ifdef DWC_NO_TST_MODE
+   `undef DWC_NO_TST_MODE
+`endif
+`ifdef DWC_SYNCHRONIZER_TECH_MAP
+   `undef DWC_SYNCHRONIZER_TECH_MAP
+`endif
+`ifdef DW_HOLD_MUX_DELAY
+   `undef DW_HOLD_MUX_DELAY
+`endif
+`ifdef DW_SETUP_MUX_DELAY
+   `undef DW_SETUP_MUX_DELAY
+`endif
+`ifdef HCLK_PERIOD
+   `undef HCLK_PERIOD
+`endif
+`ifdef IDR_RS
+   `undef IDR_RS
+`endif
+`ifdef IFX_RULE_SETUP
+   `undef IFX_RULE_SETUP
+`endif
+`ifdef INC_ENH_CLK_RATIO
+   `undef INC_ENH_CLK_RATIO
+`endif
+`ifdef INTC_RS
+   `undef INTC_RS
+`endif
+`ifdef INT_RS
+   `undef INT_RS
+`endif
+`ifdef LEDA_SVA_ENABLED
+   `undef LEDA_SVA_ENABLED
+`endif
+`ifdef LOG2_SSIC_NUM_SLAVES
+   `undef LOG2_SSIC_NUM_SLAVES
+`endif
+`ifdef MHCLK_PERIOD
+   `undef MHCLK_PERIOD
+`endif
+`ifdef MIOW
+   `undef MIOW
+`endif
+`ifdef MWCR_RS
+   `undef MWCR_RS
+`endif
+`ifdef PSTRB_WIDTH
+   `undef PSTRB_WIDTH
+`endif
+`ifdef RM_BCM01
+   `undef RM_BCM01
+`endif
+`ifdef RM_BCM02
+   `undef RM_BCM02
+`endif
+`ifdef RM_BCM03
+   `undef RM_BCM03
+`endif
+`ifdef RM_BCM05
+   `undef RM_BCM05
+`endif
+`ifdef RM_BCM06
+   `undef RM_BCM06
+`endif
+`ifdef RM_BCM07
+   `undef RM_BCM07
+`endif
+`ifdef RM_BCM08
+   `undef RM_BCM08
+`endif
+`ifdef RM_BCM09
+   `undef RM_BCM09
+`endif
+`ifdef RM_BCM10
+   `undef RM_BCM10
+`endif
+`ifdef RM_BCM11
+   `undef RM_BCM11
+`endif
+`ifdef RM_BCM12
+   `undef RM_BCM12
+`endif
+`ifdef RM_BCM15
+   `undef RM_BCM15
+`endif
+`ifdef RM_BCM16
+   `undef RM_BCM16
+`endif
+`ifdef RM_BCM21
+   `undef RM_BCM21
+`endif
+`ifdef RM_BCM22
+   `undef RM_BCM22
+`endif
+`ifdef RM_BCM23
+   `undef RM_BCM23
+`endif
+`ifdef RM_BCM24
+   `undef RM_BCM24
+`endif
+`ifdef RM_BCM25
+   `undef RM_BCM25
+`endif
+`ifdef RM_BCM26
+   `undef RM_BCM26
+`endif
+`ifdef RM_BCM27
+   `undef RM_BCM27
+`endif
+`ifdef RM_BCM28
+   `undef RM_BCM28
+`endif
+`ifdef RM_BCM29
+   `undef RM_BCM29
+`endif
+`ifdef RM_BCM30
+   `undef RM_BCM30
+`endif
+`ifdef RM_BCM31
+   `undef RM_BCM31
+`endif
+`ifdef RM_BCM32
+   `undef RM_BCM32
+`endif
+`ifdef RM_BCM36
+   `undef RM_BCM36
+`endif
+`ifdef RM_BCM36_NHS
+   `undef RM_BCM36_NHS
+`endif
+`ifdef RM_BCM37
+   `undef RM_BCM37
+`endif
+`ifdef RM_BCM43
+   `undef RM_BCM43
+`endif
+`ifdef RM_BCM44
+   `undef RM_BCM44
+`endif
+`ifdef RM_BCM46_A
+   `undef RM_BCM46_A
+`endif
+`ifdef RM_BCM46_AA
+   `undef RM_BCM46_AA
+`endif
+`ifdef RM_BCM46_B
+   `undef RM_BCM46_B
+`endif
+`ifdef RM_BCM46_C
+   `undef RM_BCM46_C
+`endif
+`ifdef RM_BCM46_D
+   `undef RM_BCM46_D
+`endif
+`ifdef RM_BCM46_E
+   `undef RM_BCM46_E
+`endif
+`ifdef RM_BCM46_F
+   `undef RM_BCM46_F
+`endif
+`ifdef RM_BCM47
+   `undef RM_BCM47
+`endif
+`ifdef RM_BCM51
+   `undef RM_BCM51
+`endif
+`ifdef RM_BCM52
+   `undef RM_BCM52
+`endif
+`ifdef RM_BCM53
+   `undef RM_BCM53
+`endif
+`ifdef RM_BCM54
+   `undef RM_BCM54
+`endif
+`ifdef RM_BCM55
+   `undef RM_BCM55
+`endif
+`ifdef RM_BCM57
+   `undef RM_BCM57
+`endif
+`ifdef RM_BCM58
+   `undef RM_BCM58
+`endif
+`ifdef RM_BCM59
+   `undef RM_BCM59
+`endif
+`ifdef RM_BCM64
+   `undef RM_BCM64
+`endif
+`ifdef RM_BCM65
+   `undef RM_BCM65
+`endif
+`ifdef RM_BCM66
+   `undef RM_BCM66
+`endif
+`ifdef RM_BCM71
+   `undef RM_BCM71
+`endif
+`ifdef RM_BCM72
+   `undef RM_BCM72
+`endif
+`ifdef RM_BCM73
+   `undef RM_BCM73
+`endif
+`ifdef RM_BCM76
+   `undef RM_BCM76
+`endif
+`ifdef RM_BCM98
+   `undef RM_BCM98
+`endif
+`ifdef RM_BCM99
+   `undef RM_BCM99
+`endif
+`ifdef RM_BCM99_N
+   `undef RM_BCM99_N
+`endif
+`ifdef RM_BVM02
+   `undef RM_BVM02
+`endif
+`ifdef RM_SVA01
+   `undef RM_SVA01
+`endif
+`ifdef RM_SVA02
+   `undef RM_SVA02
+`endif
+`ifdef RM_SVA05
+   `undef RM_SVA05
+`endif
+`ifdef RM_SVA07
+   `undef RM_SVA07
+`endif
+`ifdef RM_SVA08
+   `undef RM_SVA08
+`endif
+`ifdef RM_SVA09
+   `undef RM_SVA09
+`endif
+`ifdef RM_SVA12_C
+   `undef RM_SVA12_C
+`endif
+`ifdef RX_ABW
+   `undef RX_ABW
+`endif
+`ifdef RX_FIFO_WIDTH
+   `undef RX_FIFO_WIDTH
+`endif
+`ifdef RX_SAMPLE_DUP_RS
+   `undef RX_SAMPLE_DUP_RS
+`endif
+`ifdef RX_SAMPLE_RS
+   `undef RX_SAMPLE_RS
+`endif
+`ifdef R_PYLD0_USER_WIDTH
+   `undef R_PYLD0_USER_WIDTH
+`endif
+`ifdef R_PYLD1_USER_WIDTH
+   `undef R_PYLD1_USER_WIDTH
+`endif
+`ifdef SAFETYCR_RS
+   `undef SAFETYCR_RS
+`endif
+`ifdef SAFETYINT_RS
+   `undef SAFETYINT_RS
+`endif
+`ifdef SERIOW
+   `undef SERIOW
+`endif
+`ifdef SIOW
+   `undef SIOW
+`endif
+`ifdef SNPS_INTERNAL_ON
+   `undef SNPS_INTERNAL_ON
+`endif
+`ifdef SNPS_RCE_INTERNAL_ON
+   `undef SNPS_RCE_INTERNAL_ON
+`endif
+`ifdef SPITE_INT_INDX
+   `undef SPITE_INT_INDX
+`endif
+`ifdef SPI_CLK_OFFSET
+   `undef SPI_CLK_OFFSET
+`endif
+`ifdef SPI_CTRLR0_RS
+   `undef SPI_CTRLR0_RS
+`endif
+`ifdef SPI_DM_EN_OFFSET
+   `undef SPI_DM_EN_OFFSET
+`endif
+`ifdef SPI_MBL_OFFSET
+   `undef SPI_MBL_OFFSET
+`endif
+`ifdef SPI_MD_RS
+   `undef SPI_MD_RS
+`endif
+`ifdef SPI_RXDS_SIG_EN_OFFSET
+   `undef SPI_RXDS_SIG_EN_OFFSET
+`endif
+`ifdef SPI_XPRE_OFFSET
+   `undef SPI_XPRE_OFFSET
+`endif
+`ifdef SR_RS
+   `undef SR_RS
+`endif
+`ifdef SSIC_ADDR_SLICE_LHS
+   `undef SSIC_ADDR_SLICE_LHS
+`endif
+`ifdef SSIC_AHBM_SYNC_CLK
+   `undef SSIC_AHBM_SYNC_CLK
+`endif
+`ifdef SSIC_AHB_ADDR_OFFSET
+   `undef SSIC_AHB_ADDR_OFFSET
+`endif
+`ifdef SSIC_AHB_SLVIF_PAR
+   `undef SSIC_AHB_SLVIF_PAR
+`endif
+`ifdef SSIC_AR_REGSLICE_EN
+   `undef SSIC_AR_REGSLICE_EN
+`endif
+`ifdef SSIC_AW_REGSLICE_EN
+   `undef SSIC_AW_REGSLICE_EN
+`endif
+`ifdef SSIC_AXIM_SLVIF_SYNC_CLK
+   `undef SSIC_AXIM_SLVIF_SYNC_CLK
+`endif
+`ifdef SSIC_AXIM_SYNC_CLK
+   `undef SSIC_AXIM_SYNC_CLK
+`endif
+`ifdef SSIC_AXI_ARUW
+   `undef SSIC_AXI_ARUW
+`endif
+`ifdef SSIC_AXI_AW
+   `undef SSIC_AXI_AW
+`endif
+`ifdef SSIC_AXI_AWUW
+   `undef SSIC_AXI_AWUW
+`endif
+`ifdef SSIC_AXI_AW_IS_32
+   `undef SSIC_AXI_AW_IS_32
+`endif
+`ifdef SSIC_AXI_BLW
+   `undef SSIC_AXI_BLW
+`endif
+`ifdef SSIC_AXI_BLW_VAL
+   `undef SSIC_AXI_BLW_VAL
+`endif
+`ifdef SSIC_AXI_BUW
+   `undef SSIC_AXI_BUW
+`endif
+`ifdef SSIC_AXI_DW
+   `undef SSIC_AXI_DW
+`endif
+`ifdef SSIC_AXI_DW64
+   `undef SSIC_AXI_DW64
+`endif
+`ifdef SSIC_AXI_ECC_MODE
+   `undef SSIC_AXI_ECC_MODE
+`endif
+`ifdef SSIC_AXI_IDW
+   `undef SSIC_AXI_IDW
+`endif
+`ifdef SSIC_AXI_IDW_IS_ONE
+   `undef SSIC_AXI_IDW_IS_ONE
+`endif
+`ifdef SSIC_AXI_INTF_AXI3
+   `undef SSIC_AXI_INTF_AXI3
+`endif
+`ifdef SSIC_AXI_INTF_AXI4
+   `undef SSIC_AXI_INTF_AXI4
+`endif
+`ifdef SSIC_AXI_INTF_TYPE
+   `undef SSIC_AXI_INTF_TYPE
+`endif
+`ifdef SSIC_AXI_LTW
+   `undef SSIC_AXI_LTW
+`endif
+`ifdef SSIC_AXI_PAR_AR0S
+   `undef SSIC_AXI_PAR_AR0S
+`endif
+`ifdef SSIC_AXI_PAR_AR0S_IS_ZERO
+   `undef SSIC_AXI_PAR_AR0S_IS_ZERO
+`endif
+`ifdef SSIC_AXI_PAR_ARW
+   `undef SSIC_AXI_PAR_ARW
+`endif
+`ifdef SSIC_AXI_PAR_AW0S
+   `undef SSIC_AXI_PAR_AW0S
+`endif
+`ifdef SSIC_AXI_PAR_AW0S_IS_ZERO
+   `undef SSIC_AXI_PAR_AW0S_IS_ZERO
+`endif
+`ifdef SSIC_AXI_PAR_AWW
+   `undef SSIC_AXI_PAR_AWW
+`endif
+`ifdef SSIC_AXI_PAR_B0S
+   `undef SSIC_AXI_PAR_B0S
+`endif
+`ifdef SSIC_AXI_PAR_B0S_IS_ZERO
+   `undef SSIC_AXI_PAR_B0S_IS_ZERO
+`endif
+`ifdef SSIC_AXI_PAR_BW
+   `undef SSIC_AXI_PAR_BW
+`endif
+`ifdef SSIC_AXI_PAR_EN
+   `undef SSIC_AXI_PAR_EN
+`endif
+`ifdef SSIC_AXI_PAR_GENERATION
+   `undef SSIC_AXI_PAR_GENERATION
+`endif
+`ifdef SSIC_AXI_PAR_R0S
+   `undef SSIC_AXI_PAR_R0S
+`endif
+`ifdef SSIC_AXI_PAR_R0S_IS_ZERO
+   `undef SSIC_AXI_PAR_R0S_IS_ZERO
+`endif
+`ifdef SSIC_AXI_PAR_RW
+   `undef SSIC_AXI_PAR_RW
+`endif
+`ifdef SSIC_AXI_PAR_W0S
+   `undef SSIC_AXI_PAR_W0S
+`endif
+`ifdef SSIC_AXI_PAR_W0S_IS_ZERO
+   `undef SSIC_AXI_PAR_W0S_IS_ZERO
+`endif
+`ifdef SSIC_AXI_PAR_WW
+   `undef SSIC_AXI_PAR_WW
+`endif
+`ifdef SSIC_AXI_RUW
+   `undef SSIC_AXI_RUW
+`endif
+`ifdef SSIC_AXI_SAFETY_EN
+   `undef SSIC_AXI_SAFETY_EN
+`endif
+`ifdef SSIC_AXI_WSW
+   `undef SSIC_AXI_WSW
+`endif
+`ifdef SSIC_AXI_WUW
+   `undef SSIC_AXI_WUW
+`endif
+`ifdef SSIC_A_2_H_SYNC_DEPTH
+   `undef SSIC_A_2_H_SYNC_DEPTH
+`endif
+`ifdef SSIC_A_2_H_VERIF_EN
+   `undef SSIC_A_2_H_VERIF_EN
+`endif
+`ifdef SSIC_A_2_S_SYNC_DEPTH
+   `undef SSIC_A_2_S_SYNC_DEPTH
+`endif
+`ifdef SSIC_BOOT_MODE_EN
+   `undef SSIC_BOOT_MODE_EN
+`endif
+`ifdef SSIC_B_REGSLICE_EN
+   `undef SSIC_B_REGSLICE_EN
+`endif
+`ifdef SSIC_CLK_EN
+   `undef SSIC_CLK_EN
+`endif
+`ifdef SSIC_CLK_EN_MODE
+   `undef SSIC_CLK_EN_MODE
+`endif
+`ifdef SSIC_CLK_PERIOD
+   `undef SSIC_CLK_PERIOD
+`endif
+`ifdef SSIC_CLK_STRETCH_EN
+   `undef SSIC_CLK_STRETCH_EN
+`endif
+`ifdef SSIC_COMBINED
+   `undef SSIC_COMBINED
+`endif
+`ifdef SSIC_CONCURRENT_XIP_EN
+   `undef SSIC_CONCURRENT_XIP_EN
+`endif
+`ifdef SSIC_CONT_XFER_TIMEOUT_CNT_EN
+   `undef SSIC_CONT_XFER_TIMEOUT_CNT_EN
+`endif
+`ifdef SSIC_DFLT_ACACHE
+   `undef SSIC_DFLT_ACACHE
+`endif
+`ifdef SSIC_DFLT_ADDR_L
+   `undef SSIC_DFLT_ADDR_L
+`endif
+`ifdef SSIC_DFLT_AID
+   `undef SSIC_DFLT_AID
+`endif
+`ifdef SSIC_DFLT_AINC
+   `undef SSIC_DFLT_AINC
+`endif
+`ifdef SSIC_DFLT_APROT
+   `undef SSIC_DFLT_APROT
+`endif
+`ifdef SSIC_DFLT_ARLEN
+   `undef SSIC_DFLT_ARLEN
+`endif
+`ifdef SSIC_DFLT_ATW
+   `undef SSIC_DFLT_ATW
+`endif
+`ifdef SSIC_DFLT_AWLEN
+   `undef SSIC_DFLT_AWLEN
+`endif
+`ifdef SSIC_DFLT_AXIAR0
+   `undef SSIC_DFLT_AXIAR0
+`endif
+`ifdef SSIC_DFLT_AXIAR1
+   `undef SSIC_DFLT_AXIAR1
+`endif
+`ifdef SSIC_DFLT_AXIFSMTOV
+   `undef SSIC_DFLT_AXIFSMTOV
+`endif
+`ifdef SSIC_DFLT_BAUDR
+   `undef SSIC_DFLT_BAUDR
+`endif
+`ifdef SSIC_DFLT_CFS
+   `undef SSIC_DFLT_CFS
+`endif
+`ifdef SSIC_DFLT_CLK_STRETCH
+   `undef SSIC_DFLT_CLK_STRETCH
+`endif
+`ifdef SSIC_DFLT_DDR_EN
+   `undef SSIC_DFLT_DDR_EN
+`endif
+`ifdef SSIC_DFLT_DFS
+   `undef SSIC_DFLT_DFS
+`endif
+`ifdef SSIC_DFLT_DFS_HC
+   `undef SSIC_DFLT_DFS_HC
+`endif
+`ifdef SSIC_DFLT_DM_EN
+   `undef SSIC_DFLT_DM_EN
+`endif
+`ifdef SSIC_DFLT_DYN_WS
+   `undef SSIC_DFLT_DYN_WS
+`endif
+`ifdef SSIC_DFLT_FRF
+   `undef SSIC_DFLT_FRF
+`endif
+`ifdef SSIC_DFLT_FSM_PAR_EN
+   `undef SSIC_DFLT_FSM_PAR_EN
+`endif
+`ifdef SSIC_DFLT_HYPERBUS_EN
+   `undef SSIC_DFLT_HYPERBUS_EN
+`endif
+`ifdef SSIC_DFLT_IDMAE
+   `undef SSIC_DFLT_IDMAE
+`endif
+`ifdef SSIC_DFLT_INCR_INST
+   `undef SSIC_DFLT_INCR_INST
+`endif
+`ifdef SSIC_DFLT_INST_DDR_EN
+   `undef SSIC_DFLT_INST_DDR_EN
+`endif
+`ifdef SSIC_DFLT_INST_L
+   `undef SSIC_DFLT_INST_L
+`endif
+`ifdef SSIC_DFLT_MAX_WS
+   `undef SSIC_DFLT_MAX_WS
+`endif
+`ifdef SSIC_DFLT_MD_BITS
+   `undef SSIC_DFLT_MD_BITS
+`endif
+`ifdef SSIC_DFLT_MD_BITS_EN
+   `undef SSIC_DFLT_MD_BITS_EN
+`endif
+`ifdef SSIC_DFLT_NDF
+   `undef SSIC_DFLT_NDF
+`endif
+`ifdef SSIC_DFLT_PAR_EN
+   `undef SSIC_DFLT_PAR_EN
+`endif
+`ifdef SSIC_DFLT_PAR_MODE
+   `undef SSIC_DFLT_PAR_MODE
+`endif
+`ifdef SSIC_DFLT_RXDS_EN
+   `undef SSIC_DFLT_RXDS_EN
+`endif
+`ifdef SSIC_DFLT_RXDS_SIG_EN
+   `undef SSIC_DFLT_RXDS_SIG_EN
+`endif
+`ifdef SSIC_DFLT_RXFBTL
+   `undef SSIC_DFLT_RXFBTL
+`endif
+`ifdef SSIC_DFLT_SCLK_OUT
+   `undef SSIC_DFLT_SCLK_OUT
+`endif
+`ifdef SSIC_DFLT_SCPH
+   `undef SSIC_DFLT_SCPH
+`endif
+`ifdef SSIC_DFLT_SCPOL
+   `undef SSIC_DFLT_SCPOL
+`endif
+`ifdef SSIC_DFLT_SLV
+   `undef SSIC_DFLT_SLV
+`endif
+`ifdef SSIC_DFLT_SLVIFFSMTOV
+   `undef SSIC_DFLT_SLVIFFSMTOV
+`endif
+`ifdef SSIC_DFLT_SPIAR
+   `undef SSIC_DFLT_SPIAR
+`endif
+`ifdef SSIC_DFLT_SPI_DWS_EN
+   `undef SSIC_DFLT_SPI_DWS_EN
+`endif
+`ifdef SSIC_DFLT_SPI_FRF
+   `undef SSIC_DFLT_SPI_FRF
+`endif
+`ifdef SSIC_DFLT_SPI_INST
+   `undef SSIC_DFLT_SPI_INST
+`endif
+`ifdef SSIC_DFLT_SSIFSMTOV
+   `undef SSIC_DFLT_SSIFSMTOV
+`endif
+`ifdef SSIC_DFLT_SSI_TOS
+   `undef SSIC_DFLT_SSI_TOS
+`endif
+`ifdef SSIC_DFLT_SS_N
+   `undef SSIC_DFLT_SS_N
+`endif
+`ifdef SSIC_DFLT_TGL_EN
+   `undef SSIC_DFLT_TGL_EN
+`endif
+`ifdef SSIC_DFLT_TMOD
+   `undef SSIC_DFLT_TMOD
+`endif
+`ifdef SSIC_DFLT_TRANS_TYPE
+   `undef SSIC_DFLT_TRANS_TYPE
+`endif
+`ifdef SSIC_DFLT_TXFTHR
+   `undef SSIC_DFLT_TXFTHR
+`endif
+`ifdef SSIC_DFLT_WAIT_CYCLES
+   `undef SSIC_DFLT_WAIT_CYCLES
+`endif
+`ifdef SSIC_DFLT_WRAP_INST
+   `undef SSIC_DFLT_WRAP_INST
+`endif
+`ifdef SSIC_DFLT_XIP_ADDR_L
+   `undef SSIC_DFLT_XIP_ADDR_L
+`endif
+`ifdef SSIC_DFLT_XIP_CONT_XFER_EN
+   `undef SSIC_DFLT_XIP_CONT_XFER_EN
+`endif
+`ifdef SSIC_DFLT_XIP_DDR_EN
+   `undef SSIC_DFLT_XIP_DDR_EN
+`endif
+`ifdef SSIC_DFLT_XIP_HYPERBUS_EN
+   `undef SSIC_DFLT_XIP_HYPERBUS_EN
+`endif
+`ifdef SSIC_DFLT_XIP_INST_DDR_EN
+   `undef SSIC_DFLT_XIP_INST_DDR_EN
+`endif
+`ifdef SSIC_DFLT_XIP_INST_EN
+   `undef SSIC_DFLT_XIP_INST_EN
+`endif
+`ifdef SSIC_DFLT_XIP_INST_L
+   `undef SSIC_DFLT_XIP_INST_L
+`endif
+`ifdef SSIC_DFLT_XIP_MBL
+   `undef SSIC_DFLT_XIP_MBL
+`endif
+`ifdef SSIC_DFLT_XIP_PREFETCH
+   `undef SSIC_DFLT_XIP_PREFETCH
+`endif
+`ifdef SSIC_DFLT_XIP_RXDS_EN
+   `undef SSIC_DFLT_XIP_RXDS_EN
+`endif
+`ifdef SSIC_DFLT_XIP_RXDS_SIG_EN
+   `undef SSIC_DFLT_XIP_RXDS_SIG_EN
+`endif
+`ifdef SSIC_DFLT_XIP_SLV
+   `undef SSIC_DFLT_XIP_SLV
+`endif
+`ifdef SSIC_DFLT_XIP_SPI_FRF
+   `undef SSIC_DFLT_XIP_SPI_FRF
+`endif
+`ifdef SSIC_DFLT_XIP_TOCNT
+   `undef SSIC_DFLT_XIP_TOCNT
+`endif
+`ifdef SSIC_DFLT_XIP_TRANS_TYPE
+   `undef SSIC_DFLT_XIP_TRANS_TYPE
+`endif
+`ifdef SSIC_DFLT_XIP_WAIT_CYCLES
+   `undef SSIC_DFLT_XIP_WAIT_CYCLES
+`endif
+`ifdef SSIC_DMA_EN
+   `undef SSIC_DMA_EN
+`endif
+`ifdef SSIC_ECC_GRAN_TYPE
+   `undef SSIC_ECC_GRAN_TYPE
+`endif
+`ifdef SSIC_ENCRYPT
+   `undef SSIC_ENCRYPT
+`endif
+`ifdef SSIC_ENH_CLK_RATIO
+   `undef SSIC_ENH_CLK_RATIO
+`endif
+`ifdef SSIC_ERR_RESP_EN
+   `undef SSIC_ERR_RESP_EN
+`endif
+`ifdef SSIC_ERR_RESP_OR_XIP
+   `undef SSIC_ERR_RESP_OR_XIP
+`endif
+`ifdef SSIC_FIFO_HAS_SCAN_MODE
+   `undef SSIC_FIFO_HAS_SCAN_MODE
+`endif
+`ifdef SSIC_HAS_32_BIT_XFER_SIZE
+   `undef SSIC_HAS_32_BIT_XFER_SIZE
+`endif
+`ifdef SSIC_HAS_ADV_RX_SAMPLE_LOGIC
+   `undef SSIC_HAS_ADV_RX_SAMPLE_LOGIC
+`endif
+`ifdef SSIC_HAS_AHB_SLVIF
+   `undef SSIC_HAS_AHB_SLVIF
+`endif
+`ifdef SSIC_HAS_APB_SLVIF
+   `undef SSIC_HAS_APB_SLVIF
+`endif
+`ifdef SSIC_HAS_ASYNC_CLK
+   `undef SSIC_HAS_ASYNC_CLK
+`endif
+`ifdef SSIC_HAS_ASYNC_CLK_NDEF
+   `undef SSIC_HAS_ASYNC_CLK_NDEF
+`endif
+`ifdef SSIC_HAS_AXIM_SLVIF_SYNC_CLK
+   `undef SSIC_HAS_AXIM_SLVIF_SYNC_CLK
+`endif
+`ifdef SSIC_HAS_AXIM_SYNC_CLK
+   `undef SSIC_HAS_AXIM_SYNC_CLK
+`endif
+`ifdef SSIC_HAS_AXI_DMA
+   `undef SSIC_HAS_AXI_DMA
+`endif
+`ifdef SSIC_HAS_AXI_ECC
+   `undef SSIC_HAS_AXI_ECC
+`endif
+`ifdef SSIC_HAS_DDR
+   `undef SSIC_HAS_DDR
+`endif
+`ifdef SSIC_HAS_DMA
+   `undef SSIC_HAS_DMA
+`endif
+`ifdef SSIC_HAS_ECC_ARC_PARITY
+   `undef SSIC_HAS_ECC_ARC_PARITY
+`endif
+`ifdef SSIC_HAS_ERR_RESP
+   `undef SSIC_HAS_ERR_RESP
+`endif
+`ifdef SSIC_HAS_EXTD_SPI
+   `undef SSIC_HAS_EXTD_SPI
+`endif
+`ifdef SSIC_HAS_EXTD_SPI_SLV
+   `undef SSIC_HAS_EXTD_SPI_SLV
+`endif
+`ifdef SSIC_HAS_EXT_RAM
+   `undef SSIC_HAS_EXT_RAM
+`endif
+`ifdef SSIC_HAS_EXT_SSEL
+   `undef SSIC_HAS_EXT_SSEL
+`endif
+`ifdef SSIC_HAS_HYPERBUS
+   `undef SSIC_HAS_HYPERBUS
+`endif
+`ifdef SSIC_HAS_MHSYNC_CLK
+   `undef SSIC_HAS_MHSYNC_CLK
+`endif
+`ifdef SSIC_HAS_ODD_PAR
+   `undef SSIC_HAS_ODD_PAR
+`endif
+`ifdef SSIC_HAS_RXDS
+   `undef SSIC_HAS_RXDS
+`endif
+`ifdef SSIC_HAS_RXDS_LOGIC
+   `undef SSIC_HAS_RXDS_LOGIC
+`endif
+`ifdef SSIC_HAS_RX_SAMPLE_DELAY
+   `undef SSIC_HAS_RX_SAMPLE_DELAY
+`endif
+`ifdef SSIC_HAS_RX_SAMPLE_LOGIC
+   `undef SSIC_HAS_RX_SAMPLE_LOGIC
+`endif
+`ifdef SSIC_HAS_SAFETY_PKG
+   `undef SSIC_HAS_SAFETY_PKG
+`endif
+`ifdef SSIC_HAS_SPI_DM
+   `undef SSIC_HAS_SPI_DM
+`endif
+`ifdef SSIC_HAS_SYNC_CLK
+   `undef SSIC_HAS_SYNC_CLK
+`endif
+`ifdef SSIC_HAS_TXUIS
+   `undef SSIC_HAS_TXUIS
+`endif
+`ifdef SSIC_HAS_TX_RX_EN
+   `undef SSIC_HAS_TX_RX_EN
+`endif
+`ifdef SSIC_HAS_XIP
+   `undef SSIC_HAS_XIP
+`endif
+`ifdef SSIC_HAS_XIP_INST
+   `undef SSIC_HAS_XIP_INST
+`endif
+`ifdef SSIC_HAS_XIP_WRITE
+   `undef SSIC_HAS_XIP_WRITE
+`endif
+`ifdef SSIC_HAS_XIP_WRITEREG
+   `undef SSIC_HAS_XIP_WRITEREG
+`endif
+`ifdef SSIC_HC_FRF
+   `undef SSIC_HC_FRF
+`endif
+`ifdef SSIC_HYPERBUS_EN
+   `undef SSIC_HYPERBUS_EN
+`endif
+`ifdef SSIC_H_2_A_SYNC_DEPTH
+   `undef SSIC_H_2_A_SYNC_DEPTH
+`endif
+`ifdef SSIC_H_2_A_VERIF_EN
+   `undef SSIC_H_2_A_VERIF_EN
+`endif
+`ifdef SSIC_H_2_MH_SYNC_DEPTH
+   `undef SSIC_H_2_MH_SYNC_DEPTH
+`endif
+`ifdef SSIC_H_2_MH_VERIF_EN
+   `undef SSIC_H_2_MH_VERIF_EN
+`endif
+`ifdef SSIC_H_2_S_SYNC_DEPTH
+   `undef SSIC_H_2_S_SYNC_DEPTH
+`endif
+`ifdef SSIC_H_2_S_VERIF_EN
+   `undef SSIC_H_2_S_VERIF_EN
+`endif
+`ifdef SSIC_ID
+   `undef SSIC_ID
+`endif
+`ifdef SSIC_INC_ALMOST_EMPTY_LOGIC
+   `undef SSIC_INC_ALMOST_EMPTY_LOGIC
+`endif
+`ifdef SSIC_INC_BURST_INFO
+   `undef SSIC_INC_BURST_INFO
+`endif
+`ifdef SSIC_INC_CLK_STRETCH
+   `undef SSIC_INC_CLK_STRETCH
+`endif
+`ifdef SSIC_INC_CONCURRENT_XIP
+   `undef SSIC_INC_CONCURRENT_XIP
+`endif
+`ifdef SSIC_INC_DTR
+   `undef SSIC_INC_DTR
+`endif
+`ifdef SSIC_INC_DYN_WS
+   `undef SSIC_INC_DYN_WS
+`endif
+`ifdef SSIC_INC_EARLY_LOGIC
+   `undef SSIC_INC_EARLY_LOGIC
+`endif
+`ifdef SSIC_INC_EXT_RAM
+   `undef SSIC_INC_EXT_RAM
+`endif
+`ifdef SSIC_INC_EXT_RAM_XIP
+   `undef SSIC_INC_EXT_RAM_XIP
+`endif
+`ifdef SSIC_INC_RXDS
+   `undef SSIC_INC_RXDS
+`endif
+`ifdef SSIC_INC_RXDS_OR_CONT_XFER
+   `undef SSIC_INC_RXDS_OR_CONT_XFER
+`endif
+`ifdef SSIC_INC_RX_SYNC_RST
+   `undef SSIC_INC_RX_SYNC_RST
+`endif
+`ifdef SSIC_INC_SER_MUX
+   `undef SSIC_INC_SER_MUX
+`endif
+`ifdef SSIC_INC_SPI_BRIDGE
+   `undef SSIC_INC_SPI_BRIDGE
+`endif
+`ifdef SSIC_INC_SYNC_RX_RST
+   `undef SSIC_INC_SYNC_RX_RST
+`endif
+`ifdef SSIC_INC_TX_RX_RAM
+   `undef SSIC_INC_TX_RX_RAM
+`endif
+`ifdef SSIC_INC_XIP_PREFETCH
+   `undef SSIC_INC_XIP_PREFETCH
+`endif
+`ifdef SSIC_INDIVIDUAL
+   `undef SSIC_INDIVIDUAL
+`endif
+`ifdef SSIC_INDIVIDUAL_INTR
+   `undef SSIC_INDIVIDUAL_INTR
+`endif
+`ifdef SSIC_INTR_ACTIVE_HIGH
+   `undef SSIC_INTR_ACTIVE_HIGH
+`endif
+`ifdef SSIC_INTR_COMB_EN
+   `undef SSIC_INTR_COMB_EN
+`endif
+`ifdef SSIC_INTR_IO
+   `undef SSIC_INTR_IO
+`endif
+`ifdef SSIC_INTR_POL
+   `undef SSIC_INTR_POL
+`endif
+`ifdef SSIC_IO_MAP_EN
+   `undef SSIC_IO_MAP_EN
+`endif
+`ifdef SSIC_IS_DFLT_MDD
+   `undef SSIC_IS_DFLT_MDD
+`endif
+`ifdef SSIC_IS_DFLT_MHS
+   `undef SSIC_IS_DFLT_MHS
+`endif
+`ifdef SSIC_IS_DFLT_MST
+   `undef SSIC_IS_DFLT_MST
+`endif
+`ifdef SSIC_IS_DFLT_MWMOD
+   `undef SSIC_IS_DFLT_MWMOD
+`endif
+`ifdef SSIC_IS_DFLT_TXEIM
+   `undef SSIC_IS_DFLT_TXEIM
+`endif
+`ifdef SSIC_IS_MASTER
+   `undef SSIC_IS_MASTER
+`endif
+`ifdef SSIC_IS_MST_SLV
+   `undef SSIC_IS_MST_SLV
+`endif
+`ifdef SSIC_MASTER_EN
+   `undef SSIC_MASTER_EN
+`endif
+`ifdef SSIC_MAX_XFER_SIZE
+   `undef SSIC_MAX_XFER_SIZE
+`endif
+`ifdef SSIC_MH_2_H_SYNC_DEPTH
+   `undef SSIC_MH_2_H_SYNC_DEPTH
+`endif
+`ifdef SSIC_MH_2_H_VERIF_EN
+   `undef SSIC_MH_2_H_VERIF_EN
+`endif
+`ifdef SSIC_MH_2_S_SYNC_DEPTH
+   `undef SSIC_MH_2_S_SYNC_DEPTH
+`endif
+`ifdef SSIC_MH_2_S_VERIF_EN
+   `undef SSIC_MH_2_S_VERIF_EN
+`endif
+`ifdef SSIC_NUM_SLAVES
+   `undef SSIC_NUM_SLAVES
+`endif
+`ifdef SSIC_PAR_MODE
+   `undef SSIC_PAR_MODE
+`endif
+`ifdef SSIC_PAR_TYPE
+   `undef SSIC_PAR_TYPE
+`endif
+`ifdef SSIC_RAM_AW
+   `undef SSIC_RAM_AW
+`endif
+`ifdef SSIC_RAM_DEPTH
+   `undef SSIC_RAM_DEPTH
+`endif
+`ifdef SSIC_RAND_SEED
+   `undef SSIC_RAND_SEED
+`endif
+`ifdef SSIC_READY_VALID_PAR_EN
+   `undef SSIC_READY_VALID_PAR_EN
+`endif
+`ifdef SSIC_REG_DATA_WIDTH
+   `undef SSIC_REG_DATA_WIDTH
+`endif
+`ifdef SSIC_RX_DLY_SR_DEPTH
+   `undef SSIC_RX_DLY_SR_DEPTH
+`endif
+`ifdef SSIC_RX_FIFO_DEPTH
+   `undef SSIC_RX_FIFO_DEPTH
+`endif
+`ifdef SSIC_R_REGSLICE_EN
+   `undef SSIC_R_REGSLICE_EN
+`endif
+`ifdef SSIC_SAFETY_PKG_EN
+   `undef SSIC_SAFETY_PKG_EN
+`endif
+`ifdef SSIC_SCPH0_SSTOGGLE
+   `undef SSIC_SCPH0_SSTOGGLE
+`endif
+`ifdef SSIC_SCPH0_SSTOGGLE_IS_ONE
+   `undef SSIC_SCPH0_SSTOGGLE_IS_ONE
+`endif
+`ifdef SSIC_SLAVE1
+   `undef SSIC_SLAVE1
+`endif
+`ifdef SSIC_SLAVE10
+   `undef SSIC_SLAVE10
+`endif
+`ifdef SSIC_SLAVE11
+   `undef SSIC_SLAVE11
+`endif
+`ifdef SSIC_SLAVE12
+   `undef SSIC_SLAVE12
+`endif
+`ifdef SSIC_SLAVE13
+   `undef SSIC_SLAVE13
+`endif
+`ifdef SSIC_SLAVE14
+   `undef SSIC_SLAVE14
+`endif
+`ifdef SSIC_SLAVE15
+   `undef SSIC_SLAVE15
+`endif
+`ifdef SSIC_SLAVE16
+   `undef SSIC_SLAVE16
+`endif
+`ifdef SSIC_SLAVE2
+   `undef SSIC_SLAVE2
+`endif
+`ifdef SSIC_SLAVE3
+   `undef SSIC_SLAVE3
+`endif
+`ifdef SSIC_SLAVE4
+   `undef SSIC_SLAVE4
+`endif
+`ifdef SSIC_SLAVE5
+   `undef SSIC_SLAVE5
+`endif
+`ifdef SSIC_SLAVE6
+   `undef SSIC_SLAVE6
+`endif
+`ifdef SSIC_SLAVE7
+   `undef SSIC_SLAVE7
+`endif
+`ifdef SSIC_SLAVE8
+   `undef SSIC_SLAVE8
+`endif
+`ifdef SSIC_SLAVE9
+   `undef SSIC_SLAVE9
+`endif
+`ifdef SSIC_SLAVE_EN
+   `undef SSIC_SLAVE_EN
+`endif
+`ifdef SSIC_SLVIF_PAR_EN
+   `undef SSIC_SLVIF_PAR_EN
+`endif
+`ifdef SSIC_SLVIF_TYPE
+   `undef SSIC_SLVIF_TYPE
+`endif
+`ifdef SSIC_SLV_SPI_MODE
+   `undef SSIC_SLV_SPI_MODE
+`endif
+`ifdef SSIC_SPI_BRIDGE
+   `undef SSIC_SPI_BRIDGE
+`endif
+`ifdef SSIC_SPI_DM_EN
+   `undef SSIC_SPI_DM_EN
+`endif
+`ifdef SSIC_SPI_DM_OR_SAFETY_PKG
+   `undef SSIC_SPI_DM_OR_SAFETY_PKG
+`endif
+`ifdef SSIC_SPI_DYN_WS_EN
+   `undef SSIC_SPI_DYN_WS_EN
+`endif
+`ifdef SSIC_SPI_HAS_ENH_IO_MAP
+   `undef SSIC_SPI_HAS_ENH_IO_MAP
+`endif
+`ifdef SSIC_SPI_HAS_OCTAL
+   `undef SSIC_SPI_HAS_OCTAL
+`endif
+`ifdef SSIC_SPI_HAS_QUAD
+   `undef SSIC_SPI_HAS_QUAD
+`endif
+`ifdef SSIC_SPI_MODE
+   `undef SSIC_SPI_MODE
+`endif
+`ifdef SSIC_SPI_SLV_HAS_OCTAL
+   `undef SSIC_SPI_SLV_HAS_OCTAL
+`endif
+`ifdef SSIC_SPI_SLV_HAS_QUAD
+   `undef SSIC_SPI_SLV_HAS_QUAD
+`endif
+`ifdef SSIC_SYNC_CLK
+   `undef SSIC_SYNC_CLK
+`endif
+`ifdef SSIC_S_2_A_SYNC_DEPTH
+   `undef SSIC_S_2_A_SYNC_DEPTH
+`endif
+`ifdef SSIC_S_2_A_VERIF_EN
+   `undef SSIC_S_2_A_VERIF_EN
+`endif
+`ifdef SSIC_S_2_H_SYNC_DEPTH
+   `undef SSIC_S_2_H_SYNC_DEPTH
+`endif
+`ifdef SSIC_S_2_H_VERIF_EN
+   `undef SSIC_S_2_H_VERIF_EN
+`endif
+`ifdef SSIC_S_2_MH_SYNC_DEPTH
+   `undef SSIC_S_2_MH_SYNC_DEPTH
+`endif
+`ifdef SSIC_S_2_MH_VERIF_EN
+   `undef SSIC_S_2_MH_VERIF_EN
+`endif
+`ifdef SSIC_TX_FIFO_DEPTH
+   `undef SSIC_TX_FIFO_DEPTH
+`endif
+`ifdef SSIC_UVM_RAND_SEED
+   `undef SSIC_UVM_RAND_SEED
+`endif
+`ifdef SSIC_VERSION_ID
+   `undef SSIC_VERSION_ID
+`endif
+`ifdef SSIC_W_REGSLICE_EN
+   `undef SSIC_W_REGSLICE_EN
+`endif
+`ifdef SSIC_XIPWR_DFLT_ADDR_L
+   `undef SSIC_XIPWR_DFLT_ADDR_L
+`endif
+`ifdef SSIC_XIPWR_DFLT_DDR_EN
+   `undef SSIC_XIPWR_DFLT_DDR_EN
+`endif
+`ifdef SSIC_XIPWR_DFLT_FRF
+   `undef SSIC_XIPWR_DFLT_FRF
+`endif
+`ifdef SSIC_XIPWR_DFLT_HYPERBUS_EN
+   `undef SSIC_XIPWR_DFLT_HYPERBUS_EN
+`endif
+`ifdef SSIC_XIPWR_DFLT_INCR_INST
+   `undef SSIC_XIPWR_DFLT_INCR_INST
+`endif
+`ifdef SSIC_XIPWR_DFLT_INST_DDR_EN
+   `undef SSIC_XIPWR_DFLT_INST_DDR_EN
+`endif
+`ifdef SSIC_XIPWR_DFLT_INST_L
+   `undef SSIC_XIPWR_DFLT_INST_L
+`endif
+`ifdef SSIC_XIPWR_DFLT_RXDS_SIG_EN
+   `undef SSIC_XIPWR_DFLT_RXDS_SIG_EN
+`endif
+`ifdef SSIC_XIPWR_DFLT_TRANS_TYPE
+   `undef SSIC_XIPWR_DFLT_TRANS_TYPE
+`endif
+`ifdef SSIC_XIPWR_DFLT_WRAP_INST
+   `undef SSIC_XIPWR_DFLT_WRAP_INST
+`endif
+`ifdef SSIC_XIPWR_DFLT_XIP_WAIT_CYCLES
+   `undef SSIC_XIPWR_DFLT_XIP_WAIT_CYCLES
+`endif
+`ifdef SSIC_XIP_CONT_TO
+   `undef SSIC_XIP_CONT_TO
+`endif
+`ifdef SSIC_XIP_CONT_XFER
+   `undef SSIC_XIP_CONT_XFER
+`endif
+`ifdef SSIC_XIP_CONT_XFER_EN
+   `undef SSIC_XIP_CONT_XFER_EN
+`endif
+`ifdef SSIC_XIP_EN
+   `undef SSIC_XIP_EN
+`endif
+`ifdef SSIC_XIP_EXT_SSEL_EN
+   `undef SSIC_XIP_EXT_SSEL_EN
+`endif
+`ifdef SSIC_XIP_INST_EN
+   `undef SSIC_XIP_INST_EN
+`endif
+`ifdef SSIC_XIP_PREFETCH_EN
+   `undef SSIC_XIP_PREFETCH_EN
+`endif
+`ifdef SSIC_XIP_RX_FIFO_DEPTH
+   `undef SSIC_XIP_RX_FIFO_DEPTH
+`endif
+`ifdef SSIC_XIP_TX_FIFO_DEPTH
+   `undef SSIC_XIP_TX_FIFO_DEPTH
+`endif
+`ifdef SSIC_XIP_WRITE_EN
+   `undef SSIC_XIP_WRITE_EN
+`endif
+`ifdef SSIC_XIP_WRITE_REG_EN
+   `undef SSIC_XIP_WRITE_REG_EN
+`endif
+`ifdef SSIDONE_INT_INDX
+   `undef SSIDONE_INT_INDX
+`endif
+`ifdef SSIENR_RS
+   `undef SSIENR_RS
+`endif
+`ifdef TXD_DRIVE_RS
+   `undef TXD_DRIVE_RS
+`endif
+`ifdef TXFTHR_W
+   `undef TXFTHR_W
+`endif
+`ifdef TXUIS_INT_INDX
+   `undef TXUIS_INT_INDX
+`endif
+`ifdef TXUI_ACTIVE
+   `undef TXUI_ACTIVE
+`endif
+`ifdef TX_ABW
+   `undef TX_ABW
+`endif
+`ifdef TX_FIFO_WIDTH
+   `undef TX_FIFO_WIDTH
+`endif
+`ifdef USE_BACK2BACK_DUT
+   `undef USE_BACK2BACK_DUT
+`endif
+`ifdef VIDR_RS
+   `undef VIDR_RS
+`endif
+`ifdef W_PYLD0_USER_WIDTH
+   `undef W_PYLD0_USER_WIDTH
+`endif
+`ifdef W_PYLD1_USER_WIDTH
+   `undef W_PYLD1_USER_WIDTH
+`endif
+`ifdef XIP_CONT_XFER_EN_OFFSET
+   `undef XIP_CONT_XFER_EN_OFFSET
+`endif
+`ifdef XIP_CTRL_RS
+   `undef XIP_CTRL_RS
+`endif
+`ifdef XIP_DFS_HC_OFFSET
+   `undef XIP_DFS_HC_OFFSET
+`endif
+`ifdef XIP_INST_EN_OFFSET
+   `undef XIP_INST_EN_OFFSET
+`endif
+`ifdef XIP_INST_RS
+   `undef XIP_INST_RS
+`endif
+`ifdef XIP_MBL_OFFSET
+   `undef XIP_MBL_OFFSET
+`endif
+`ifdef XIP_WRITE_CTRL_RS
+   `undef XIP_WRITE_CTRL_RS
+`endif
+`ifdef XRX_ABW
+   `undef XRX_ABW
+`endif
+`ifdef XTX_ABW
+   `undef XTX_ABW
+`endif
+`ifdef __GUARD__DWC_SSI_ALL_INCLUDES__VH__
+   `undef __GUARD__DWC_SSI_ALL_INCLUDES__VH__
+`endif
+`ifdef __GUARD__DWC_SSI_BCM_PARAMS__VH__
+   `undef __GUARD__DWC_SSI_BCM_PARAMS__VH__
+`endif
+`ifdef __GUARD__DWC_SSI_CC_CONSTANTS__VH__
+   `undef __GUARD__DWC_SSI_CC_CONSTANTS__VH__
+`endif
+`define cb_dummy_parameter_definition 1
+`undef  cb_dummy_parameter_definition
+`ifdef DUMMY
+  `undef DUMMY
+`endif

@@ -1,0 +1,180 @@
+// -------------------------------------------------------------------
+//
+// ------------------------------------------------------------------------------
+// 
+// Copyright 2016 - 2020 Synopsys, INC.
+// 
+// This Synopsys IP and all associated documentation are proprietary to
+// Synopsys, Inc. and may only be used pursuant to the terms and conditions of a
+// written license agreement with Synopsys, Inc. All other use, reproduction,
+// modification, or distribution of the Synopsys IP or the associated
+// documentation is strictly prohibited.
+// 
+// Component Name   : DWC_ssi
+// Component Version: 1.03a
+// Release Type     : GA
+// ------------------------------------------------------------------------------
+
+// 
+// Release version :  1.03a
+// File Version     :        $Revision: #7 $ 
+// Revision: $Id: //dwh/DW_ocb/DWC_ssi/ssic_ga_dev_br/src/DWC_ssi_rxsr_mst.v#7 $ 
+//
+// File    : DWC_ssi_rxsr.v
+//
+//
+// Abstract: Master Mode - Rx Shift Register for DWC_ssi macrocell
+//
+// -------------------------------------------------------------------
+// -------------------------------------------------------------------
+
+`include "DWC_ssi_all_includes.vh"
+
+module DWC_ssi_rxsr_mst
+  (
+  input                              ssi_clk,      // SSI serial clock
+  input                              ssi_clk_en,   // ssi_clk enable
+  input                              ssi_rst_n,    // SSI async reset
+  input                              spi_en,       // SPI Enable bit
+  input                              rx_shift_en,  // shift enable for rx shifter
+  input                              load_rx_buf,  // load enable for rx buffer
+  input                              rx_dual_mode, // shift in dual mode
+  input [`SERIOW-1:0]      rxd_m, // receive data bit
+  input                              rx_quad_mode, // shift in quad mode
+  input [`DFS_W-1:0]                 dfs,          // data/control frame size
+
+  output [`SSIC_MAX_XFER_SIZE-1:0]   rx_push_data // receive data from serial peripheral
+  ); 
+
+
+  // Register and Wire Declarations
+
+  
+`protected128
+P7>L5["02T ^QEP=J8^FB#I2\6PM*H7E@T8DO7BE9Q<*0NCQN8E&ZI]G>^:G,1@NL
+P5Q9EIGA0F8Q@R45[J-?LPDX"6I:XBR!;]:1!]ZMJ)S-V#^"PNP.%G3CZ#'U[EQ<#
+P._97_Y*ZJAW+V;8Z;ZX0Z7%]<"FS76!ZM*O2C_P^7V[+_['M%?FCH3W@-C0LG8!%
+PD;/.6Q\-B.,;R[QX1YTY]SR5M^WXZE"K?MXZQML6C0.D3R%FX1J1ED1TXC_Z$"%3
+P GMO,=+<V&P?/4G8_,Y52RY0)! H?HJ]/TIZYG2/B?:?@'0C^2<*PA_!'LT8="N(
+P8S?=D@R,#%_IXD G151D(,B8XU :K9B Q<#X+7$ +.+]7?NF7QK>86U-S]R0W3*/
+P;BB<MO4EK#6/\8O0OQ9CX1STBE)G=<:>-K',E]4-8#D%=5_V$7H_Y]7!9^.345>P
+P#6'EE6,:E?<WVTI7#^-B#'?KU@WQ27;ITIO_I"4+#$%408"^,# A%;2NK><PP@<S
+P>E3WB U>!T+XM2@D6JZW_"8_V>3,: //7P5"?A>E9.WS&K%@-\E3O0::SD82ZM$#
+P5C!%&R"NQ6&$GT(I>+TI'"!%T],;>XE?G2WC$O@#:H"]TUEF3"+ $3@(^$/N1VBX
+PD>D>L<..NY.A]9&>)1N2A1'>8LC/\#A^)PJUH6 %1'N7^@)_22[U(/0?V4[]IZ4(
+P^!&-E0OS$C[_?]!KBH-H([MM!=\!BC*F!"6=S]2=H'Q:C3/M70JXW$AMD*,-G5CD
+P H]S1/M..IT(@!?&<,(U8^VH=EF$DJ/:[J%J"T'S)?(5P;L>9UU"9*J'57<K@))J
+P^V_ W6M=+JP%6CJ5WP01%\Z&SHD1T@\0@=OZD5"D!_BO2##)3.>!P#(9K!I.K,,F
+PBU)&2*T9=/1OQ8>4L5[]7=FHCYKU2+,X7X\<4FXS-28KS6IRY4D'*[K&L<57Z]W_
+P&MPW417-[^,;^Q4:(B,\N^ZR ?S;(7.&\XQ.J+(M/&CE9N1!"'K"?F=;1/T?=<=*
+P?P&7VCQO,7$7\#@N+XVPL05+9PGT'@_3O6?XND((R:F3I!AKK4]0-1,D^'0 G;R>
+P=I;-5.5D$/6# =*P;DL]Q4?"O'1B=W?U2&UV/%"FVV/'-=.OWH$#($YJ-N\>9OC5
+PZ"+L_$97$'\I;_WKOWJ.T M*7D(S6B,MA6<EG-?.O6 \;1-,)A'IBF;\PX]%A0>H
+PP2)#[;)W2@2G#WQE\FEO:$"VA. +Q<SQ4,0)B^#.FM-<RN-9:J,:K;22OB2OT.3?
+P>)-B5C^WX ZL"+&5:O!2 JA\6N4RQ*M%S.P)ZS,[]L"O2(8AG\.";]H(TCAYMTM@
+P66^]V1#$"-Y^QAVQ*<R32YP;]N%KR8U&8W,*=;U]"TD*+6Y=,E>-=X(U?*J+83#W
+PPX8OC9[.+'=3<O45#^"_,DDH!U+[; D   YZZVYH2G88!GJ'[PW[TX? BMZ?/NLE
+P(&2.Y?PG/SF 21JIU_U L5\X+6<K.G>HF> +E,ZMEV=G$%XKS;VOH+8F' QI6R>J
+P?<)=%G YL Z+4*==7]XG]_?DD<S@[+/G5)[$]Y0G:]5^Z,JY.7TOEX("&7_(T-Z/
+PLDFMLWDTCOQ/P8!%M1F@CTV9/SML68=AO?&&,."-4OIU9$;,TJQ&*VY", \6>#&1
+P$Z6*O@>'B%Q%N$?ASKZ08?BLD]($A ANFS-":Z-;7^P613X[YX[C_LY)Y0).4 Z]
+PH^G^4)P41+3MW35%JHSJ^4'0L%&LWEQN%X$;"OW.9G54SU=H]UCY(J&&B/TP+:SX
+PLNOX3AR=QCH]:2>, :L:.K!L%PD? E5-BH!.F/2WTNPI/)^I,]_C7?(S)9=;B)6M
+PVZ*\G#LTH5,3SHA#"IA22!3?W6PY+ R^F^$>+F(U8UHW^!:"D9>M=\6V%9ASZ$=?
+PH"$0&$6BEH_,0,N;HJ_1W+TX2']3&8#([QW]0%?&"Q3C-!OJ.$!I)-[@$?,]$..U
+P^D)Y.EQ! !YQ)?(4P4/"E^\&,8XCFST^5.69H*3V"9C4/<^QM-$">=E]*;@(>+.Q
+PA3KU@@QGG@8>$\,0/_K&85VSU20ZSQ/$?-%]UA6VL^MGNM"=_3=A??-'("1C9D[;
+P!DJP8]#@*G>PUE^?3X!C)](N*=L3!MTA@/T%L_J\F,)N_-[DC'=3^K#4;?!EZ[X>
+PFG3Y4=B+7:$NF\XD:RI>=N(!37)1ZPJ"-]]6A6H)^>Z%@8'@9L#731<8"KTL0SNG
+PX)5X>SW(RD L69IL9<HL7,ZN?[U:%>)_X&L^ M.U@/V<J3S_<Z)Q=\*;L*S>A4?D
+P\Y*'/L3Q&*N95LA?"!S^\O6,1H1DX?\A4NY3N<(P(:*?@(^(Y8$4 SMG5+XY\2NW
+PFE8($FMN]J1+6B)+> -S&^KFBA[/JMTI/QE+I(67 )DJL[X6F>E/*>P.70QYU$LV
+P7*Z]L#'3*9YZ'4@3/$:)FC%I[T31HV[$* '^K81&\;K3/64<JAN?I\HX\PCC5I'6
+PG&[7$',"VEV/G2VTG!;-=-;] T/JR84!T=RJ0T (!O_&P;C/KH)YC@B"L@WVH)I8
+P8X],VHW04#\\/VG=K('V4G<GOCK9,A/8:\ N0%$RU:G<.*L0'VDXER]SJ)\4:<XS
+P2XT&HEWKURUW@(\3_F]J*M<:E=-;7T4Y3Q!'Y',#8)X>Q<!%7F5IS:W.Q=@_UL@+
+P%HL08J+]#<(B)RT=>Q"UGM)3)NE7*N\KS2W!\R5)S!M1TF!8+B8>S AY9)MMG9R6
+PCQJ*^,["AY01W4B=-1EO1/11VG)E]+*PU<>QBHRX*NKX-@P_]*K2^/K'80)T:R(T
+P[X4L5(*=T4PYXQ7W/!F+V!L"5M8WK)'DS)1N"8L1:BO?NB"I,'IY1U$3[),<"2A]
+PQ\>NI#X"$<6&T,U-/,I %N[JNQ:Y3$[B.GJK-C>*OV<W4G/9T2"<./\B&ALT0PVB
+P7).8GLV7D$@!I?+5@&3!%)ZT#SH=52@C&][M.U]6GN]#,F2>BN^PH-9!6V:LS7J#
+P1#NV9[^B0IDN/E+/,JSRIUT1B_*#Q]73P*#NU]T;3Q>R'T#P^^VQY7R)PQ!" ,4,
+PG2>T9F-$&'*?(GKJE0V#T.\UKAT(W>4+8^(;*\'F_]INW :B><.RG%=,'7XV';L>
+PZ[6F_,03IF['?4A$<+9J&UW[0AQR"D0_NB7WH<_OF%=U46RN_1*TY7(GPS?]5Y_[
+PHA>^3(W$#GY!:Q&8\(O ?#2879=U7)YI>): 7;EU&]T9$[35#K+.F$-S9=OUO-B0
+P)W;!NET''-F]W>DQF(@]AMV_DH@;TF#\>SF+]KU#6,!VCF)>*"GV21J& )"AX,E6
+P+5[-8DM5[09,U64]4N45O&E; KQZZI>O(^?'0OV*PA>038N5B[@2HAVB1)\[/G6=
+P<#RAF4E?22F_+N-);EIYG,Z?_7N=D=R A5&GGUB@$ GRWD. "5JJ_Z[.:=^]YXQ[
+P"H(D8\XY0<EP4&Z=_9 R:G5"N:K[_)XT)\(&#I@1I&KNP]QL9F!A10QQ&#4XXEUT
+POO:A;*IA2I[7+[ >8S(>JT0:[I.^.#H9U+P/=2. _[, M3Q#/G1A:B\SJX:9/7F+
+PS[_$VVLRI&"RQT);;.%&$FS>C8D5*0%,;^-]"JSNH?CG5(OS0I(OI;[RO;0EZ96?
+P;MT*]07S7HD][8*O7>69C5ZE(OG>%SLL8,$=75!,6OC(_26,J.>0Q;R:/B+K\<)W
+P1&V0PX7C@P.'@=!,+8G EZ^V>1J!#<7]A$7JI:%;FWOUB*1;@)0_QP+CRO7"N"XD
+PS&V=<;X+CJ$F\= 0(8^_4SNPQFL^0U?]BL$R\]>.J"PCRWOEN#E]_Y'HP[VQ&;'Y
+P#6,><%36"*_''H([%B1E#-1_*3Z@*)QDF1ZI]'O3[$-BCQN,-=D^V:P.MA1O]?$_
+P>X(_"XF76VR.#]#HF;#4YV,T'8TT^X2!4.=1K='87R[E[ #"$ZSSO96AI:F@8B=*
+P^I<8[IKF7_F>EHA_))2R[_*'#J<..%[\V WS:O-M;K?<+V)4WKCX(B\)PP 6@4)F
+P$CUN.NPYZ:NH[D4#UQ>$PF@F3_.=;QK]:RK>EEY;;*+I:\<@@)2U5P$"-[V&7<TO
+PJ$C:KJ:\L-81#2&BA.#DK<[;)JN<]X*RWJZ43ZJ8E)W&UTJ0NYWQ[!1A%KW7<P6)
+PIN WA6*#>EC7<6[K+3NQ">+&S68WH]0B] 5NEYN/84--W\ZD+<=5 /D+%<NC TM)
+PN96F @YUZ0J>^N(&#AQ%:_@A1+^$"H$7:]*X_R)\MR0V5X4+(1D$,[D*<"?-_,N9
+P@ Z!L'L4[F*63Z\LA-]EH%"[Q&\>9:_+4AJI%84>$2VYL(J=@H>OUY5Q/K]XU+-X
+P3'59UZ="]L;N" "HPU=TM%V]^/(9J_8X/CBQ+IGZ$VB8]\MU46890 9J=X0CT*.K
+P5AQT&[,^P*J,F4SXFRFL[)^TKW85OQVI7F\JC;E&-],AO6P5[WO'A!6CC!*MZ &:
+P['701F:@162,QWQW9QICCEPLFM?6^Y!JUK=+M( U42N[6@)??OI!0GTY<6QPL28L
+P^@07&V3"&FA6>2"/-C89)A0Z8T#F*U@_PY@X%09-8E!R!T)]?N^Q;T,%?CC[5F1\
+PN#-[[D0>@O1-R1WR\XW_:RF@N@.J.5D;N*\,Q!$L0 KRZ!,X'!(OJ7=>\>\<@3TM
+PR+9JP\B,L26A_*SU#O2V0>0_HP>D3AOWZ'+0(_^%]XI7[*5&VOVZ;WV3U4YL.3^?
+PQ6.0+/0LG[3DSZE'S.$,@R<KH*DR\Z(2D4:J8*ZU4P3)+ZZ%%-%YN1RM&-*9-7_2
+P*4DZ&3(%,;RU=*NM_^;!(@?(2 +J=/G'3JRNFYI&*.;M>L617F/(5O]DR]4-KK;$
+PU "%&'BH?387*W=,)!V"S)QU"YM+GJ0%S_NB+&XK!'N.6T4X5I_7-/8&X1CNE,XR
+PXV O4I1)3QM8W3"3C$.VN+2"_/-O0*(NB2L9K0-5U71O9[Z3<V.]BJ*0,/1C"NDZ
+P^@Q"L;_DBY(*?*U303S@PX& 10[A=0G86#-8(T$.'V>X>$]@.^AH<.QKY.J4RD'P
+P6/-S%_A(8K]A^0T/4W4-6=02N(  "'LD2Z+TX<S6B2R^8^&*@11@  %O^4#^+=#8
+P)$M=DQ]C.[O7--3IP"BJ =</)/=!5IR,A+>9&CH-L8R_5$R_E;U\1!G5AB78$UDJ
+P &TG1BA?D L,"(?>B4-:>?;;?JD\YN.)%%MDM)":8D4'';:H6Q#E&!DH44JRJLC)
+PD2TA:JT?5BV'T&T?'&B3=5">ZJI21%9MXE#5RM0/TU]#)X&OC[8"N#,#) TJ7I.%
+P2&N H5!&@<3C#:YIK$;C!YQD6_1+4;/<-PT+0 [TM*Z;]7E/\FSXTY[TS5''H */
+P)+P#[9'-\_(_;& 43G,[^W%9%(?#6_RKKQQ11-;(+C<W"E*#H* RGWO3Z]B/!^")
+P-*H(3B5-T,G$=:!?&,9ML*JBID[".!)6C!%)LYV$ND,,C-5M1.HO=Q?VZSG2M6(P
+P4>)0IR&.('JBL7$!D".1C_ZY09)BZ'F+2.+S#QX2Z,B:Y^ O.P7?SSDD'^<&AR!-
+P!TEP-)G:SN7Y<@4.;$]EBF3VRL8K;/1BZ"-4LZ>NCUCZ;JHGZ& 1N+M7.6CQ0*$/
+PZQZ,_VA4#+$[K-Q!JX7]4^*A;T-X'S0=Y$"(%>$!O[*Y9!(TC:R+.E1>=>)S*,K_
+P(C<2<M2RY&.7.K#-Y@"[TA)WET( .(6>6<$X1 8W2+Y+P[ ]*D<RR1<AGHCIYE@+
+P:,!T EGE4W )^=>/V2P0@ZP@!U1K<"F&EW6U1Y5"U==ITA74O<XT4OJ199PHY[SD
+PP2@\-1R%+%+O48ZS5UE46MPXBRDM\U$D;\VETD?:TIHB8V5IH,O?<FZ/51&/'H9I
+P<0<?WM5XQ@U.,.RJRS*YB U@I\Z&P^Y0Z_0WRCUO@>1=[7 G/!8%>;O(5-;J,N0J
+PILJVU6>)K@:B<]*1#7!M@T#8,2_6_<1K)HRV2,ZD=TSP994AIS(9.[8 9 OD#-@Q
+PP<!]Q?J:P"Z>X_@MMX( V"$L(69P>#%/)NJ\+[ZDK$*^=8I@@N]7S9UN_IN_3;\C
+PT\,O$85!*<#/.4O0$#/TOIB71O[00GM \'TD]UT6ECT^ZMH\+J#_O#35?T+ZKV]#
+P<-X!)LB+N#0G-4"@6#NJ%Y=*> 7[]2+,E-&+!2\2!FR4_@1Y3H9SX3"0AG^Y6 W+
+P6EM'K'I$FYA+FE*L:"DR%%5GQ_YB8QB#PNMVSD=)4GD=6D<EQVZ(1AX5#L^:+H1K
+P=@E;N4#+"1%KK'\1YLU:R;IE4#H%@[XPWK!I$)Z.O$:6E2R!7E[B%L>O>0)&9[&0
+P8)$#+<^MJ;3E^AKVKQ^/$,YV^Q/V&TVQ#F5>_/%JI!Z;\I.F^[G"Q7W,74H^TPU;
+PNR[^G?C3:_Y;J;RS+0KV-^9J)([5]79E^<Z5'[%O,VL.JQ#3GUYZRD&^T+]'?$\%
+P) <BM@-LC+A%*]6_1_IIJ8GMTJ9W&[*0K  7<*#!\&0NK,;IB[,V[ZA9ZG'/8!)"
+P#,_0P]FPS$-FSJ_I2M.&VQW8OF3U1&5O#6<(# 9"IS4YP#95N,70>#Z$9W\>9JXN
+PO(R[7E(BH:X461M0WF3-3OK@>MK!K5VO!H\NL\WO=[49B4I5DHS%6<JMB+E\GNL]
+PL(+;DP'(FGP7X7I6:1QN-;\]^(""=V@\K%R7W.(ZY8F^[W!%26P^3/T<X7QDL.4M
+PYKR#VG(R[2)S;<=WC2X+UCPOAOL%<14O:SOF%]<YOE,@"(3W7XBX*E=_L7_U-%9Z
+PPBKTC73E\Y\:U2$DR4%=3&!!P/[PLGU%1'NM)-Y=2."LYF%]\^-JXDO%X!F$"S=/
+P9T-W98=P0XI3&K8 6DHYJ+11JVR^QEH#RZZ'AW9XVDC8>$&"\SI,N-(\+_&F@FS.
+PTMG)U[@C4#C'4.DC)W6Y_+?I26&?1;78GCPT[,FQZ:$S%.TC'_&LR\-HW"[8GN -
+P]4R8K.1ZJ*H.+E?:/X#92I'4O%[7!9!/$Z7.Y<4[;;8-5KC9TFOU"EFSC?&2Q!^?
+P0/KVY!,L;)AS):<I;1LBD9I@9ET_E$*D'UP-I7GPW2]8_U*+2F@3Q"_)' %3&.M;
+P@DMG[$E(9NXTL/_BA^?X1^Q7?W;2=SC0A6F%_[QKUU+P/;F4$A*/?S?810C1\>4+
+P671I&ID=^ W1Y)_[,@1Y6Z\]4B;X!0E)#A.D].#:]."K" ,K\^4!=MZ.[+Q_=RD_
+PG2-$^D\4!D-*]IL!ZUM[0X4KC'"$4R$&\3(UG$;.Z*P@!JX+=/#NFHB_-O_1_^PT
+PH'@<X97/PHAA_;+?%W%1\\BQE51!\498?=7)<-=_V*L2K39G1<_R0_0[F^R36((T
+P96ILNT,$&Y6M;<$_<IRWOQK;_RI$@+QL35G1Z9A ,C1TASR[)MU[>@F>:]_"TP+=
+P_#%"NG[&N&:N3E8\-C9B;$PY4B5*9@%#8V#S]X]HT32G'M\5T5J;)Q[U*^*_X@ B
+PGR:EL,BJ\T.L="3[( 5B^MZ*V]!*B:M]4P\=V0/3%&:/VC;+8;8(7A[F[Y$Z"7,^
+PUX7C:B*V<&#GO;$XLOFF8U8KV*X"WZL@X0?_0Y_HJ6$FS>I!STVJ(\&KSR,]U-_'
+P3<YCV[L:)4/R\6EL3T8/I#.UPBC^9P.99I/U]2+X=1+=)P.22 [H$]3VS>7;%+!1
+P-T%]$C+'?,M\I; 3N-9K/UD_0P?0VJB^\N(2)!&_BU7WP@8K[EYOVF%*LC'3U"Z&
+P[VZ97L/E ])A'?NZ>D5%ZZ[<RU]U$_U@C]E76Q4#3_Z5 +"&$$(T@!_3)5E**L&B
+P50?/W:2<4^OI-=\S,>9$'CAX-W\"_'=JYI12Y';Z3 QIR:Z5I^?W%AAAX<QR#V,1
+PM:FU%&["WW9\9X*"W$@H7*1G>RC=RS"]G'%=D"!HC7DBYBFJ05L1&C,][:6ZI+( 
+`endprotected128
+endmodule // DWC_ssi_rxsr
+

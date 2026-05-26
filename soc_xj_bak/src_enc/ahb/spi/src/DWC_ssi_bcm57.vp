@@ -1,0 +1,116 @@
+
+// ------------------------------------------------------------------------------
+// 
+// Copyright 2016 - 2020 Synopsys, INC.
+// 
+// This Synopsys IP and all associated documentation are proprietary to
+// Synopsys, Inc. and may only be used pursuant to the terms and conditions of a
+// written license agreement with Synopsys, Inc. All other use, reproduction,
+// modification, or distribution of the Synopsys IP or the associated
+// documentation is strictly prohibited.
+// 
+// Component Name   : DWC_ssi
+// Component Version: 1.03a
+// Release Type     : GA
+// ------------------------------------------------------------------------------
+
+//
+// Filename    : DWC_ssi_bcm57.v
+// Revision    : $Id: //dwh/DW_ocb/DWC_ssi/ssic_ga_dev_br/src/DWC_ssi_bcm57.v#4 $
+// Author      : Rick Kelly    April 26, 2004
+// Description : DWC_ssi_bcm57.v Verilog module for DWC_ssi
+//
+// DesignWare IP ID: 17ca3d14
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+  module DWC_ssi_bcm57 (
+        clk,
+        rst_n,
+        wr_n,
+        data_in,
+        wr_addr,
+        rd_addr,
+        data_out
+        );
+
+   parameter DATA_WIDTH = 4;    // RANGE 1 to 256
+   parameter DEPTH = 8;         // RANGE 2 to 256
+   parameter MEM_MODE = 0;      // RANGE 0 to 3
+   parameter ADDR_WIDTH = 3;    // RANGE 1 to 8
+
+   input                        clk;            // clock input
+   input                        rst_n;          // active low async. reset
+   input                        wr_n;           // active low RAM write enable
+   input [DATA_WIDTH-1:0]       data_in;        // RAM write data input bus
+   input [ADDR_WIDTH-1:0]       wr_addr;        // RAM write address bus
+   input [ADDR_WIDTH-1:0]       rd_addr;        // RAM read address bus
+
+   output [DATA_WIDTH-1:0]      data_out;       // RAM read data output bus
+
+
+   
+`protected128
+PO@T7R?.IO8;(Q:A?Q<#OU+Y6CLE,S2YC>+TS^"$&>0,YZO%Z?-+44T%8X_T2'H!Z
+P#[$"JG0G,:,BE8; )?E17&OXWXW4,L$P3;!W=UBU1W"#&$18&D7@9=_&:KOO,S7W
+P=KT-KL86-"R/[4SFYM[LH&L:8CA[R\(F8X'O\(6VH6>&&" HVP4B V". V7$)PQ3
+P#Y4K((8P)C&/#X$?W/5QO6,+E*E>2%?!!VEE4[S W=&5Q-T2H\?+Z>CGX['(=+;@
+PT[N0@UW+=,K\)BO:C$?&OQQV]4YN82!6JECDYZ1(->;0Y]A^*%ZO(%AS+Q9PQ&S9
+P&-1)Y8P[$&-_A^(@2@<:?7O*]K$=6&;G37V./D%S57H,')H="AM+O,6-N[JIRXWQ
+P+/>EAW*B9,IDO"/W!I5S,M N BQ^EZCZZ/QSE'$CKW,AV0KZWO8V5I8[8,L8\$4V
+P.\ .<651RVHW<8;:K;,)I_2BKGQ-*6B=\GGP1B_7@G,12Z<H[X9YIFLH,'6*)-,W
+PVZ$B8-4/;[)FQ%CJ*,J,D^:T_FPA8Q'*=+_G"GR]S0QL#_S=PTN$ &M1_ .N<:$T
+PH: VOHOD@_5<+&;5W)2:/U09IKN/2*<ZU+7&(#%O,!F.'QO;>4_W1S5X?,2TN-2D
+PM[?%AW$HNV]86$126_MHB31.<F[$XW7_,RX256:65_9=2O@E]+4FP7WZS4!21'H*
+P91[@!A2*?W'-H4\9)9.-+W"T;2Y(-@1UQ\6W6\T0B)-H,@54Y(9IKLPI;J-F",GR
+P.-&SK,!?3M=$ZJLUP0<0^(BSG<CUVT:]=>JT7=+$3QUY+:/YOV/77EL>CEQ3@=26
+PXV(5A2]J9-G6E/!LL=!+5E$=6A:MZ,PV'<D@?QU7+ZT':7K:I,'7;%*6"//:D8OL
+P3!L-. U2I>WF]!SB62OYB9SA):W4*QN,;4B+6GSVHMQR\X83J3O0O-O:@*<).%, 
+PV))1.LK4Y+U.I.OQWH1HG-AZA<[+> NAMN5&?LN6T14CG$@_Y-=6-6I-6[RS]TX/
+PGH9M;35D=_WC3^DZGL',@D.YQ]K/>2<ZJ#;]&I%B6N 8\X;AGN( !D%8(-,P2F^9
+PJG-/ >4G$\Y=!0[.R;"_&6ANOP'6BOG_:+DZITVQ$7[5T@F^A91<,3C@(@4&\C>#
+P_"HZG)+0U@YSVERV3CQNUG#)M/CZ& ,L*7>+ZU2*,0#N!2:S9$M;QOW[.<N1VE:O
+PHR$QCJI,W5*N@QY:GZRD)5[%GH)&L2=)9 BKJB\A_[","X77<4*%<GNI_Q&<S8T]
+P/SS'^[;P!#;'29^59ZCMRQWAB=WN!<<]46VKL,B&L-A)7CA;I^W'+W%R09/Q*O=2
+P16:)4*P'"GT:/Z7OB>48@Z_#O_R'?4PD>;>^NC/[6/2373J*Z_1VI6O^H]JR86Y9
+PN2"07877+*"9#&0S :1KKO=8^)24P82HCPVKD%,#4<46N^]Z6R13#%J(M'K:I+/_
+PS)4>M;3881?_=T5'W.T$HG\V:+?).&.(?<PH&ZF'#D=$Y2T3>LLD&>G 4['A4.]\
+P"R(?.\9TC"6 1ILG:4Q;T>[$1(O^K%IU?([-Q,,<_MQ^K^H,@@B@3;M+N#HI!U^6
+P]GL#$;P!H&=!)>YXXO\*;2?PRG5(SCAS\$H8?$V,#:ZZ1MH0*VK^KBNPZKDVH5_G
+P0(E(";EZ"5H.D]((+)G1C&$%8;65=&78:KCR_O)# OPX)2$)M#*WS8L66:AL[$?/
+POA:/"@=FNF>YPKJ-&KC05ZR4+C]!G/]#/"D2UV^A#_2C;-:LU@N'P6=51)1G(EC$
+PI#<?[8-;;K,/6Z?O80OP J?NY!0E'ZTJI6G'QQ?S7!)QF+O_)GJRX:R]D@H6CZ0$
+P?0;S1Q.<LK=NA0;VA;V@GF8\&D:E55VN("?Z -X1?;/V^<R5*6]:P;&+N^(Y:@)D
+P&C/>^*IZ$A]OJOQE_5[XXL_SLCU2<BD5!$N-<&@\6=OF/='^V=A%**BK \G!ZXD_
+P3VV1Z=W7/#?ICO$6K>1GJSAQ(H#J7T (RNVJ7C[ \>LVHJ5JX>RT\0HZF3"P5J#6
+P9@FH?\I^JGU"?7@M82AEE'#IX8R8M8C%3='G=ALX7YFB4<"7S@Y)3$39H=G_B;G6
+P 40\AD,8WSMFO)\D)%9Y.#%&W6'5WTK,;(OC!S8VP3Y276R88)7A K>N&V>7>?'>
+P]<(@^,//]-QR!"BCB$D2/QH3,(ZB<@%>X^@RB;W+^BZA^!:H_^$\@/#:]6:YC^0-
+P(?+^!'BVY !L>.NKAYFA0MER7')W'8.FZJ8$+358Q*RVQRNQU\Z%S2>_9W&,&'WB
+P<*VLL605Q3_N)!Z Q&;AWGU[E17+ A@TB93<H(CM\7.VJ4H6PM%II"2.JXWR,%?_
+P38\"YTJKCE*MT+GQ];Q1C1;^Q(GX#E>UTT1I&>A286Q4970+O#\>"(%/RB/*@!/;
+P'MY)PFN]16@X:"@>[CYER?310/45_F.E89:NY#J5K6#65&P\)4'E).$[?W0A)(\9
+PX(?(6]I625]P,7++Z.CR\C^<-8D?NJMZPMOC&/0 1AR?C$O;$\+X3O%._UNWF4T<
+PB[P)HE(ZKS=J2-#H ,- :*L?TNV^>WLD2^3"JFR*K3%;LI[5T^@]%7:XIM-=7R]^
+P4>"WW?#F?A[5H8%YBT+,,1ZB%D<TL8[C!+HL+W!9&LE5HW [&WFGV+:Y6'7R8:&J
+P;=CXC&^*1QTE33S]536"CZTV(?9I?!H^"G7R6.".'=:DV)D$J)W8NV^;8/ZG6_,<
+PF!1*T(TGV++V6#PO54GX9(I^\4N^%W9\0(TO5.X8Q5R$^+B'B9]&DR948&A7Z-:1
+P-ST_A5,M$VFAGW.)55O!.GPTZ:]$(H)=MFN2FF>>#F!LC>L->S>/_*7-JTWL512_
+PLWS?;[Y6A->RK<"6R^N>;,&7,2&*X0AB8U*)=J]SH(-!)^,A/:><. *A2A1^0?^*
+P4S+PTM;3&GILA\TUJ+I*/NF[9=LFFBJQD)'[Y8QIDC%SAOMNQ904S(\,]N#C:D#&
+P )WR%.0!OL.<E</C_"30&HT41 TEEBSS7:?#.4R]FCSNE9^FF"!VXKWY'JYK):\Y
+P RAD3O$) ]CJ&7\I%1)T !KA]!=T7OI4-W@:?J+1:L2T*6&.1N5F%G"V0ZD\U1P@
+P=5R3E"XQF38=="F.G49*PMG/0"IC7T_:Y_*' C.,QECP+>$!'EY!HS,H7%<]D&KC
+PLJV0&TI-A9W .KHW@_M=,+T [\N5O<8XIH(R43\CIG5N<OAG2R!.$JFO)'V'!H%X
+P9+7T!B-"*!CXG$D'WB2V'U*UWCU>Z'FM22ST$S:5'>3FCEN ?-!+[^ZQD&OPI%I8
+PT7C':PA.F]<.<_O6JC'OTPCF,Z[XV@;\?1US[4KGF:,7PES:XAR,!\S5H)F%G[F=
+PO5B+S"5<WUZWYE5ZRM#ZB\198847&P,,JS"3.T8IK]D#/]F)(!!B.95RQO1V>Y3'
+PI4@2 .WOP)%\N;4%N^C7T&#YU_<NI)4+'+5$^<'Z:6S:NZ,]#[XSP57?ZO\"?]((
+PHE#03<*K/_*L,<$Z_YJY)*F2NKXYM#QF/I;%/]8%,E[(F?5*W+^^_V<3M=B!X5)6
+PA2EL*!LKHEV>5#^+A2F5"8X+ZJ->PY?*"AO+F6?2;,L_G<U6'=ND7^X0L0;@MA&D
+P8YTO6C2B'TH:O\]I[P03N"+.&OQRNO2KVN;'=,7/&@A4QE6UO*=*EO0*!#M3!%%R
+P"5VFI?C0+^JB 8+KBN>'B)UG*V /WYRD7)+"$B.C1J2AC^?!@*A8SGD:_ ]GE=[V
+`endprotected128
+endmodule

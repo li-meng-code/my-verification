@@ -1,0 +1,163 @@
+// -------------------------------------------------------------------
+//
+// ------------------------------------------------------------------------------
+// 
+// Copyright 2016 - 2020 Synopsys, INC.
+// 
+// This Synopsys IP and all associated documentation are proprietary to
+// Synopsys, Inc. and may only be used pursuant to the terms and conditions of a
+// written license agreement with Synopsys, Inc. All other use, reproduction,
+// modification, or distribution of the Synopsys IP or the associated
+// documentation is strictly prohibited.
+// 
+// Component Name   : DWC_ssi
+// Component Version: 1.03a
+// Release Type     : GA
+// ------------------------------------------------------------------------------
+
+// 
+// Release version :  1.03a
+// File Version     :        $Revision: #2 $ 
+// Revision: $Id: //dwh/DW_ocb/DWC_ssi/ssic_ga_dev_br/src/DWC_ssi_sclkgen.v#2 $ 
+//
+// File    : DWC_ssi_sclkgen.v
+//
+//
+// Created : Tue Jun 18 17:32:26 BST 2002
+// Abstract: This module generates the rising and falling edge
+//           detection of the serial data clock.
+//
+//        1: When DWC_ssi is a serial master this module generates
+//           the serial data clock (sclk_int).
+//
+//        2: When DWC_ssi is a serial slave this module
+//           edge detects the sclk_in signal.
+//
+//        3: The clock generator counter is reset when the following
+//           conditions occur:
+//           ssi_rst_n is activated.
+//           ssi_en_int is de-activated.
+//
+// -------------------------------------------------------------------
+// -------------------------------------------------------------------
+
+`include "DWC_ssi_all_includes.vh"
+
+module DWC_ssi_sclkgen
+  (
+   input                ssi_clk,
+   input                ssi_rst_n,
+   input                ssi_clk_en,
+   input  [15:0]        baudr,
+   input                sclk_mask,
+   input                sclk_active,
+   input                ssi_en_int,
+   output reg           sclk_out,
+   output               sclk_re,
+   output               sclk_fe
+   );
+
+  // -------------------------------------------------
+  // -- local registers and wires
+  // -------------------------------------------------
+  
+  
+    
+    
+`protected128
+P,*(6I<R*<Q@ :ZQ(:G:/W(L>\=;@$V7G#7+IN<D^GME0?6;ZD?)_0OJATM/?-&5)
+PR"H))IX95)T$N!C1G4;,S]=D8Y^6N0^-V:3'#V[T+#<T.I>RJ(#J/OKX;2!LRGFI
+PQH4GR[@.1)Z2_L=H;3[N;\UFAN<A7V[:6.3 W/:S10FKOV& NLEP5M98X:IY:69(
+PD=0%!Z +_P32,VAI=@<M4#RT6F#9)"VC*TN'=K\/R7;[RIN[)Y1&;2*._2.\%JU(
+P8,EF4T4<=D$PWUL'7)2:IH($[.3D4G1WPA3E-U6-L&46331;2*U61B8.\2Q4#EGL
+PCM=MUM/C5)FH YG>%.@(CB&9P3U1J'F%Q3WC>H&4$GH\PVM?=\$AS?2N?WOT8'=.
+PP\,TI&F2*^<.BX*Y1%ZN#2 0U1#,TJ+<- N,^H"1]]A!SL#O,(.X /V@(#7]5KA\
+P&\<ZWH?)\XD,XWQAHHTDH^B4\71)80@<@,G[6T#BTI)^^X:V A&;U^@IF\@8FJT!
+P-H)WWP'?3*^$!X!>T90P-2ZY2AS5RX"SRQ.TS)3.&G0U-E*=X* ?7M>70#,.QQ6C
+PH(TQBI3/S.HE;.8KKZYC97#>B]Q'H3U<)<_+BD"U*^;$@&I.?/ZHM1$/+0S\#X(Y
+PJ=?8@,X' L[7REBGXZO\1L7.1=4M'DEM4.ZB!HEW@ZY!U'O=]LN0#?Y_B1BQAQK)
+PJM]@$ 6#(GF-TA4.TU3B2;R1WX:'?IGNJS@0;2F<*6<4KK-]C8J50HH_NGB.F>0A
+P,95>D',MQ#G5'L4XWWF3T FVM=^C_"$VZ,)[_UD>/@,XJI(Z*JTVNA(Q*RE#MWPF
+PYUU793/C/(B;H+1147^RIZ(S+JGOO7:[5H+X""]_UCCFK;YGMJ@.CZ7"3A3IOUO6
+P%S>,JGT RJJ,M9;\G; <T4D!&R00(M8>AL39O,#>(4_"/MFJT$9^BJW_Y@EYLC(>
+PD]3^4 ?_EJN<5[H!T!)AE@X\Y: 3\!%4QU'NTKF[.9-PC;P7O20 43(GM^ ( (<J
+PB<.<3;4S,9.E:XF>>H%3N;=YLX*],M-M99VZ;//?N-=?6'ZG@UBB66O @Y;'^$>)
+PB+ ;)[Q5FF1^?WF9WNPEU4I)Y&,D@$E7D1^^&-2T2N( E[7^6T['\H]/. <JA"?"
+P:N8S!H6TOE$O!U3IL3!+=[W LC-.-M\;%]ZUXO*^><;N!\9*XA^A\KR>56,]K(R6
+P_7YDQ3=-G\-X:>J6\F*LT5U;@$I"4VV@7?,F$>5Z\7KYQM7"QJDJS^#T>@*%H9$D
+P+G (_<#' H5[4O*1+.(<MK>XRCDCR.Z6V.:5(X9 54U0^4<<9*%Z<M:0A!9\4_+D
+P;09LHF)):D@ZF?9.'/O!^-655X[%9MO!$C=%_\?-&3\#=DHL',[<_CJK;8"T>5OB
+PWKG8[1&?E(LPV> R$GU$@&["EL)P%Y_E J6J.9AJ!Q^\&S.W+P% J&^O6T2_=KVU
+P^OZ6A\"KSB"AG0'1T"F""@1B-N[5B,V8US&?,P*!0#5NH/!#AFXBX"_A*3N99\8-
+P'V@PU](-3T&#XS\W:#K+/7FFTH7[,&@3^&RB$?<E4#*4C#*JT&SF%72 YCS-@]J5
+PNB'Y1=\K]Z&P=_OE$3[C6)ZL0.+I)'Y,HRF57< >6&/-;UM"V,99G2,8 4E<08+[
+PKCZII'M;E C[4'7*2LZ"&5%NZ0+N4G$/@8?>E#5G\QB%DT08XI+W(.0:XVM\_)'7
+P=!.7!WBOUP69OD-::L?KL<ZNJSE=,L=:#XW9:2"J-$4_C[')'DG;-SU)T8;-^F?R
+P]5U@VALY)@7P1&6^A@0*ZW065]P1YG,3PED,;D! +TJ8VH;4)+;_\$L)I:AO%6:.
+PO?ZNRRIM5@,1LD)HBL>RQ3] M?=M6T>=<!NFA7[!Q"?RB"<;$!10*JMM5635&9:"
+PQR)/*5Z4=2361]!CS0B3I*C&3.PTF[;;%4S_]FB3:&+.*Y[Y_ 2-< J2F9+6AG'>
+PC0'$<AS7A<_+<\"1G\%N DEKAZ9"?]6K.7^!)#X(G326:[77*)Q1#W51_L):[;*-
+P]#Z[<4Y*#RDJMJ)OET9B2K$AA/=*+#V7$M?<^_!J<[R/LZ=8]>;]KP+MO6=^2Z34
+P1AV<Y>G S1@A:0:&SPN$'\++8^LRBHB=TT>U7[FG!*0,RY8Q67GD5_2) 7,QZH,;
+PN\WZ,:8(7*">(A)_"D@*>>I'<EPGU,Q_AQEL<OV N=(_46%#6NP\R;>#C3Q#1OXD
+P+QL;@@511* HD'5X^KWBB!M]YMBID5-R?=0K1ASRE5IH"7DHKC6^]B5!:!IR>\8K
+PVH^;W)4Y&&D/E8H48T>&ZY[D]B0\UQ#TJ KYC,[4/4/LWE OYMWK)ZNO8U+U,V")
+P4/.#K*H: 5Q90,:;Y(F4NH>:C"'K@].S=.R0M\ V"D_'Z@$+^$[YJTEZ A>]TQ0:
+P4&U+\C#=$![O,P/_'< :-^AH+T<#,Y'2(+_XH'Y6^CK*65E"H#F[3AL'C^MNO+SV
+PN5U3#09MX<*@(D'3M4U#KT82Y*@9RK#SJ3R0%+=$-I!Q:XG821,!&IU"L"2Z%^&T
+P9-*?3DAO+F9>P+Y^3!(SJ"L2>[%.2.1=X:HL=3G@MKM3P>!>8 _+3!W7$06J+U&;
+PY&K9V!SX'DK<B[)L@BNO\@\XKJM"[2',,5*FWU//.@W<Z(/D1T5R3YB58GL_NQM4
+P8:/',*DE4B(@N\N87D05NWB?(D!6B4C<)JU^VC6^=[3FP&4)+Y/ZCBAE,+!&V[B#
+P:-Q^)\XDV.<^>$!3L]S2;\=]WEW631T/C87]'(BNLP?'XO'!U"=N['[$K+(*^,$!
+PE?"W\H!EE4F8XT--0I'URJ-M\P7PMM7;G1I'31A__ !O!,;Z,KF@22UN?+N:(+/0
+P3O% /;T3GOF=)#\QRV;=-,)=:>G43W6H(#XR,&#YC9FB8;F^:PA204C9*D:X_$]=
+P?Y\C\XV#[L=ES3WS[SGMZ0/.WG=GV(J+8[V<?G&/K#OFYY1^I/-Z!=_C#GE)2;]B
+P4^ HU\B%#EZO>ZIKBPV'=7W +;>&I^V$3?A1R+%@@B&'O<K$(C6LXYYA*O=$]737
+PZ(M+M"B:IK5_!ZK4## :3Y(-;J$>3R*&GE"M!*G5D4/9_ 8EYXA!:1JG]$B'G)XN
+PU0]M1T*'4#6>3AK]Y>91'"_MVEAEU^U@7'<W=Q )Z2'X3^/ _"TLP$U'?B3S=Z,G
+P^\( *V?-!2^RM)5+S;3(C,@9T04V QGWZOQ4F8L#!J7=LGJ-J67\,\R%%_0\I5 [
+PP;;]6I$=C'-X']T$<G'Z^QKW,:?E&KG*N)A<DQC=BL\'!3YD49K$0STR98F#8^]5
+P$'BJ%+%C>;9Q4.3*CVM)5 1&5M^6TU2S3$<[J\&R'B42XE[;R/7XQ878,*J*Q:C&
+P\:O,$J"'=VR'O*LC5"\5"CS >NPOS9:Q</V?2S0S9QH5/*&R*@T\--%_8:!.,?]W
+P7F-OL1*>,MP_2K!D&V9_BL_423C87,5>*>H0>#^#">3Q4L=^A0\ULN\N!"2K7($N
+P8"*[$&[+X%[/$SM?3F7(FSKB.=6VLYU&8H1!(:63I,J*/5?:*I0H!8,8*@*#]F=J
+P/*O02 2<?+5#.^Z#?&H_5\ 6)J%C6[^XCRK"H%;-YWF&=XBVL+M6N2 %73A*70C>
+P,WBM,W:L%WBGU+YM4T+CLFG]G1%27Y&G2['L8C)CY1%)_K%&\VT)XY%HG'\=W <I
+P_HS5W)>2DL(NF4B^X]CJS_([:/,(>UE_H%*=R=A8HRR#97OZ5&H<OA>L@0QAQZDV
+PWD(E'@]8A>2Z4D=_-?A8!G*/.K<DX?C^,W"7$+*I-(D<-SD#!A8HE*9;CM@!.8^*
+P9&?A5EN(8&_@(*PX[,Z.J9(I+I6UNB##E%9;[83=/:-?%?X:-Y=-U$?T/1-9B76H
+P^PQ(@% BI\*, I 8&,>BUD J;"$,)!;8=7;G[4P*[2F'+TS%\M'0Y2I,@9U5.B(&
+P0&U]B8PWSK.P]78!WO0>)ES&#J_?EFD-(6MSW$V5QIBM$1<55?;6UD. )8>*&#=&
+PX3_(;#H%)X"D]9\]Q,9!33$;/X\)>7@*!WN/=;2INH!PG87[B[[5[^!]!AWB\)9J
+P7&E6I,C3+*;-UPTU6?*S DA6IX]&B-+=YY='@. O$GM+.+\'D&BWN1?<90&EGV5U
+PBE/DWFVI!5A'8?I0(VF-[2NZZVQW'%;H=E0L:?5"M56(R-7)<VG;NX']K5&D?9'@
+P_,#C&3M#?Q'1H>DH):X 9TW^(N)!!^(";^HYY@]5VZ>B-$4DPZ3/0-B3S$=@%XBE
+PNTR"E7#)<L,]?G:S5E B2\G!8<J@*UP+K+"3V.#.>$TCK8B?"W2R>LR--&X@])KM
+P##J13T9NE"_J?W(!FB28#-& E-"#:C><W)#V(V/%44,"R#N_Q7C#*:(K\E^I*G9=
+P/2.??7CMUSU9%>6'1Q$C(]NY22EPFW@M0G4M1%7]\_#E;HN1^&A<(Z:OU7"R1HA^
+P)J4XZ#J/I;ABX_*-W[FMP?;FJI.#$_8'@NN'G$#4JW+\;/$2STO[UF'<RDXK::5A
+PJ0YFRQVCF/3D6>JX'"FW@_3"P7I)X>EGU>;SRTF["P3!\<4^\1T(R:0B,"A1/K[P
+P:4#X-D-/GBX^&-<-+GK&BL\>%[D-Q2UH8/#J)V4<7$J'NR8&&>T02(DT!M3"<O6_
+P:7ZF9)0"?GOU='BD;+"3WN*\]LPKKL]]>G[Q$"/\1S?!=QQG].=35MD6/6NLJRWR
+PF7HN)/\#>/U43B,'!0<?$[T\%G^:K@.6W]U>YIOF\5M<XCU$6E KCGI%18A<6+4>
+PX.ML.AP3"2(*)>YWG6#>,4$6!* "DB%,]CZD7#MA7UJ&+&V[MD@"4RN&V%Z[#>& 
+PN7[<N)M9A0PYQF.O]K),82I^)Y;G E21,U&6 QZ7N-[CCWDWN$O(!U"%%[RR<C;5
+P('TCZ>PHDIL4G?-FPEBH:UA*W3L<_Y#I&;(=]E!;M 1\+.P6O7^:$LX+FI:SE;A[
+P+/W#LAYH:?L  =\&S4(>L<R+1@F+M7%M30:@.9)#I"T'Q3?!$55Q M.3^?ZT$IQ#
+PMQC,_2. ^!F6)WVJU(ZBGKQQ.0"5A9Z,^31RK![M$86:D[%!2[._VMBE&?3'"QU:
+P8IW_4L9>IG.('N6+^+/M1A 91G;(E@*)9Z*JH&&$Q4CW<&%[)M2#%U!"6<@+^Q27
+P6? D["2P:;V"65.VI.P)51>/15<+6TWX.7$$+GI!+((,+^1W[H;0C2CP15_R?.+K
+PF>)0ZZY76H86 B\MBR9<\EB71KY5^-UFUM*0^XE"('. G9%7>:%+;9)L&G;AD-9<
+P"X69NN"_GJ.JA"08*5(#T[_;$T"LTG-2HM,.+3.OP05X &J(T\22T;[&QX"+\PN%
+PWD18?+WXHRX.M0X^F",TQ[$>#\C_&T\&'M#(Z\$[M7K]@-<V!_02%HR!2_&TU9/+
+P:W&>H?Y^]?W ,:#*'[Z^)\9HIOPQ"LX%A55L?YWC?G+2A+K?8AF&$:(UFM!E*D-S
+PO7MA&6.;(B&$^8.[I-*X=!5,>2*#8II(*5HMK(YL$TW3T.Q_4P6LJH&6;/=*ZU=*
+PRD$':RK_Q05(8*J5A!T*2[@C,TEQ.CHFY'PE)O@CB.(C+37M$Z\32P\O-*+36H+Q
+P7_]WN"^/&3T"$,_1VMBZ=XR,WVU[#LOD@..(^FRAV]E.$;]2? *7QC\[/@UT;AMA
+PJ>-7/ F3%NS-:8P2+_X>=$0W1YTG@6T#3)040]!H8/7<_?8,KW MYFECSB2M^BA4
+P!9\4<*[<S#(N+'OZV6^,,W=<#O=YS6$NL7/CU\1CDU%-V=&5'(RXIZYX!$S?RNC#
+PX-T>^'=HR?PL7O6!9OMW]&3)==IYFP-&<<C&5O?<_'] 4=6\.\*!:IM?P43>"%1"
+PP?XJ< TQ=4*^$YS6U$:V.:LCU<R^.VW&@DXP<5E%4UG%,$A!R,QF0ADR9EOS)!XY
+`endprotected128
+endmodule // DWC_ssi_sclkgen
+
