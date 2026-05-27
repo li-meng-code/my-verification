@@ -1,0 +1,161 @@
+//=======================================================================
+// COPYRIGHT (C) 2007-2017 SYNOPSYS INC.
+// This software and the associated documentation are confidential and
+// proprietary to Synopsys, Inc. Your use or disclosure of this software
+// is subject to the terms and conditions of a written license agreement
+// between you, or your company, and Synopsys, Inc. In the event of
+// publications, the following notice is applicable:
+//
+// ALL RIGHTS RESERVED
+//
+// The entire notice above must be reproduced on all authorized copies.
+//
+//-----------------------------------------------------------------------
+
+`ifndef GUARD_SVT_SOURCE_INTERNAL_SVI
+`define GUARD_SVT_SOURCE_INTERNAL_SVI
+
+
+//svt_vcs_lic_vip_protect
+//pragma protect begin_protected
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=CDS_KEY
+//pragma protect key_method=RC5
+//pragma protect key_block
+I+XNr5i/yu3//5lDCNMXIpZIpMEHSYaD1IvTEfVEytR+IPuXS+bjrDgPO1ymi+Xr
+InENHqfnQqXx/BwGhJO5kTz8RMnH0Ed46GF20EXl0Ytix6aIFUq47m1BE3wWaTDE
+QyDe5nYDR3yK4ssr0XE7u+WzzXQDlEd5/uOGCYBpSwLKB6NKKSuG+g==
+//pragma protect end_key_block
+//pragma protect digest_block
+3SEVaJqkW9K/BW6TiTUFTr1Ue+w=
+//pragma protect end_digest_block
+//pragma protect data_block
+6VvMlXt8hMSYKZYTeunGwl/gUH3dQ+kotH/ITqLbkJ0rzuAXB/VDA0tjUTKxa6Ag
+j7hwcBl9+ldYvg8OEcGbQHSS5RERh33+aJ4jo/PxoMzI5ILZZ2sBKY4n8WQ5Jq3t
+nWJJBA8tfKsjaK3N0NFczrdOop9BQ+3UXFM7dmY7ttlHdMhFlUm8bZwM53V8pkfe
+m7ropnFwfPIgvoiGaWwiogrmu0DKYxGdKR+DByW0j5VwgRuNbcTn+CiZABypYVIV
+h1bmxBJ4+EupcBBIwbTv1kNfns13hu7nkbnrGigeLtUSLa7w5ab1QG0AJa0Vm+dT
++7bg/Tm+h3FkVOLUwToTZ30Z6LNK7F6l2E9r7SUkyVL3F5xi3iCaE/V9wYbHWbog
+CkpCymSsOEUIjq2sowmb/Rc+NPF8LNLPqFYLohc6GEFwittO/wmZ3Ig1pPEqttON
+jjaEkB+FjPRj5eLzjiMiuR9COFJvYaHvzFC8mq9LA4x1X2cQhj9x+jlz1DksT0gA
+HhJGn3av2cbqJshX+55xFqjfjb08pMYZqk0QbKOP4w3oc2crGTD2m3TH9NE97gO5
+s2t3LHzeRpHxB/8xVqBqMmcvp7FsZkpZ2kBg9mPKq9Z6hg6waRujFt+3krA1hu9C
+afyUxB4dNFfn+HxS7tVSG1GnokeU9NDIVgLfcDn5mEdncBnfzObbgotwItSNL2nl
+mLGqgoZwC61427jUsgf+RZVXjD43t99vXZTsVCnOwjkd4fCMCN5ob6NKVo6RuETT
+DuXh+OPjx0G5e7zPECjrkyAeL3i5xA9aJNb8yFq5wu8xb/rZ/AAwFeDSi5Zz6+O9
+d6Ezpm0U3XGpj59hCU6a+QtjfFrd4a7tM5b3oKbWtrKcRuRTFpFlh7fd20jzmUgQ
+5FXkvcyOddEkZV9XKnctiCgDgXdW5fvTwkt6ai//aXxqLyg2ZdiLszJAobdMutFi
+IXSE/yJHp3PoVxsGj6XC32jHLqvH65dUlPGX50y2U86c41S19q/4SbJ5Xp4G1Fta
+fpzYVB7P02RS6CVhRWQ3QpgXjE+dEqvwPIliPmQU/WnheA8Qh2+PbUvIjfCMDSdu
+
+//pragma protect end_data_block
+//pragma protect digest_block
+oiBID264ZcM6d7R6tfdWJCGDyno=
+//pragma protect end_digest_block
+//pragma protect end_protected
+
+// Certain things need to be treated differently if we are using UVM 1.2 or higher, so make it easy to key off this.
+`ifdef UVM_MAJOR_REV_1
+`ifdef UVM_MINOR_REV_0
+`define SVT_PRE_UVM_12
+`elsif UVM_MINOR_REV_1
+`define SVT_PRE_UVM_12
+`endif
+`endif
+
+`ifdef SVT_UVM_TECHNOLOGY
+`ifndef SVT_PRE_UVM_12
+`define SVT_UVM_12_OR_HIGHER
+`endif
+`endif
+
+// The UVM_RESOURCE_DEFINES_SVH macro was added for the 1800.2-2017 release
+`ifdef SVT_UVM_TECHNOLOGY
+`ifdef UVM_RESOURCE_DEFINES_SVH
+`define SVT_UVM_1800_2_2017_OR_HIGHER
+`endif
+`endif
+
+//svt_vcs_lic_vip_protect
+//pragma protect begin_protected
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=CDS_KEY
+//pragma protect key_method=RC5
+//pragma protect key_block
+Kls7PD2nv5VhfTmOuCj3T8ZKjzYW2+ulyBUVJR0lUW2C/Mrh6DjvyrJXskqZf/uh
++P64SfHmXfG2JeR2WI7QYYT6yLgYt6setELIwG9JPGRACHcFOZmqz3NQPo4eUESJ
+Slk1VUMJPGB+P5z7obdR10YbhlxPjF/9UP5+tlgIv681CAW+WKlADQ==
+//pragma protect end_key_block
+//pragma protect digest_block
+F0ZkyxFo1+aPAoWdMPkgWAdwVao=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+ZgkmG1s+Y05IeIV08HFaRg==
+//pragma protect end_data_block
+//pragma protect digest_block
+BhdZzqFKApV+jFVmNs7cBYUXuxw=
+//pragma protect end_digest_block
+//pragma protect end_protected
+
+//Added to fix DVT error reported from svt_Agent. Macro definition at #140 is
+//not visible in case of DVT. 
+`ifndef SVT_UVM_FGP_LOCK
+`define SVT_UVM_FGP_LOCK
+`endif
+
+`endif //GUARD_SVT_SOURCE_INTERNAL_SVI

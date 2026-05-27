@@ -1,0 +1,3 @@
+Command Line: /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/platform/LINUXAMD64/bin/Novas -i -simflow -simBin /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/./output/simvcssvlog -simDelim +UVM_TESTNAME=base_test +UVM_MAX_QUIT_COUNT=10,1 -l ./logs/simulate__base_test.log +fsdb+sva_success +UVM_VERDI_TRACE=UVM_AWARE+RAL+HIER+COMPWAVE +UVM_TR_RECORD +UVM_LOG_RECORD
+uname(Linux centos 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64)
+au time 42799.423006 849.267236 386.818309 delta 553631744 553631744 total 1107230720 1107230720

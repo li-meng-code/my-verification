@@ -1,0 +1,97 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_T-2022.06-SP2-10
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[OneSearch]
+isExisted = TRUE
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = TRUE
+TBHierShow = 1
+TBHierSelectedNode = uvm_test_top
+TBHierHasData = 1
+powerDumped = 0
+[UvmSeq]
+SeqQFShow = 1
+QF1_val0 = 
+QF1_ckb0 = FALSE
+QF1_val1 = 
+QF1_ckb1 = FALSE
+QF1_val2 = 
+QF1_ckb2 = FALSE
+QF1_val3 = 
+QF1_ckb3 = FALSE
+QF1_val4 = 
+QF1_ckb4 = FALSE
+QF1_val5 = 
+QF1_ckb5 = FALSE
+QF1_val6 = 
+QF1_ckb6 = FALSE
+QF1_val7 = 
+QF1_ckb7 = FALSE
+QF1_val8 = 
+QF1_ckb8 = FALSE
+QF1_val9 = 
+QF1_ckb9 = FALSE
+[UvmWin]
+SeqShow = TRUE
+[fusa]
+fdb_server = 
+fdb_proj = 
+fdb_campaign = 
+fdb_tool = 
+[hb]
+postSimFile = /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb
+syncTime = 6.13397
+viewport = 0 27 1536 834 0 0 479 1916
+activeNode = "test_top"
+activeScope = "test_top"
+activeFile = "/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/top.sv"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 110
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+safetyAwareAnnot = True
+amsAnnot = True
+DnDtraceCrossHierOnly = True
+leadingZero = False
+signalPane = False
+SourceVerticalScrollLines = 5
+Scope1 = "test_top"
+Scope2 = "uvm_pkg"
+Scope3 = "svt_pkg_precursor"
+multipleSelection = 1 40 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-simflow" "-dbdir" "/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/./output/simvcssvlog.daidir" 
+invokeDir = /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys
+[hb.sourceTab.1]
+scope = test_top
+File = /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/top.sv
+Line = 111
+[nMemoryManager]
+WaveformFile = /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb
+UserActionNum = 0
+nMemWindowNum = 0

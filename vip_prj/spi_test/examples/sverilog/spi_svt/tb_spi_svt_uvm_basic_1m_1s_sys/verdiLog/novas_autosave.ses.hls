@@ -1,0 +1,2 @@
+	test_top.spi_master_if.mosi[0]	ID_PURPLE5
+	test_top.spi_master_if.sclk	ID_YELLOW6

@@ -1,0 +1,864 @@
+Command: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog +UVM_TESTNAME=base_test +UVM_MAX_QUIT_COUNT=10,1 +fsdb+sva_success +UVM_VERDI_TRACE=UVM_AWARE+RAL+HIER+COMPWAVE +UVM_TR_RECORD +UVM_LOG_RECORD +fsdb+gate=off -ucli2Proc -ucli -l /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/verdiLog/sim.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2-10_Full64; Runtime version T-2022.06-SP2-10_Full64;  May 26 22:18 2026
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+  ***********       IMPORTANT RELEASE NOTES         ************
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+ucli% synUtils::getArch
+linux64
+ucli% loaddl -simv /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUXAMD64/libnovas.so LoadFSDBDumpCmd;LoadFSDBDumpCmd
+LoadFSDBDumpCmd success
+ucli% config ckptfsdbcheck off;config endofsim noexit;config onfail {enable all};config followactivescope on;catch {setUcliVerdiConnected};set watch::resultTagsForVerdiBP {<ucli_break_bp_status_begin> <ucli_break_bp_status_end>};set ucliCore::support_restore_through_stask_in_verdi 1;cbug::config pretty_print auto;fsdbDumpfile {/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb} ;fsdbDumpflush ; 
+*Verdi* Loading libsscore_vcs202206.so
+FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-10, Linux x86_64/64bit, 02/29/2024
+(C) 1996 - 2024 by Synopsys, Inc.
+*Verdi* : Create FSDB file '/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb'
+*Verdi* : Flush all FSDB Files at 0 ps.
+
+ucli% synEnv::hasFataled
+0
+ucli% ucliCore::getToolPID
+61124
+ucli% sps_interactive
+*Verdi* : Enable RPC Server(61124)
+
+ucli% ucliCore::getToolPID
+61124
+ucli% ucliCore::getToolPID
+61124
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% puts $ucliCore::nativeUcliMode
+0
+
+ucli% ucliCore::getToolTopPID
+61124
+ucli% pid
+61137
+ucli% synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.user04.61124 }
+
+ucli% if { [info vars watch::vcbp_str_len_limit_of_get_value] != ""} {set watch::vcbp_str_len_limit_of_get_value 1024}
+1024
+ucli% info command stateVerdiChangeCB
+
+ucli% proc stateVerdiChangeCB args { if {$ucliGUI::state eq "terminated"} {puts "\n<VERDI_Terminated>\n";catch {setVerdiSimTerminated}}}
+
+ucli% trace variable ucliGUI::state wu stateVerdiChangeCB
+
+ucli% if {[catch {rename synopsys::restore verdiHack::restore} ]} {puts "0"}
+
+ucli% proc synopsys::restore {args} { verdiHack::restore $args; puts "\n<VERDI_RESTORE>\n"}
+
+ucli% if {[catch {rename quit verdiHack::quit} ]} {puts "0"}
+
+ucli% proc quit {args} { if {[string length $args] == 0} { verdiHack::quit; } elseif {([string equal "-h" $args] == 1)||([string equal "-he" $args] == 1)||([string equal "-hel" $args] == 1)||([string equal "-help" $args] == 1)} { puts "\n quit           # Exit the simulation.\n \[-noprompt\]        (Exit the simulation and Verdi.)\n"} elseif {([string equal "-n" $args] == 1)||([string equal "-no" $args] == 1)||([string equal "-nop" $args] == 1)||([string equal "-nopr" $args] == 1)||([string equal "-nopro" $args] == 1)||([string equal "-noprom" $args] == 1)||([string equal "-nopromp" $args] == 1)||([string equal "-noprompt" $args] == 1)} { puts "\nVERDI_EXIT_N\n" } else { verdiHack::quit $args; } }
+
+ucli% if {[catch {rename exit verdiHack::exit} ]} {puts "0"}
+
+ucli% proc exit {args} { if {[string length $args] == 0} { verdiHack::exit; } elseif {([string equal "-h" $args] == 1)||([string equal "-he" $args] == 1)||([string equal "-hel" $args] == 1)||([string equal "-help" $args] == 1)} { puts "\n exit           # Exit the simulation.\n \[-noprompt\]        (Exit the simulation and Verdi.)\n"} elseif {([string equal "-n" $args] == 1)||([string equal "-no" $args] == 1)||([string equal "-nop" $args] == 1)||([string equal "-nopr" $args] == 1)||([string equal "-nopro" $args] == 1)||([string equal "-noprom" $args] == 1)||([string equal "-nopromp" $args] == 1)||([string equal "-noprompt" $args] == 1)} { puts "\nVERDI_EXIT_N\n" } else { verdiHack::exit $args; } }
+
+ucli% proc checkpoint::beforeRecreate {} { sps_interactive }
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% save::getUserdefinedProcs
+::stateVerdiChangeCB ::LoadFSDBDumpCmd
+ucli% info procs
+ipi_get_str fsdbDumpMDAByFile fsdbDumpMDA echo fsdbDumpMemNow fsdbAutoSwitchDumpfile unknown sps_interactive auto_import stat fsdbDumpfile setenv auto_execok pkg_mkIndex stateVerdiChangeCB fsdbDumpSingle proc_body ipi_begin fsdbDumpoff getenv fsdbDumplimit fsdbDumpPattern ipi_handle ipi_get_prop fsdbDumpvarsByFile fsdbDumpMDAInScope lminus ipi_sim_get ls auto_load_index proc_args fsdbAddRuntimeSignal fsdbDumpSC print_message_info ridbDump fsdbDumpSVAoff fsdbSuppress fsdbDumpvars help fsdbDumpMDAOnChange ipi_control auto_qualify fsdbDumpMem tclPkgUnknown printenv ipi_handle_by_name helpdoc fsdbDumpMemInScope fsdbDumpFinish is_true fsdbDumpon sh fsdbQueryInfo LoadFSDBDumpCmd fsdbDumpPSL fsdbDumpSVA ipi_end wrapperSpecmanSn fsdbDumpSVAon fsdbDumpClassObjectByFile is_false auto_load fsdbDumpPSLon ipi_get_int64 fsdbSubstituteHier ipi_get_value ipi_iterate exit fsdbDumpMemInFile tclLog fsdbDumpflush get_unix_variable mem_debug ipi_scan fsdbDumpPSLoff fsdbDumpClassObject fsdbDumpvarsToFile set_unix_variable bgerror fsdbDumpStrength add_group fsdbSwitchDumpfile source add_wave ipi_set_prop unsetenv fsdbDumpvarsES readline fsdbDisplay ipi_handle_free set_group ipi_get quit define_proc_attributes tclPkgSetup fsdbDumpMDANow ipi_init_play_tcl fsdbDumpIO
+ucli% info commands
+ipi_get_str cchange subst fsdbDumpMDAByFile pwd cshow guiSource fsdbDumpMDA echo fsdbDumpMemNow fsdbAutoSwitchDumpfile ucliConnectToSharedMem unknown ucliIsScriptPauseByVerdi lrange sps_interactive auto_import setVerdiSimTerminated coverage case stat fsdbDumpfile break setenv dump auto_execok msglog linsert pkg_mkIndex dumplist catch stateVerdiChangeCB mpformat fsdbDumpSingle if join detach_sim halt proc_body abortScriptAfterDetachVerdi report_violations which lp_show ipi_begin pause dve_help fsdbDumpoff format getenv listing fsdbDumplimit package binary trace ctimeout onbreak after flush fsdbDumpPattern step restore ipi_handle power continue get_command_option_values force try foreach ipi_get_prop fsdbDumpvarsByFile lrepeat tailcall unset fsdbDumpMDAInScope lminus ipi_sim_get interp write_app_var lindex stack yield ls resetInterruptCount runAfterDetachVerdi eof saif list printvar create_command_group keysFileChangeCB virtual auto_load_index checkpoint proc_args finish fsdbAddRuntimeSignal cgettimeout sexpr lsearch fblocked fsdbDumpSC fanin lappend print_message_info proc cextract ridbDump writelist get_defined_commands cdump fsdbDumpSVAoff fsdbSuppress man set_sig_vas_in_waiting_input fconfigure fsdbDumpvars help fsdbDumpMDAOnChange ipi_control switch auto_qualify fsdbDumpMem mpexpr status tclPkgUnknown close printenv ipi_handle_by_name helpdoc thread lreverse set read fsdbDumpMemInScope initAttachableFile unalias fsdbDumpFinish setVerdiAttachable seek while set_cle_options is_true set_message_info writeKeyLog cbug fsdbDumpon find_forces yieldto sh start_verdi load fsdbQueryInfo memory sn vcsExecFuncInSharedObject cenable history puts gdb loadSharedObject tblog assertion resume _synopsys_cci_unalias socket tell open get_message_ids cadd exec pid stop LoadFSDBDumpCmd unloadSharedObject redirect fsdbDumpPSL throw fsdbDumpSVA ipi_end return ace wrapperSpecmanSn error fsdbDumpSVAon split fsdbDumpClassObjectByFile is_false array ucliAttachedByVerdi vbus get lreplace concat coroutine fcopy update parse_proc_arguments report_app_var run search setUcliVerdiStatus for append auto_load fsdbDumpPSLon ucliLaunchVerdi alias logFileChangeCB scan setUcliVerdiConnected apply abort set_current_command_mode release zlib chan loads _spw_define_proc_attributes ipi_get_int64 onerror print_suppressed_messages scope fileevent fsdbSubstituteHier inputFileChangeCB regexp resultTagsForVerdiCB set_app_var ipi_get_value cdelete upvar ipi_iterate save encoding onfail exit fsdbDumpMemInFile incr tclLog fsdbDumpflush get_message_info get_unix_variable show senv glob mem_debug ipi_scan GUIsource config fsdbDumpPSLoff time eval lassign fsdbDumpClassObject gets fsdbDumpvarsToFile tcl_exit set_unix_variable restart start change llength variable constraints xprop bgerror fsdbDumpStrength call clock info apropos add_group fsdbSwitchDumpfile ucliDetachVerdi source GUI_tcl_shell_puts global tcheck initreg add_wave report_timing ipi_set_prop next drivers cd file lmap unload namespace loaddl unsetenv get_app_var fsdbDumpvarsES suppress_message vwait dict readline fsdbDisplay uplevel ipi_handle_free date set_group lset rename ipi_get quit sh_list_key_bindings do unsuppress_message define_proc_attributes error_info tclPkgSetup expr printPromptStr regsub onCheckpointCB csave fsdbDumpMDANow dtl_load ipi_init_play_tcl lsort fsdbDumpIO doFileChangeCB _synopsys_cci_alias writeHistoryLog cdisable string
+ucli% set ucliCore::resultTagsForVerdi [list <?special_verdi_begin?> <?special_verdi_end?>]
+<?special_verdi_begin?> <?special_verdi_end?>
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% if {[catch {get uvm_pkg.UVM_VERSION_STRING} result] == 0} {puts $result}
+
+ucli% senv hasTB
+1
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% fsdbDumpflush 
+*Verdi* : Flush all FSDB Files at 0 ps.
+
+ucli% senv
+activeDomain: Verilog
+activeFile: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/uvm_pkg.sv
+activeFrame: -1
+activeLine: 27
+activeScope: uvm_pkg
+activeThread: 0
+endCol: 0
+file: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/uvm_pkg.sv
+frame: -1
+fsdbFilename: 
+hasTB: 1
+inputFilename: 
+keyFilename: ucli.key
+line: 27
+logFilename: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/verdiLog/sim.log
+macroIndex: -1
+macroOffset: -1
+pid: 61124
+scope: uvm_pkg
+startCol: 0
+state: stopped
+thread: 0
+time: 0
+timePrecision: 1 ps
+vcdFilename: 
+vpdFilename:
+ucli% puts $::ucliCore::cbug_active
+0
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% checkpoint -list -all
+There are no checkpoints present.
+ucli% stop
+No stop points are set
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% run
+*Verdi* Enable Verdi Message Catcher.
+*Verdi* : Begin dumping the Class Object by file (/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm-1.1/verdi/component.config).
+*Verdi* : End of class object dumping.
+UVM_INFO /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv(266) @ 0: reporter [VERDI_TR_AUTO] +UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly
+*Verdi* Enable Verdi Factory Dumping.
+UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+*Verdi* WARNING: Env/runtime option has specified fsdbfile name as "/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb". Fsdbfile name in task "test_top" is ignored.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+UVM_INFO @ 0: reporter [MAXQUITSET] '+UVM_MAX_QUIT_COUNT=10,1' provided on the command line is being applied.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(189) @ 0: uvm_test_top [build_phase] Entered ...
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VCS-SV simulation.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ps 
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: SVT, VIP Version: V-2023.12
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] DESIGNWARE_HOME@compile: /home/share/uvm/synopsys2023_vip/.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ps 
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(5754) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: SPI-BASE, VIP Version: V-2023.12
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(372) @ 0: uvm_test_top [build_phse] Running with simulation cycle =          10
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(407) @ 0: uvm_test_top [build_phase] Exited ...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_basic_env.sv(81) @ 0: uvm_test_top.env [build_phase] spi_basic_env BUILD-FLOW: Starting...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_basic_env.sv(207) @ 0: uvm_test_top.env [build_phase] spi_basic_env BUILD-FLOW: Finishing...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_virtual_sequencer.sv(36) @ 0: uvm_test_top.env.sequencer [build_phase] Entered...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_virtual_sequencer.sv(48) @ 0: uvm_test_top.env.sequencer [build_phase] Exiting...
+*Verdi* Enable Verdi Recorder.
+Info: Verdi UVM-1.1d Hooks File 2022/05/26 
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_simple_reset_sequence.sv(97) @ 0: uvm_test_top.env.sequencer@@spi_simple_reset_sequence [body] Entered...
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_agent.svp(405) @ 1000: uvm_test_top.env.master_agent [display_checked_out_features] VIP Vendor: Synopsys, VIP Suite: SPI-BASE, VIP License: VIP-LIBRARY-SVT+DESIGNWARE-REGRESSION
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_common.svp(2718) @ 10000: uvm_test_top.env.slave_agent.txrx [sample_reset] Reset detected .....
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_common.svp(2718) @ 10000: uvm_test_top.env.master_agent.txrx [sample_reset] Reset detected .....
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_common.svp(2718) @ 20000: uvm_test_top.env.slave_agent.txrx [sample_reset] Reset de-asserted .....
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_common.svp(2718) @ 20000: uvm_test_top.env.master_agent.txrx [sample_reset] Reset de-asserted .....
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_simple_reset_sequence.sv(122) @ 120000: uvm_test_top.env.sequencer@@spi_simple_reset_sequence [body] Exiting...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(417) @ 120000: uvm_test_top [configure_phase] Entered ...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(454) @ 120000: uvm_test_top [top] Master Configuration : 
+-------------------------------------------------------------------------------------------------------------------
+Name                                                Type                                   Size  Value             
+-------------------------------------------------------------------------------------------------------------------
+master_cfg                                          cust_svt_spi_agent_configuration       -     @731              
+  spi_mem_cfg                                       object                                 -     <null>            
+  enable_spi_flash_catalog_coverage                 aa(int,string)                         0     -                 
+  sys_cfg                                           object                                 -     <null>            
+  inst                                              string                                 10    unset_inst        
+  no_dut                                            integral                               1     'b0               
+  no_dut_xact_limit                                 integral                               32    'd100             
+  enable_signal_callbacks                           integral                               1     'b0               
+  enable_sled                                       integral                               1     'b0               
+  enable_runtime_trace_recording                    integral                               1     'b0               
+  filter_psdisplay_short                            qda                                    0     -                 
+  spi_feature                                       svt_spi_types::spi_feature_enum        2     SPI               
+  spi_interrupt_enable                              integral                               1     'b0               
+  spi_system_enable                                 integral                               1     'b1               
+  spi_transmit_interrupt_enable                     integral                               1     'b0               
+  sppr                                              integral                               3     'h7               
+  spr                                               integral                               3     'h3               
+  disable_baud_rate_divisor                         integral                               1     'b0               
+  bit_endianness                                    svt_spi_types::endianness_enum         1     BIG_ENDIAN        
+  byte_endianness                                   svt_spi_types::endianness_enum         1     BIG_ENDIAN        
+  payload_word_size                                 svt_spi_types::payload_word_size_enum  2     SPI_16B           
+  is_master                                         integral                               1     'b1               
+  modfen                                            integral                               1     'b0               
+  ssoe                                              integral                               1     'b1               
+  slave_id                                          integral                               32    'd0               
+  master_id                                         integral                               32    'd0               
+  default_slave                                     integral                               32    'd0               
+  default_master                                    integral                               32    'd0               
+  frame_format                                      svt_spi_types::frame_format_enum       3     SPI_STD           
+  operation_mode                                    svt_spi_types::operation_mode_enum     2     SPI_MODE_3        
+  cs_polarity                                       svt_spi_types::active_mode_enum        1     ACTIVE_LOW        
+  reset_polarity                                    svt_spi_types::active_mode_enum        1     ACTIVE_HIGH       
+  dtr_mode_select                                   svt_spi_types::dtr_mode_select_enum    2     ADDRESS_DATA_PHASE
+  enable_wait_cycle_phase_in_write_mode             integral                               1     'b0               
+  enable_configurable_data_frame_width              integral                               1     'b0               
+  data_frame_width                                  integral                               32    'd8               
+  enable_mem_core                                   integral                               1     'b0               
+  pattern_during_electrical_idle                    svt_spi_types::linestate_value_enum    2     LINESTATE_Z       
+  pattern_during_data_invalid_window                svt_spi_types::linestate_value_enum    2     LINESTATE_UNKNOWN 
+  enable_data_valid_window                          integral                               1     'b0               
+  enable_gate_delay_modeling                        integral                               1     'b0               
+  enable_io_delay_modeling                          integral                               1     'b0               
+  enable_sclk_pause_feature                         integral                               1     'b0               
+  psdisplay_data_size                               integral                               32    'd10              
+  psdisplay_control_word_size                       integral                               32    'd10              
+  enable_baud_rate_check                            integral                               1     'b1               
+  slave_rdy_polarity                                svt_spi_types::active_mode_enum        1     ACTIVE_LOW        
+  is_active                                         integral                               1     'b1               
+  enable_monitor                                    integral                               1     'b1               
+  enable_txrx_chk                                   integral                               1     'b1               
+  enable_txrx_cov                                   integral                               1     'b0               
+  enable_checks_cov                                 integral                               1     'b0               
+  enable_txrx_xml_gen                               integral                               1     'b0               
+  pa_format_type                                    svt_xml_writer::format_type_enum       32    FSDB              
+  enable_exceptions                                 integral                               1     'b0               
+  enable_txrx_reporting                             integral                               32    'd0               
+  enable_txrx_tracing                               integral                               32    'd1               
+  min_spi_bus_sclk_period_ns                        real                                   64    1280.000000       
+  enable_event_based_timing_check                   integral                               1     'd0               
+  enable_spi_bus_sclk_period_check                  integral                               1     'd1               
+  disable_spi_bus_sclk_pulse_check_upon_sclk_pause  integral                               1     'd0               
+  min_spi_bus_sclk_pause_multiple_factor            integral                               32    'd4               
+  enable_slave_rdy_feature                          integral                               1     'd0               
+  rx_buffer_threshold                               integral                               32    'd10              
+  sample_async_signal_delay_during_idle_state       integral                               32    'd1               
+-------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(455) @ 120000: uvm_test_top [top] Slave Configuration : 
+-------------------------------------------------------------------------------------------------------------------
+Name                                                Type                                   Size  Value             
+-------------------------------------------------------------------------------------------------------------------
+slave_cfg                                           cust_svt_spi_agent_configuration       -     @735              
+  spi_mem_cfg                                       object                                 -     <null>            
+  enable_spi_flash_catalog_coverage                 aa(int,string)                         0     -                 
+  sys_cfg                                           object                                 -     <null>            
+  inst                                              string                                 10    unset_inst        
+  no_dut                                            integral                               1     'b0               
+  no_dut_xact_limit                                 integral                               32    'd100             
+  enable_signal_callbacks                           integral                               1     'b0               
+  enable_sled                                       integral                               1     'b0               
+  enable_runtime_trace_recording                    integral                               1     'b0               
+  filter_psdisplay_short                            qda                                    0     -                 
+  spi_feature                                       svt_spi_types::spi_feature_enum        2     SPI               
+  spi_interrupt_enable                              integral                               1     'b0               
+  spi_system_enable                                 integral                               1     'b1               
+  spi_transmit_interrupt_enable                     integral                               1     'b0               
+  sppr                                              integral                               3     'h7               
+  spr                                               integral                               3     'h3               
+  disable_baud_rate_divisor                         integral                               1     'b0               
+  bit_endianness                                    svt_spi_types::endianness_enum         1     BIG_ENDIAN        
+  byte_endianness                                   svt_spi_types::endianness_enum         1     BIG_ENDIAN        
+  payload_word_size                                 svt_spi_types::payload_word_size_enum  2     SPI_16B           
+  is_master                                         integral                               1     'b0               
+  modfen                                            integral                               1     'b0               
+  ssoe                                              integral                               1     'b1               
+  slave_id                                          integral                               32    'd0               
+  master_id                                         integral                               32    'd0               
+  default_slave                                     integral                               32    'd0               
+  default_master                                    integral                               32    'd0               
+  frame_format                                      svt_spi_types::frame_format_enum       3     SPI_STD           
+  operation_mode                                    svt_spi_types::operation_mode_enum     2     SPI_MODE_3        
+  cs_polarity                                       svt_spi_types::active_mode_enum        1     ACTIVE_LOW        
+  reset_polarity                                    svt_spi_types::active_mode_enum        1     ACTIVE_HIGH       
+  dtr_mode_select                                   svt_spi_types::dtr_mode_select_enum    2     ADDRESS_DATA_PHASE
+  enable_wait_cycle_phase_in_write_mode             integral                               1     'b0               
+  enable_configurable_data_frame_width              integral                               1     'b0               
+  data_frame_width                                  integral                               32    'd8               
+  enable_mem_core                                   integral                               1     'b0               
+  pattern_during_electrical_idle                    svt_spi_types::linestate_value_enum    2     LINESTATE_Z       
+  pattern_during_data_invalid_window                svt_spi_types::linestate_value_enum    2     LINESTATE_UNKNOWN 
+  enable_data_valid_window                          integral                               1     'b0               
+  enable_gate_delay_modeling                        integral                               1     'b0               
+  enable_io_delay_modeling                          integral                               1     'b0               
+  enable_sclk_pause_feature                         integral                               1     'b0               
+  psdisplay_data_size                               integral                               32    'd10              
+  psdisplay_control_word_size                       integral                               32    'd10              
+  enable_baud_rate_check                            integral                               1     'b1               
+  slave_rdy_polarity                                svt_spi_types::active_mode_enum        1     ACTIVE_LOW        
+  is_active                                         integral                               1     'b1               
+  enable_monitor                                    integral                               1     'b1               
+  enable_txrx_chk                                   integral                               1     'b1               
+  enable_txrx_cov                                   integral                               1     'b0               
+  enable_checks_cov                                 integral                               1     'b0               
+  enable_txrx_xml_gen                               integral                               1     'b0               
+  pa_format_type                                    svt_xml_writer::format_type_enum       32    FSDB              
+  enable_exceptions                                 integral                               1     'b0               
+  enable_txrx_reporting                             integral                               32    'd0               
+  enable_txrx_tracing                               integral                               32    'd1               
+  min_spi_bus_sclk_period_ns                        real                                   64    1280.000000       
+  enable_event_based_timing_check                   integral                               1     'd0               
+  enable_spi_bus_sclk_period_check                  integral                               1     'd1               
+  disable_spi_bus_sclk_pulse_check_upon_sclk_pause  integral                               1     'd0               
+  min_spi_bus_sclk_pause_multiple_factor            integral                               32    'd4               
+  enable_slave_rdy_feature                          integral                               1     'd0               
+  rx_buffer_threshold                               integral                               32    'd10              
+  sample_async_signal_delay_during_idle_state       integral                               32    'd1               
+-------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(456) @ 120000: uvm_test_top [configure_phase] Exited ...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(471) @ 120000: uvm_test_top [main_phase] Entered ...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(472) @ 120000: uvm_test_top [main_phase] Setting the drain time in the main_phase of the base test to 6000000
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(479) @ 120000: uvm_test_top [main_phase] Exited ...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_virtual_sequence.sv(69) @ 120000: uvm_test_top.env.sequencer@@spi_default_virtual_sequence [body] sequence_length is 5 as a result of config DB.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 120000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=0
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 120000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=0
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 120000: uvm_test_top.env.slave_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 120000: uvm_test_top.env.slave_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @3973                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    120000                                                     
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    45    uvm_test_top.env.slave_agent.transaction_seqr              
+  transmit_delay                  integral                  32    'd7                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd6                                                        
+  data[0]                         integral                  8     'h2f                                                       
+  data[1]                         integral                  8     'hcc                                                       
+  data[2]                         integral                  8     'hd9                                                       
+  data[3]                         integral                  8     'hb7                                                       
+  data[4]                         integral                  8     'hc9                                                       
+  data[5]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd5                                                        
+  timer_trailing                  integral                  32    'd2                                                        
+  timer_idling_between_transfers  integral                  32    'd3                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 120000: uvm_test_top.env.master_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 120000: uvm_test_top.env.master_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @3968                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    120000                                                     
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    46    uvm_test_top.env.master_agent.transaction_seqr             
+  transmit_delay                  integral                  32    'd3                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd2                                                        
+  data[0]                         integral                  8     'haf                                                       
+  data[1]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd7                                                        
+  timer_trailing                  integral                  32    'd4                                                        
+  timer_idling_between_transfers  integral                  32    'd1                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 135000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated Baud Rate Divisor = 128
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 4615000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated SCLK edge count = 32
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 4615000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Starts.
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 25095000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Stops.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1145) @ 27015000: uvm_test_top.env.spi_scbd [write_master_rx] Packet received at Master Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1123) @ 27015000: uvm_test_top.env.spi_scbd [write_slave_tx] Packet received at Slave Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (33760, 526) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 27015000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=0
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 27015000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1167) @ 27015000: uvm_test_top.env.spi_scbd [write_slave_rx] Packet received at Slave Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(625) @ 27015000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] slave Tx Queue size = 1 & master Rx Queue size = 1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(692) @ 27015000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] Packet Txed by slave is correctly recieved by master
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 27015000: uvm_test_top.env.slave_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 27015000: uvm_test_top.env.slave_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4032                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    27015000                                                   
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    45    uvm_test_top.env.slave_agent.transaction_seqr              
+  transmit_delay                  integral                  32    'd1                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd6                                                        
+  data[0]                         integral                  8     'he4                                                       
+  data[1]                         integral                  8     'ha7                                                       
+  data[2]                         integral                  8     'hb4                                                       
+  data[3]                         integral                  8     'he                                                        
+  data[4]                         integral                  8     'h6e                                                       
+  data[5]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd2                                                        
+  timer_trailing                  integral                  32    'd4                                                        
+  timer_idling_between_transfers  integral                  32    'd4                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1101) @ 27655000: uvm_test_top.env.spi_scbd [write_master_tx] Packet received at Master Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (33824, 527) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 27655000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=0
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 27655000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(525) @ 27655000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] master Tx Queue size  =           1 & slave Rx Queue size =           1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(593) @ 27655000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] Packet Txed by Active SPI Agent is correctly recieved by slave
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 27655000: uvm_test_top.env.master_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 27655000: uvm_test_top.env.master_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4053                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    27655000                                                   
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    46    uvm_test_top.env.master_agent.transaction_seqr             
+  transmit_delay                  integral                  32    'd2                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd2                                                        
+  data[0]                         integral                  8     'hb4                                                       
+  data[1]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd6                                                        
+  timer_trailing                  integral                  32    'd9                                                        
+  timer_idling_between_transfers  integral                  32    'd2                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 27665000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated Baud Rate Divisor = 128
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 31505000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated SCLK edge count = 32
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 31505000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Starts.
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 51985000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Stops.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1145) @ 57105000: uvm_test_top.env.spi_scbd [write_master_rx] Packet received at Master Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1123) @ 57105000: uvm_test_top.env.spi_scbd [write_slave_tx] Packet received at Slave Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (34272, 534) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 57105000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 57105000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=2
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1167) @ 57105000: uvm_test_top.env.spi_scbd [write_slave_rx] Packet received at Slave Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(625) @ 57105000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] slave Tx Queue size = 1 & master Rx Queue size = 1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(692) @ 57105000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] Packet Txed by slave is correctly recieved by master
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 57105000: uvm_test_top.env.slave_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 57105000: uvm_test_top.env.slave_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4088                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    57105000                                                   
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    45    uvm_test_top.env.slave_agent.transaction_seqr              
+  transmit_delay                  integral                  32    'd8                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd6                                                        
+  data[0]                         integral                  8     'h17                                                       
+  data[1]                         integral                  8     'h8d                                                       
+  data[2]                         integral                  8     'h6                                                        
+  data[3]                         integral                  8     'h10                                                       
+  data[4]                         integral                  8     'h66                                                       
+  data[5]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd7                                                        
+  timer_trailing                  integral                  32    'd4                                                        
+  timer_idling_between_transfers  integral                  32    'd5                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1101) @ 58385000: uvm_test_top.env.spi_scbd [write_master_tx] Packet received at Master Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (34528, 538) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 58385000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 58385000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=2
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(525) @ 58385000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] master Tx Queue size  =           1 & slave Rx Queue size =           1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(593) @ 58385000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] Packet Txed by Active SPI Agent is correctly recieved by slave
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 58385000: uvm_test_top.env.master_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 58385000: uvm_test_top.env.master_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4108                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    58385000                                                   
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    46    uvm_test_top.env.master_agent.transaction_seqr             
+  transmit_delay                  integral                  32    'd3                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd2                                                        
+  data[0]                         integral                  8     'hbb                                                       
+  data[1]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd3                                                        
+  timer_trailing                  integral                  32    'd1                                                        
+  timer_idling_between_transfers  integral                  32    'd1                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 58400000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated Baud Rate Divisor = 128
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 60320000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated SCLK edge count = 32
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 60320000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Starts.
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 80800000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Stops.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1145) @ 80800000: uvm_test_top.env.spi_scbd [write_master_rx] Packet received at Master Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1123) @ 80800000: uvm_test_top.env.spi_scbd [write_slave_tx] Packet received at Slave Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (34912, 544) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 80800000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=2
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 80800000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=3
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1167) @ 80800000: uvm_test_top.env.spi_scbd [write_slave_rx] Packet received at Slave Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(625) @ 80800000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] slave Tx Queue size = 1 & master Rx Queue size = 1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(692) @ 80800000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] Packet Txed by slave is correctly recieved by master
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 80800000: uvm_test_top.env.slave_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 80800000: uvm_test_top.env.slave_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4143                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    80800000                                                   
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    45    uvm_test_top.env.slave_agent.transaction_seqr              
+  transmit_delay                  integral                  32    'd2                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd6                                                        
+  data[0]                         integral                  8     'hfe                                                       
+  data[1]                         integral                  8     'h2b                                                       
+  data[2]                         integral                  8     'haa                                                       
+  data[3]                         integral                  8     'hbc                                                       
+  data[4]                         integral                  8     'h52                                                       
+  data[5]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd5                                                        
+  timer_trailing                  integral                  32    'd5                                                        
+  timer_idling_between_transfers  integral                  32    'd5                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1101) @ 81440000: uvm_test_top.env.spi_scbd [write_master_tx] Packet received at Master Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (35168, 548) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 81440000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=2
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 81440000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=3
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(525) @ 81440000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] master Tx Queue size  =           1 & slave Rx Queue size =           1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(593) @ 81440000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] Packet Txed by Active SPI Agent is correctly recieved by slave
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 81440000: uvm_test_top.env.master_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 81440000: uvm_test_top.env.master_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4163                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    81440000                                                   
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    46    uvm_test_top.env.master_agent.transaction_seqr             
+  transmit_delay                  integral                  32    'd2                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd2                                                        
+  data[0]                         integral                  8     'h8c                                                       
+  data[1]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd4                                                        
+  timer_trailing                  integral                  32    'd4                                                        
+  timer_idling_between_transfers  integral                  32    'd4                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 81450000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated Baud Rate Divisor = 128
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 84010000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated SCLK edge count = 32
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 84010000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Starts.
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 104490000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Stops.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1145) @ 106410000: uvm_test_top.env.spi_scbd [write_master_rx] Packet received at Master Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1123) @ 106410000: uvm_test_top.env.spi_scbd [write_slave_tx] Packet received at Slave Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (35552, 554) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 106410000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=3
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 106410000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=4
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1167) @ 106410000: uvm_test_top.env.spi_scbd [write_slave_rx] Packet received at Slave Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(625) @ 106410000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] slave Tx Queue size = 1 & master Rx Queue size = 1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(692) @ 106410000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] Packet Txed by slave is correctly recieved by master
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 106410000: uvm_test_top.env.slave_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 106410000: uvm_test_top.env.slave_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4198                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    106410000                                                  
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    45    uvm_test_top.env.slave_agent.transaction_seqr              
+  transmit_delay                  integral                  32    'd9                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd6                                                        
+  data[0]                         integral                  8     'h9b                                                       
+  data[1]                         integral                  8     'h8                                                        
+  data[2]                         integral                  8     'h43                                                       
+  data[3]                         integral                  8     'he7                                                       
+  data[4]                         integral                  8     'h93                                                       
+  data[5]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd9                                                        
+  timer_trailing                  integral                  32    'd8                                                        
+  timer_idling_between_transfers  integral                  32    'd5                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1101) @ 108970000: uvm_test_top.env.spi_scbd [write_master_tx] Packet received at Master Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (35808, 558) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 108970000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=3
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(76) @ 108970000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Calling `uvm_do, iteration=4
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(525) @ 108970000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] master Tx Queue size  =           1 & slave Rx Queue size =           1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(593) @ 108970000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] Packet Txed by Active SPI Agent is correctly recieved by slave
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(4893) @ 108970000: uvm_test_top.env.master_agent.txrx [adjust_data_frame_size] padding 1 bytes of data
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 108970000: uvm_test_top.env.master_agent.txrx [send_transaction] Transaction from seq_item_port 
+-----------------------------------------------------------------------------------------------------------------------------
+Name                              Type                      Size  Value                                                      
+-----------------------------------------------------------------------------------------------------------------------------
+req                               cust_svt_spi_transaction  -     @4218                                                      
+  causal_xact                     object                    -     <null>                                                     
+  implementation                  da(object)                0     -                                                          
+  original_xact                   object                    -     <null>                                                     
+  trace                           da(object)                0     -                                                          
+  exception_list                  object                    -     <null>                                                     
+  mem_upper_data_partition        da(object)                0     -                                                          
+  slave_id                        integral                  32    'h0                                                        
+  begin_time                      time                      64    108970000                                                  
+  depth                           int                       32    'd3                                                        
+  parent sequence (name)          string                    3     seq                                                        
+  parent sequence (full name)     string                    59    uvm_test_top.env.sequencer.spi_default_virtual_sequence.seq
+  sequencer                       string                    46    uvm_test_top.env.master_agent.transaction_seqr             
+  transmit_delay                  integral                  32    'd8                                                        
+  transfer_mode                   integral                  2     'h2                                                        
+  double_transfer_rate_mode       integral                  1     'd0                                                        
+  data_frame_size                 integral                  32    'd2                                                        
+  data[0]                         integral                  8     'h46                                                       
+  data[1]                         integral                  8     'h0                                                        
+  timer_leading                   integral                  32    'd2                                                        
+  timer_trailing                  integral                  32    'd3                                                        
+  timer_idling_between_transfers  integral                  32    'd3                                                        
+  slave_id                        integral                  32    'd0                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 109010000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated Baud Rate Divisor = 128
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_active_common.svp(1437) @ 110290000: uvm_test_top.env.master_agent.txrx [send_spi_transaction] Calculated SCLK edge count = 32
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 110290000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Starts.
+UVM_INFO /home/share/uvm/synopsys2023_vip/vip/svt/spi_svt/V-2023.12/spi_txrx_svt/sverilog/src/vcs/svt_spi_txrx_baud_rate_generator.svp(7) @ 130770000: uvm_test_top.env.master_agent.txrx [generate_master_baud_rate] Clock Generation Stops.
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1145) @ 132050000: uvm_test_top.env.spi_scbd [write_master_rx] Packet received at Master Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1123) @ 132050000: uvm_test_top.env.spi_scbd [write_slave_tx] Packet received at Slave Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (36192, 564) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 132050000: uvm_test_top.env.slave_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=4
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1167) @ 132050000: uvm_test_top.env.spi_scbd [write_slave_rx] Packet received at Slave Rx
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(625) @ 132050000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] slave Tx Queue size = 1 & master Rx Queue size = 1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(692) @ 132050000: uvm_test_top.env.spi_scbd [slave_tx_master_rx_comparator] Packet Txed by slave is correctly recieved by master
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(1101) @ 133970000: uvm_test_top.env.spi_scbd [write_master_tx] Packet received at Master Tx
+*Verdi* ERROR: Attribute name (slave_id) is not unique of event (36448, 568) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_default_sequence.sv(87) @ 133970000: uvm_test_top.env.master_agent.transaction_seqr@@spi_default_virtual_sequence.seq [body] Response received for iteration=4
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(525) @ 133970000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] master Tx Queue size  =           1 & slave Rx Queue size =           1
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(593) @ 133970000: uvm_test_top.env.spi_scbd [master_tx_slave_rx_comparator] Packet Txed by Active SPI Agent is correctly recieved by slave
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(891) @ 6133970000: uvm_test_top.env.spi_scbd [report_phase]  
+                         Scoreboard : ---------------------------------------------------------------------
+                         Scoreboard : NO mismatch in SPI transaction object 
+                         Scoreboard : ---------------------------------------------------------------------
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_monitor_scoreboard.sv(926) @ 6133970000: uvm_test_top.env.spi_scbd [report_phase]  
+ --------------------------------------------------
+| Scoreboard Report                                |
+ --------------------------------------------------
+| SPI Transactions transmitted by master Tx       5  |
+| SPI Transactions received    by slave Rx        5  |
+| SPI Transactions Not Matched                    0  |
+ --------------------------------------------------
+| SPI Transactions transmitted by slave Tx        5  |
+| SPI Transactions received    by master Rx       5  |
+| SPI Transactions Not Matched                    0  |
+ --------------------------------------------------
+| SPI Transactions dropped     by master          0  |
+| SPI Transactions dropped     by slave           0  |
+ --------------------------------------------------
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(490) @ 6133970000: uvm_test_top [final_phase] Entered ...
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(501) @ 6133970000: uvm_test_top [final_phase] 
+SvtTestEpilog: Passed
+
+UVM_INFO /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env/spi_base_test.sv(502) @ 6133970000: uvm_test_top [final_phase] Exited ...
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+Quit count :     0 of    10
+** Report counts by severity
+UVM_INFO :  134
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[MAXQUITSET]     1
+[RNTST]     1
+[VERDI_TR_AUTO]     1
+[adjust_data_frame_size]    10
+[body]    23
+[build_phase]     6
+[build_phse]     1
+[configure_phase]     2
+[display_checked_out_features]     1
+[final_phase]     3
+[generate_master_baud_rate]    10
+[main_phase]     3
+[master_tx_slave_rx_comparator]    10
+[new]     4
+[report_phase]     2
+[sample_reset]     4
+[send_spi_transaction]    10
+[send_transaction]    10
+[slave_tx_master_rx_comparator]    10
+[top]     2
+[write_master_rx]     5
+[write_master_tx]     5
+[write_slave_rx]     5
+[write_slave_tx]     5
+$finish called from file "/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/base/uvm_root.svh", line 437.
+$finish at simulation time           6133970000
+Simulation complete, time is 6133970000 ps.
+
+Warning-[UCLI-ACTIVE-SCOPE-INVISIBLE] UCLI active scope invisible
+  The active scope where simulation stops in is invisible, i.e. the module of 
+  the active scope is fully encrypted, or one of its parent modules is 
+  encrypted. Moving up to its parent modules until it is visible. If its top 
+  module is still invisible, moving to next visible top module.
+
+uvm_pkg.sv, 1 : //
+
+ucli% synEnv::hasFataled
+0
+ucli% ucliCore::getToolPID
+61124
+ucli% save::getUserdefinedProcs
+::stateVerdiChangeCB ::LoadFSDBDumpCmd
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% fsdbDumpflush 
+*Verdi* : Flush all FSDB Files at 6,133,970,000 ps.
+
+ucli% senv
+activeDomain: TB
+activeFile: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/uvm_pkg.sv
+activeFrame: 0
+activeLine: 1
+activeScope: 
+activeThread: 24
+endCol: 0
+file: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/uvm_pkg.sv
+frame: 0
+fsdbFilename: 
+hasTB: 1
+inputFilename: 
+keyFilename: ucli.key
+line: 1
+logFilename: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/verdiLog/sim.log
+macroIndex: -1
+macroOffset: -1
+pid: 61124
+scope: uvm_pkg
+startCol: 0
+state: stopped
+thread: 24
+time: 6133970000
+timePrecision: 1 ps
+vcdFilename: 
+vpdFilename:
+ucli% puts $::ucliCore::cbug_active
+0
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% checkpoint -list -all
+There are no checkpoints present.
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% stop
+No stop points are set
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% finish; quit
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 6133970000 ps
+CPU Time:      5.810 seconds;       Data structure size:   2.5Mb
+Wed May 27 10:12:01 2026
+
+<VERDI_Terminated>
+

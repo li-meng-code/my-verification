@@ -1,0 +1,23 @@
+Command: vcs -l ./logs/compile.log -q -kdb -Mdir=./output/csrc +incdir+/home/user04/workspace/vip_prj/spi_test/src/sverilog/vcs \
++incdir+/home/user04/workspace/vip_prj/spi_test/include/sverilog +incdir+/home/user04/workspace/vip_prj/spi_test/src/verilog/vcs \
++incdir+/home/user04/workspace/vip_prj/spi_test/include/verilog -ntb_opts uvm -full64 \
+-sverilog -timescale=1ns/1ps +define+SVT_SPI +define+UVM_PACKER_MAX_BYTES=1500000 \
++define+SVT_SPI_DATA_WIDTH=8 +define+SVT_MEM_ENABLE_DEPTH_INDEPENDENT_VALUES +define+SVT_FSDB_ENABLE \
++define+WAVES_FSDB +define+WAVES=\"fsdb\" +plusarg_save -debug_access+all\
+-debug_region=cell+encrypt -notice -P /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/novas.tab \
+/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/pli.a +define+SVT_UVM_TECHNOLOGY \
++define+SYNOPSYS_SV +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/. \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/../../env \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/../env \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/dut \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/hdl_interconnect \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/lib \
++incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/tests \
+-o ./output/simvcssvlog -f top_files -f hdl_files
+
+
+Command:/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/./output/simvcssvlog +UVM_TESTNAME=base_test +UVM_MAX_QUIT_COUNT=10,1 -l ./logs/simulate__base_test.log +fsdb+sva_success +UVM_VERDI_TRACE="UVM_AWARE+RAL+HIER+COMPWAVE" +UVM_TR_RECORD +UVM_LOG_RECORD -gui=verdi
+
+
+

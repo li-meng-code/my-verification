@@ -1,0 +1,197 @@
+//=======================================================================
+// COPYRIGHT (C) 2011-2017 SYNOPSYS INC.
+// This software and the associated documentation are confidential and
+// proprietary to Synopsys, Inc. Your use or disclosure of this software
+// is subject to the terms and conditions of a written license agreement
+// between you, or your company, and Synopsys, Inc. In the event of
+// publications, the following notice is applicable:
+//
+// ALL RIGHTS RESERVED
+//
+// The entire notice above must be reproduced on all authorized copies.
+//
+//-----------------------------------------------------------------------
+
+`ifndef GUARD_SVT_CONSENSUS_SV
+`define GUARD_SVT_CONSENSUS_SV
+
+`ifdef SVT_VMM_TECHNOLOGY
+
+// Use vmm_consensus for the basic consensus definition
+`define SVT_CONSENSUS_BASE_TYPE vmm_consensus
+
+`else // SVT_O/UVM_TECHNOLOGY
+
+// If not using VMM technology then create equivalent consensus functionality, relying on uvm_objection
+`define SVT_CONSENSUS_BASE_TYPE svt_consensus
+
+//svt_vcs_lic_vip_protect
+//pragma protect begin_protected
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=CDS_KEY
+//pragma protect key_method=RC5
+//pragma protect key_block
+axOcR2YB00Oo/mhWQxfw6XNxIifkRPLv56ENuBC2TAMZ9WPoPg7GK7h0qd+2ffF7
+JqCAEywteb3a+BLHILQgx6HJSKC/ApNOUVqRIAaxUSLPaj2N2TNG3PWd8BT7buvt
+HKUtdNVuCgQgM8g7cQlEXWP2LdLQ/h7Vu52/xKTfcUnHcyugg8BMgg==
+//pragma protect end_key_block
+//pragma protect digest_block
+6s4cenWMhTnH7XM0HLLrUjdikeU=
+//pragma protect end_digest_block
+//pragma protect data_block
+SC0eQqmFwZBMDsY6VwC/n0U26Ladwa+w+jiBZ8FgXVNu64YeI/xrXoie5hmnyjTD
+kyD4R2G+BBqNgld27Jx69yOwQXSsY4Lcb0f7EUzDlByMRpThEu0r+UdeT7xPf8N/
+EtQ6ZUQG8R27ys1OGlNULvn0EuxjzNNWstQts2JJMkzIAKhfJo1hL62eNx4uiVAr
+b46OuLOZ7Qu2UKNS4xbPdedG8Ru00nKmoY/1Q+kcVwXcHkH8M020x/1y36c7qcGx
+5Vpr/VZCDwa3TIuNAPZERJ+cIwSGCSl0Y02GthSlX5SmtIurYx4fev9dKNKSIO0Q
+R+0nr6BtpTnjfVMDeq+lrtesVMPXFZw6QuVWSY8Vq3LOcImejEeMhDc+6NaiXrCW
+iGsvkO3mLPf1GAmdh/+Gq/wiBIujsZEfwnkUY1A5L278h+mfhOctvnCc/yZuAIrU
+e43RyqeL1uhv/MjaCYCk5A==
+//pragma protect end_data_block
+//pragma protect digest_block
+/SiEQMEGIJp154HTh/kcVvUv/70=
+//pragma protect end_digest_block
+//pragma protect end_protected
+
+/**
+ * Consensus implementation used to provide a basic consensus capability in UVM.
+ */
+class svt_consensus extends `SVT_XVM(report_object);
+
+//svt_vcs_lic_vip_protect
+//pragma protect begin_protected
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=CDS_KEY
+//pragma protect key_method=RC5
+//pragma protect key_block
+OuyS7FE6tImduz3utVnRmNC21VT1/Qel1TZZ6Fdt4yjdVyO5vcBXNDbtQ9f8bnXN
+lNXpTQO5IMhdcY7Id7xoXeblzndhiV4zPHmcsFYohOXSrvR3hypD3WyUXbJIKKxc
+svo5a1nfD7/u2oseUVgq01SW05dxyz+FcEfD5hukImvbWdEEIQYCkQ==
+//pragma protect end_key_block
+//pragma protect digest_block
+6Bw/a09+zpdsUzEjLJKlkIBLPxE=
+//pragma protect end_digest_block
+//pragma protect data_block
+VUWBDicqKzdlhYhLkdzUlRbwHboYO12YRnMxjFfWoFsQokWTXEpezpUkWYwIOJ/b
+DDW6U+brVJOkUa6Y9XBPBvB7W6WC5MU/je6rM8pifPNARUwNVFegZkVguoN0YOFw
+WKgTdPgwYa3F+FKcdMf+rdaIwHPdSxeiQcHVvxQWJwgXXlzvYDKaTpyO/cdSocj2
+bTDeGnbIb+JoLZ8f2gdH078+Lc96UG9IqMKQ3+dePfUikVPWUIpH51GY8qj6uQRN
+hDq7F1RJZvbNe/FAoq0UVNMdmQDSxXyQYEOU1TAew/lIYnS1He3hZBEi2L1Y6uNl
+RboTwDlvJPbtvbYM0N03HJ0+vfTLsnojpzUiMX+6KtMW1L0KincrlK6IdzaCDRNW
+UbOoxE8AXHD4WYWy91haexSMUj2Rh5/uSewGC8cJaucp5nfQ8d3F1BqCdd9i9cqW
+hIwuHbLVtu7bjIdd5CBxQr9adyL+ZMEzZM06A3MRwzB0vfw14sKj9fFE4OLSK3Ys
+xV61G25HCuj5CKxLH/ROKOyo4r6MbzZEkovWKwkrlAALpWcHBtMOoAxHutXVWibV
+dqqUvtTD33BcchF7+gdfUFaiEDzeIdnJKj4xJq6CkHdWVrct2kXpXiQxwmPlwWcr
+QS2WbnBm516GoSdTK17ffKYjDrbRe6OsHNS30IMbro7/j0exDKjCBs784xwzunEj
+EPZS2nvBw4IoPNECOtaVDq5tGE3HzpAOrm5QG840S0axz2n8UsPrspjjWP9oe29X
+QqI7gtTaZurC/jTdexe9vRiSBE/RjF87ZJTgYQd5Bsr6FdUKVI7zeiSmrwCuZRqS
+v9ZZCy/Ix2luGKh0xwtqL40YdWBlhq4faLbLGOtwdbxSsodNjhpZxgWpJyH4DiWK
+9bhOKz6uwlOexqau5I0pLgMkadbWVtoVSLrELwaC5n/QsDLeGLHjJ/9o5ruyG3HQ
+WK/DKWzw6sAqu/lWYDLQR2YtYGLdAwDCBvbbZD2jdihJreazScM3xpjYlB6B7m8i
+wo56HDc1BFY+EYpXFsY3dsykhgTbhMEQkgrWOHyRVtm+ty9ASlIhVFy5XVjZh2cM
+I7dXHJ+qQR9wbsxVzD4L0av1rZnouX0XmYWc+f2ofIlZ+gqzKMiW4DdSZkJTSYp5
+CKmbzBWTVDRdKhLYh9nIkZHDbeMSGzZ41KgFcHQRxlrXnKGgqroHIoQWLMSvCp69
+IOTgtRusp5qy0CNXPdxdvpEaPGD4WOSyOWTQuNpV665NrGA/knAAsd5rMXlJ6a6H
+Mcb6FEWudTEknPVPByIoanNgljikgjw0SLDicZ0t82k3bTdICQG9CFsvN2p6JzMM
+mXSJGldxGPWnbKW1gCkAfeLAti/Wk3KBLdtbmEf40612kU7BY2YtK1OsW3y4y3GK
+md5Ih1AmR5q21zv2s+77PoOjpmgVDin0wSxu6wNaMs7jdKI3vv5kaCsCe50L65ex
+J6pMBm6lfZTmeTDfRvuKJGcEr+60vEpeDTRlGScsDLX3t8oAx+qKuQlFiS54/MOm
+Y4UaF/coExzN8Vl7vZhzLJpntsm9lxNjfkPqPruIgWOaqGm3EOvwQsdZVkgj0aZg
+dHLXZrtEaKWATkBfEwsWWuYs8fYqIb1holvqCGSlgq4=
+//pragma protect end_data_block
+//pragma protect digest_block
+x9seffXaAnoIiNqLa+cHkyteQPM=
+//pragma protect end_digest_block
+//pragma protect end_protected
+
+endclass
+
+//svt_vcs_lic_vip_protect
+//pragma protect begin_protected
+//pragma protect key_keyowner=Cadence Design Systems.
+//pragma protect key_keyname=CDS_KEY
+//pragma protect key_method=RC5
+//pragma protect key_block
+1oK5JfI9jxPisjtkHphP5PB7MCHM5ZWMSGed2+cpuo3ZdOVbuRP5Ub24jOqK9THz
+sQM+uwyGv2z/Rozp98+n4ccnMkm/GBPn89MlJOwJ9O8iORcBDHBMoIRpuh537FRU
+U5/G3GUp6A/POGWjQ/6RV0N5hx4CQexhL6LzNcuzcUPmBvO4vD8oWg==
+//pragma protect end_key_block
+//pragma protect digest_block
+kN87ae8rkr96xV99F1d8ZQTlvGg=
+//pragma protect end_digest_block
+//pragma protect data_block
+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
+ltuos77Jf8oB+ONHPQ3l2w==
+//pragma protect end_data_block
+//pragma protect digest_block
+s02tHnm2w1znF3zvtHZmnTppH8M=
+//pragma protect end_digest_block
+//pragma protect end_protected
+
+`endif // SVT_UVM_TECHNOLOGY
+
+`endif // GUARD_SVT_CONSENSUS_SV

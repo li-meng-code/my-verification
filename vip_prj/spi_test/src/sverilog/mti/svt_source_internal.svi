@@ -1,0 +1,149 @@
+//=======================================================================
+// COPYRIGHT (C) 2007-2017 SYNOPSYS INC.
+// This software and the associated documentation are confidential and
+// proprietary to Synopsys, Inc. Your use or disclosure of this software
+// is subject to the terms and conditions of a written license agreement
+// between you, or your company, and Synopsys, Inc. In the event of
+// publications, the following notice is applicable:
+//
+// ALL RIGHTS RESERVED
+//
+// The entire notice above must be reproduced on all authorized copies.
+//
+//-----------------------------------------------------------------------
+
+`ifndef GUARD_SVT_SOURCE_INTERNAL_SVI
+`define GUARD_SVT_SOURCE_INTERNAL_SVI
+
+
+//svt_vcs_lic_vip_protect
+`pragma protect begin_protected
+`pragma protect encrypt_agent = "Model Technology", encrypt_agent_info = "6.5b"
+`pragma protect data_method = "aes128-cbc"
+`pragma protect key_keyowner = "Mentor Graphics Corporation" , key_keyname = "MGC-VERIF-SIM-RSA-1" , key_method = "rsa"
+`pragma protect key_block encoding = (enctype = "base64")
+Pc95bJo5fZZ60abGYLHdVSJ7kHPbeXEXOuAugT6PoJ+DtmYx7xb8Dj8RMZZcKUGw
+zqWbaDUuRpDQ7M/4GdK3PJa4q6fYS6VAkRoo23nXwJIs2ippehYnXW7NmwGMDlUZ
+cDJgKEpx9imsGlodyMW7qftsE2ArtPtBszvQdYmYNo0=
+`pragma protect data_block encoding = ( enctype = "base64", bytes = 647       )
+CbT3lxqxIgS6z/4k8g8fRi8A0M7eeghwxXjOvGAq1ecUU5lnOEfvUewnIyJtUwbn
+FALlK6mEdalrOkQTkq9AsF+I0Ur8M9PPUoJSt2fThZr6w9hMoXDa3ixH4iyaBdT4
+x9qrvZ296AgoQQtOeiPB4knuXFlST0rtTS6t3agpVLZp5zwcnlJD4aJjyGiEMDhG
+XrmUv2fmyaSKxrx15VPTYWQeRaDYZTN53QTGzYk14nsAdZpI9Zi2QR2z74rJ+Ab9
+XHCysL9/yvXYY6+35IR2Fmcllr1Fzj3SM7XFAoPdk8cW0Z8KAPjEug97Vy93X8px
+fTM02epDFmt3aV/m/wn2RtpJSM5jb4KIQjjp4qpwr255ZNryRd0MtAJc7Ee/FHHk
+e0nfxGvnmCOVY8fRjkd9b2GuqE4x5n4OlERqCU2V9J1FD55TPC/0SHvfTwYXvD66
+qC9GcViTjTfoZYrFvC6MKkxWS5p7jYIHUnNSq49b6WisFTPPTvrd+N9cDU3/HG4r
+8SihiofemOICAecp4y6HgUqeuDqdyS8A7Kqh7LRSpHfwvyX67PrflcWLLKVAJ+D8
+FPhPoqVal75nGOz3wUypP1IzuWX5zaxkCYvm4RR1tgoTrmkA9vao4VSKIppoDQ2b
+XlUSRHSsm3/CRvi120ygxpoqOYy1el63hRSllUHQrmdpaGJfuAkCG54p1jBMCRn9
+H//P9kfuhs+lfZEbRWe4fQn9LoW60r4VwOhsEJdZ5VXpDzSq/1vcKFGczPhNl6Ul
+D6Nnxv9wYJQXlj3wnOxT44QKiZ2HULM93ipvdjmEVFA1KKeVE4dLz8mH19CA9znP
+N/7OVU/yYFM2w/NRwL1Yf35x78z+dSAiE9L2595PRxs=
+`pragma protect end_protected
+
+// Certain things need to be treated differently if we are using UVM 1.2 or higher, so make it easy to key off this.
+`ifdef UVM_MAJOR_REV_1
+`ifdef UVM_MINOR_REV_0
+`define SVT_PRE_UVM_12
+`elsif UVM_MINOR_REV_1
+`define SVT_PRE_UVM_12
+`endif
+`endif
+
+`ifdef SVT_UVM_TECHNOLOGY
+`ifndef SVT_PRE_UVM_12
+`define SVT_UVM_12_OR_HIGHER
+`endif
+`endif
+
+// The UVM_RESOURCE_DEFINES_SVH macro was added for the 1800.2-2017 release
+`ifdef SVT_UVM_TECHNOLOGY
+`ifdef UVM_RESOURCE_DEFINES_SVH
+`define SVT_UVM_1800_2_2017_OR_HIGHER
+`endif
+`endif
+
+//svt_vcs_lic_vip_protect
+`pragma protect begin_protected
+`pragma protect encrypt_agent = "Model Technology", encrypt_agent_info = "6.5b"
+`pragma protect data_method = "aes128-cbc"
+`pragma protect key_keyowner = "Mentor Graphics Corporation" , key_keyname = "MGC-VERIF-SIM-RSA-1" , key_method = "rsa"
+`pragma protect key_block encoding = (enctype = "base64")
+TWG5EGDoAP8ILvkm4L+bz7aKb7KXMBj6s5TKy7m3H/VJwyiV+dO8DgYbd2MXVvCu
+1ugngU1+jRSEWGWOTt3UczqbtlHEvJoh5GB9J10i3buNVQ0odvcZPyf93ayrx4dJ
+m9EjkEerX96nDS+cz2EjNf7DmZ/ZV1cM2/0LGueMsm4=
+`pragma protect data_block encoding = ( enctype = "base64", bytes = 3130      )
+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
+`pragma protect end_protected
+
+//Added to fix DVT error reported from svt_Agent. Macro definition at #140 is
+//not visible in case of DVT. 
+`ifndef SVT_UVM_FGP_LOCK
+`define SVT_UVM_FGP_LOCK
+`endif
+
+`endif //GUARD_SVT_SOURCE_INTERNAL_SVI
+`pragma protect begin_protected
+`pragma protect encrypt_agent = "Model Technology", encrypt_agent_info = "6.5b"
+`pragma protect data_method = "aes128-cbc"
+`pragma protect key_keyowner = "Mentor Graphics Corporation" , key_keyname = "MGC-VERIF-SIM-RSA-1" , key_method = "rsa"
+`pragma protect key_block encoding = (enctype = "base64")
+Byu0Sfq6YfsMIRtps4sftZuMg9Oiy+gSNNnJahAi0XqZj79G5XfPzv+qMo3UGhI4
+3L85lF2yH1d0xXt01Ou6Jv0gRFTp7OALPfZvZRqQkZ1vcPYaS5sSQzHr+dDYFeGN
+Nxm0Fir0TYEGPg+xBnXY1fJgr8m764AZFoybAvThXaA=
+`pragma protect data_block encoding = ( enctype = "base64", bytes = 3213      )
+AcMZ1AYyM7Wf2eFSYQRvBVj9P8N+Mk3g6AmrDfUPTvJkwx7CN7wu6euUwyXXh9cj
+5/7PwISvi5BvV9sg/Lm7SxBGzW3zvKbP4nw6w9Ro5MVhheSRNu/8dnkCbwdAzCxh
+`pragma protect end_protected

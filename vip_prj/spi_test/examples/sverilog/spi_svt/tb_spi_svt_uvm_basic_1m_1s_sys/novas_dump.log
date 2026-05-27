@@ -1,0 +1,546 @@
+#######################################################################################
+# log primitive debug message of FSDB dumping                                         #
+# This is for R&D to analyze when there are issues happening when FSDB dump           #
+#######################################################################################
+ANF: vcsd_get_serial_mode_status('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_get_serial_mode_status')
+ANF: vcsd_enable_sva_success_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_enable_sva_success_callback')
+ANF: vcsd_disable_sva_success_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_disable_sva_success_callback')
+ANF: vcsd_get_power_scope_name('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_get_power_scope_name')
+ANF: vcsd_begin_no_value_var_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_begin_no_value_var_info')
+ANF: vcsd_end_no_value_var_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_end_no_value_var_info')
+ANF: vcsd_remove_xprop_merge_mode_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vcsd_remove_xprop_merge_mode_callback')
+ANF: vhpi_get_cb_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhpi_get_cb_info')
+ANF: vhpi_free_handle('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhpi_free_handle')
+ANF: vhpi_fetch_vcsd_handle('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhpi_fetch_vcsd_handle')
+ANF: vhpi_fetch_vpi_handle('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhpi_fetch_vpi_handle')
+ANF: vhpi_has_verilog_parent('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhpi_has_verilog_parent')
+ANF: vhpi_is_verilog_scope('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhpi_is_verilog_scope')
+ANF: scsd_xprop_is_enabled('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_is_enabled')
+ANF: scsd_xprop_sig_is_promoted('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_sig_is_promoted')
+ANF: scsd_xprop_int_xvalue('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_int_xvalue')
+ANF: scsd_xprop_bool_xvalue('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_bool_xvalue')
+ANF: scsd_xprop_enum_xvalue('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_enum_xvalue')
+ANF: scsd_xprop_register_merge_mode_cb('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_register_merge_mode_cb')
+ANF: scsd_xprop_delete_merge_mode_cb('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_delete_merge_mode_cb')
+ANF: scsd_xprop_get_merge_mode('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_xprop_get_merge_mode')
+ANF: scsd_thread_get_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_thread_get_info')
+ANF: scsd_thread_vc_init('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_thread_vc_init')
+ANF: scsd_master_set_delta_sync_cbk('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_master_set_delta_sync_cbk')
+ANF: scsd_fgp_get_fsdb_cores('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_fgp_get_fsdb_cores')
+ANF: scsd_fgp_get_is_cpu_affinity_disabled('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: scsd_fgp_get_is_cpu_affinity_disabled')
+ANF: vhdi_dt_get_type('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_type')
+ANF: vhdi_dt_get_key('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_key')
+ANF: vhdi_dt_get_vhdl_enum_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_vhdl_enum_info')
+ANF: vhdi_dt_get_vhdl_physical_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_vhdl_physical_info')
+ANF: vhdi_dt_get_vhdl_array_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_vhdl_array_info')
+ANF: vhdi_dt_get_vhdl_record_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_vhdl_record_info')
+ANF: vhdi_dt_get_vhdl_integer_range_info('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_dt_get_vhdl_integer_range_info')
+ANF: vhdi_def_traverse_module('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_traverse_module')
+ANF: vhdi_def_traverse_scope('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_traverse_scope')
+ANF: vhdi_def_traverse_variable('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_traverse_variable')
+ANF: vhdi_def_get_module_id_by_vhpi('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_get_module_id_by_vhpi')
+ANF: vhdi_def_get_handle_by_module_id('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_get_handle_by_module_id')
+ANF: vhdi_def_get_variable_info_by_vhpi('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_get_variable_info_by_vhpi')
+ANF: vhdi_def_free('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_def_free')
+ANF: vhdi_ist_traverse_scope('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_traverse_scope')
+ANF: vhdi_ist_traverse_variable('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_traverse_variable')
+ANF: vhdi_ist_convert_by_vhpi('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_convert_by_vhpi')
+ANF: vhdi_ist_clone('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_clone')
+ANF: vhdi_ist_free('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_free')
+ANF: vhdi_ist_hash_key('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_hash_key')
+ANF: vhdi_ist_compare('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_compare')
+ANF: vhdi_ist_get_value_addr('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_get_value_addr')
+ANF: vhdi_set_scsd_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_set_scsd_callback')
+ANF: vhdi_cbk_set_force_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_cbk_set_force_callback')
+ANF: vhdi_trigger_init_force('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_trigger_init_force')
+ANF: vhdi_ist_check_scsd_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_check_scsd_callback')
+ANF: vhdi_ist_add_scsd_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_add_scsd_callback')
+ANF: vhdi_ist_remove_scsd_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_remove_scsd_callback')
+ANF: vhdi_ist_get_scsd_user_data('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_get_scsd_user_data')
+ANF: vhdi_add_time_change_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_add_time_change_callback')
+ANF: vhdi_get_real_value_by_value_addr('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_get_real_value_by_value_addr')
+ANF: vhdi_get_64_value_by_value_addr('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_get_64_value_by_value_addr')
+ANF: vhdi_xprop_inst_is_promoted('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_xprop_inst_is_promoted')
+ANF: vdi_ist_convert_by_vhdi('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vdi_ist_convert_by_vhdi')
+ANF: vhdi_ist_get_module_id('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_ist_get_module_id')
+ANF: vhdi_refine_foreign_scope_type('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_refine_foreign_scope_type')
+ANF: vhdi_flush_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_flush_callback')
+ANF: vhdi_set_orig_name('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_set_orig_name')
+ANF: vhdi_set_dump_pt('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_set_dump_pt')
+ANF: vhdi_set_int_subtype('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_set_int_subtype')
+ANF: vhdi_get_fsdb_option('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_get_fsdb_option')
+ANF: vhdi_fgp_get_mode('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_fgp_get_mode')
+ANF: vhdi_node_register_composite_var('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_node_register_composite_var')
+ANF: vhdi_node_analysis('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_node_analysis')
+ANF: vhdi_node_id('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_node_id')
+ANF: vhdi_node_ist_check_scsd_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_node_ist_check_scsd_callback')
+ANF: vhdi_node_ist_add_scsd_callback('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_node_ist_add_scsd_callback')
+ANF: vhdi_node_ist_get_value_addr('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_node_ist_get_value_addr')
+ANF: vhdi_enc_def_traverse_module('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_def_traverse_module')
+ANF: vhdi_enc_def_traverse_scope('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_def_traverse_scope')
+ANF: vhdi_enc_def_traverse_variable('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_def_traverse_variable')
+ANF: vhdi_enc_ist_traverse_scope('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_ist_traverse_scope')
+ANF: vhdi_enc_ist_traverse_variable('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_ist_traverse_variable')
+ANF: vhdi_enc_ist_get_module_id('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_ist_get_module_id')
+ANF: vhdi_enc_def_get_handle_by_module_id('/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog: undefined symbol: vhdi_enc_def_get_handle_by_module_id')
+VCS compile option:
+ option[0]: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog
+ option[1]: +UVM_TESTNAME=base_test
+ option[2]: +UVM_MAX_QUIT_COUNT=10,1
+ option[3]: +fsdb+sva_success
+ option[4]: +UVM_VERDI_TRACE=UVM_AWARE+RAL+HIER+COMPWAVE
+ option[5]: +UVM_TR_RECORD
+ option[6]: +UVM_LOG_RECORD
+ option[7]: +fsdb+gate=off
+ option[8]: -ucli2Proc
+ option[9]: -ucli
+ option[10]: -l
+ option[11]: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/verdiLog/sim.log
+ option[12]: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/bin/vcs1
+ option[13]: -Mcc=gcc
+ option[14]: -Mcplusplus=g++
+ option[15]: -Masflags=
+ option[16]: -Mcfl= -pipe -DVCS -DUVM_DPI_DO_TYPE_CHECK -fPIC -O -I/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/include 
+ option[17]: -Mxllcflags=
+ option[18]: -Mxcflags= -pipe -DVCS -DUVM_DPI_DO_TYPE_CHECK -fPIC -I/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/include
+ option[19]: -Mldflags= -rdynamic 
+ option[20]: -Mout=./output/simvcssvlog
+ option[21]: -Mamsrun=
+ option[22]: -Mvcsaceobjs=
+ option[23]: -Mobjects= /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/lib/libvirsim.so /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/lib/liberrorinf.so /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/lib/libsnpsmalloc.so /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/lib/libvfs.so /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/pli.a 
+ option[24]: -Mexternalobj=
+ option[25]: -Msaverestoreobj=/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/lib/vcs_save_restore_new.o
+ option[26]: -Mcrt0=
+ option[27]: -Mcrtn=
+ option[28]: -Mcsrc=/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/dpi/uvm_dpi.cc /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/dpi/uvm_verdi_dpi.cpp 
+ option[29]: -Mdir=./output/csrc
+ option[30]: -Msyslibs=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/pli.a -ldl -lm 
+ option[31]: -l
+ option[32]: ./logs/compile.log
+ option[33]: +define+UVM_VERDI_VIF_RECORD
+ option[34]: +define+UVM_VCS_RECORD
+ option[35]: +incdir+/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/vcs
+ option[36]: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/uvm_pkg.sv
+ option[37]: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/vcs/uvm_custom_install_vcs_recorder.sv
+ option[38]: +incdir+/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi
+ option[39]: /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv
+ option[40]: -q
+ option[41]: -kdb
+ option[42]: -Xufe=2steps
+ option[43]: -ntb_opts
+ option[44]: uvm
+ option[45]: +incdir+/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/
+ option[46]: -full64
+ option[47]: -timescale=1ns/1ps
+ option[48]: +define+SVT_SPI
+ option[49]: +define+UVM_PACKER_MAX_BYTES=1500000
+ option[50]: +define+SVT_SPI_DATA_WIDTH=8
+ option[51]: +define+SVT_MEM_ENABLE_DEPTH_INDEPENDENT_VALUES
+ option[52]: +define+SVT_FSDB_ENABLE
+ option[53]: +define+WAVES_FSDB
+ option[54]: +define+WAVES=""fsdb""
+ option[55]: +plusarg_save
+ option[56]: -debug_access+all
+ option[57]: +vpi
+ option[58]: +vcsd1
+ option[59]: +itf+/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/linux64/lib/vcsdp_lite.tab
+ option[60]: -debug_region=cell+encrypt
+ option[61]: -Xnotice=1
+ option[62]: -P
+ option[63]: /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/novas.tab
+ option[64]: +define+SVT_UVM_TECHNOLOGY
+ option[65]: +define+SYNOPSYS_SV
+ option[66]: -o
+ option[67]: ./output/simvcssvlog
+ option[68]: -picarchive
+ option[69]: -P
+ option[70]: /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/verdi.tab
+ option[71]: -fsdb
+ option[72]: -sverilog
+ option[73]: -gen_obj
+ option[74]: +incdir+/home/user04/workspace/vip_prj/spi_test/src/sverilog/vcs
+ option[75]: +incdir+/home/user04/workspace/vip_prj/spi_test/include/sverilog
+ option[76]: +incdir+/home/user04/workspace/vip_prj/spi_test/src/verilog/vcs
+ option[77]: +incdir+/home/user04/workspace/vip_prj/spi_test/include/verilog
+ option[78]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/.
+ option[79]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/../../env
+ option[80]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/../env
+ option[81]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env
+ option[82]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/dut
+ option[83]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/hdl_interconnect
+ option[84]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/lib
+ option[85]: +incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/tests
+ option[86]: -f
+ option[87]: top_files
+ option[88]: -f
+ option[89]: hdl_files
+ option[90]: +define+UVM_DIRECTC_OPTS
+ option[91]: -load
+ option[92]: /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+ option[93]: timescale=1ns/1ps
+Chronologic Simulation VCS Release T-2022.06-SP2-10_Full64
+Linux 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64
+CPU cores: 96
+Limit information:
+======================================
+cputime		unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		11122 kbytes
+coredumpsize		0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		4096
+memorylocked		64 kbytes
+maxproc		4096
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+INNOVUS_HOME=/opt/cadence/INNOVUS201
+VNCDESKTOP=centos:10 (user04)
+XDG_SESSION_ID=64769
+SSH_AGENT_PID=98179
+DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-HVBvjkMUmS,guid=d9b5f8c8f6260e4d5ef1510e69ae5b1c
+MGC_CALIBRE_REALTIME_VIRTUOSO_SAVE_MESSENGER_CELL=1
+HOSTNAME=centos
+NOVAS_SYNC_MOTIF_DISP=
+SELINUX_ROLE_REQUESTED=
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+CDSROOT=/opt/cadence/IC618
+HOST=centos
+TERM=xterm-256color
+XDG_MENU_PREFIX=gnome-
+VTE_VERSION=5204
+SHELL=/bin/csh -f
+USE_CALIBRE_VCO=aoj
+HISTSIZE=1000
+MAKEFLAGS=
+SSH_CLIENT=10.180.220.175 58597 2022
+PERL5LIB=/home/user04/perl5/lib/perl5:
+DESIGNWARE_HOME=/home/share/uvm/synopsys2023_vip
+SPS_FONT_PATH=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/font
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/e38fb7e2_c318_4db2_88ff_f990948a81ea
+SELINUX_USE_CURRENT_RANGE=
+SPECTRE_HOME=/opt/cadence/SPECTRE211
+VCS_STACK_EXEC=true
+CDS_LOAD_ENV=CWD
+SPS_XFONT_PATH=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/XFont
+QTDIR=/usr/lib64/qt-3.3
+VCS_PATHMAP_PRELOAD_DONE=1
+QTINC=/usr/lib64/qt-3.3/include
+PERL_MB_OPT=--install_base /home/user04/perl5
+NEMU_HOME=/home/user04/workspace/our_CPU/share_work/sim_platform/nemu
+SSH_TTY=/dev/pts/7
+NVBOARD_HOME=/home/user04/workspace/our_CPU/share_work/sim_platform/nvboard
+LC_ALL=C
+CORETOOL_HOME=/opt/Synopsys_2024/coretools/W-2024.09-SP1
+MENTOR_HOME=/opt/mentor
+DVT_HOME=/opt/dvt/dvt_eclipse
+IMSETTINGS_MODULE=none
+QT_GRAPHICSSYSTEM_CHECKED=1
+GROUP=student
+USER=user04
+LD_LIBRARY_PATH=
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+GNOME_TERMINAL_SERVICE=:1.2800
+XNLSPATH=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/etc/access/nls
+W3264_NO_HOST_CHECK=1
+CDS=/opt/cadence/IC618
+MTI_VCO_MODE=64
+HOSTTYPE=x86_64-linux
+SSH_AUTH_SOCK=/run/user/1005/keyring/ssh
+SIM_TOOL=VCS
+MALLOC_ARENA_MAX=1
+MAKELEVEL=1
+SNPSLMD_LICENSE_FILE=27000@centos
+MFLAGS=
+SYN_HOME=/opt/Synopsys_2022/syn/U-2022.12-SP7-3
+GNOME_SHELL_SESSION_MODE=classic
+AM_HOME=/home/user04/workspace/our_CPU/share_work/sim_platform/abstract-machine
+STARRC_HOME=/opt/Synopsys_2022/starrc/U-2022.12-SP5-2
+PRIME_HOME=/opt/Synopsys_2022/prime/U-2022.12-SP5-1
+MAIL=/var/spool/mail/user04
+NOVAS_RC=/opt/Synopsys_2022/verdi/novas.rc
+PATH=/home/user04/toolchain/riscv-elf/bin:/home/user04/toolchain/verilator/bin:/opt/Xilinx/Vitis_HLS/2021.2/bin:/opt/Xilinx/Model_Composer/2021.2/bin:/opt/Xilinx/Vitis/2021.2/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/arm/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-linux/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-none/bin:/opt/Xilinx/Vitis/2021.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/tps/lnx64/cmake-3.3.2/bin:/opt/Xilinx/Vitis/2021.2/aietools/bin:/opt/Xilinx/Vivado/2021.2/bin:/opt/Xilinx/Vitis_HLS/2021.2/bin:/opt/Xilinx/Model_Composer/2021.2/bin:/opt/Xilinx/Vitis/2021.2/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/arm/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-linux/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-none/bin:/opt/Xilinx/Vitis/2021.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/tps/lnx64/cmake-3.3.2/bin:/opt/Xilinx/Vitis/2021.2/aietools/bin:/opt/Xilinx/Vivado/2021.2/bin:/opt/riscv/bin:/opt/cadence/INNOVUS201/bin:/opt/Synopsys_2022/fm/U-2022.12-SP6/bin:/opt/Synopsys_2022/prime/U-2022.12-SP5-2/bin:/opt/Synopsys_2022/syn/U-2022.12-SP7-3/bin:/opt/Synopsys_2022/starrc/U-2022.12-SP5-2/bin:/opt/Synopsys_2022/icc2/T-2022.03/bin:/opt/Synopsys_2022/icc/U-2022.12-SP4/bin:/opt/Synopsys_2022/lc/U-2022.12-SP6/bin:/opt/Synopsys_2022/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:/opt/Synopsys_2022/customcompiler/T-2022.06-SP2-5/bin:/opt/Synopsys_2022/fpga/T-2022.09-SP2/bin:/opt/Synopsys_2024/coretools/W-2024.09-SP1/bin:/home/user04/Documents/gcc/bin:/opt/Xilinx/Vitis_HLS/2021.2/bin:/opt/Xilinx/Model_Composer/2021.2/bin:/opt/Xilinx/Vitis/2021.2/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/arm/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-linux/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-none/bin:/opt/Xilinx/Vitis/2021.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/tps/lnx64/cmake-3.3.2/bin:/opt/Xilinx/Vitis/2021.2/aietools/bin:/opt/Xilinx/Vivado/2021.2/bin:/opt/Xilinx/Vitis_HLS/2021.2/bin:/opt/Xilinx/Model_Composer/2021.2/bin:/opt/Xilinx/Vitis/2021.2/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/arm/lin/bin:/opt/Xilinx/Vitis/2021.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-linux/bin:/opt/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-none/bin:/opt/Xilinx/Vitis/2021.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/opt/Xilinx/Vitis/2021.2/tps/lnx64/cmake-3.3.2/bin:/opt/Xilinx/Vitis/2021.2/aietools/bin:/opt/Xilinx/Vivado/2021.2/bin:/usr/lib64/qt-3.3/bin:/home/user04/perl5/bin:/opt/cadence/INNOVUS201/bin:/opt/Synopsys_2022/fm/U-2022.12-SP6/bin:/opt/Synopsys_2022/prime/U-2022.12-SP5-2/bin:/opt/Synopsys_2022/syn/U-2022.12-SP7-3/bin:/opt/Synopsys_2022/starrc/U-2022.12-SP5-2/bin:/opt/Synopsys_2022/icc2/T-2022.03/bin:/opt/Synopsys_2022/icc/U-2022.12-SP4/bin:/opt/Synopsys_2022/lc/U-2022.12-SP6/bin:/opt/Synopsys_2022/spyglass/T-2022.06-1/SPYGLASS_HOME/bin:/opt/Synopsys_2022/customcompiler/T-2022.06-SP2-5/bin:/opt/Synopsys_2022/fpga/T-2022.09-SP2/bin:/opt/Synopsys_2024/coretools/W-2024.09-SP1/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/gui/dve/bin:/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/bin:/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/bin:/opt/Synopsys_2022/scl/2022.12/linux64/bin:/opt/cadence/IC618/tools/bin:/opt/cadence/IC618/tools/dfII/bin:/opt/cadence/SPECTRE211/bin:/opt/cadence/SPECTRE211/tools/bin:/opt/mentor/calibre2022.2/aoj_cal_2022.2_38.20/bin:/home/share/uvm/synopsys2023_vip/bin:/home/user04/.local/bin:/home/user04/bin:/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/gui/dve/bin:/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/bin:/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/bin:/opt/Synopsys_2022/scl/2022.12/linux64/bin:/opt/cadence/IC618/tools/bin:/opt/cadence/IC618/tools/dfII/bin:/opt/cadence/SPECTRE211/bin:/opt/cadence/SPECTRE211/tools/bin:/opt/mentor/calibre2022.2/aoj_cal_2022.2_38.20/bin:/home/share/uvm/synopsys2023_vip/bin
+SPECTRE_DEFAULTS=-E
+PT_HOME=/opt/Synopsys_2022/prime/U-2022.12-SP5-2
+XILINX_VITIS=/opt/Xilinx/Vitis/2021.2
+QT_IM_MODULE=ibus
+VERDI_HOME=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10
+CALIBRE_HOME=/opt/mentor/calibre2022.2/aoj_cal_2022.2_38.20
+CDS_SPECTRERF_FBENABLE=1
+CADENCE_DIR=/opt/cadence/IC618
+CDSDIR=/opt/cadence/IC618
+PWD=/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys
+VCS_HOME=/opt/Synopsys_2022/vcs/T-2022.06-SP2-10
+XMODIFIERS=@im=none
+MGC_CALIBRE_SAVE_ALL_RUNSET_VALUES=1
+FM_HOME=/opt/Synopsys_2022/fm/U-2022.12-SP6
+SYS_PROG_NAME=verdi
+LANG=C
+FPGA_SYN_HOME=/opt/Synopsys_2022/fpga/T-2022.09-SP2
+NPC_HOME=/home/user04/workspace/our_CPU/share_work/sim_platform/npc
+VCS_ARCH_OVERRIDE=linux
+KDEDIRS=/usr
+CUSTOM_COMPILER_HOME=/opt/Synopsys_2022/customcompiler/T-2022.06-SP2-5
+ICC_HOME=/opt/Synopsys_2022/icc/U-2022.12-SP4
+XILINX_HLS=/opt/Xilinx/Vitis_HLS/2021.2
+SELINUX_LEVEL_REQUESTED=
+CDSHOME=/opt/cadence/IC618
+SYS_INST_DIR=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10
+CDS_Netlisting_Mode=Analog
+XILINX_VIVADO=/opt/Xilinx/Vivado/2021.2
+LM_LICENSE_FILE=/opt/Synopsys_2022/scl/2022.12/admin/license/Synopsys.dat
+HISTCONTROL=ignoredups
+ICV_HOME=/opt/Synopsys_2022/icvalidator/U-2022.12-SP5
+DBUS_STARTER_BUS_TYPE=session
+SHLVL=5
+HOME=/home/user04
+OSTYPE=linux
+VCS_EXEC_DONE=1
+ICC2_HOME=/opt/Synopsys_2022/icc2/T-2022.03
+MGC_HOME=/opt/mentor/calibre2022.2/aoj_cal_2022.2_38.20
+VERDI_ORIGNAL_LD_LIBRARY_PATH=
+CORETOOLS_HOME=/opt/Synopsys_2022/coretools/U-2022.12
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+CDS_AUTO_64BIT=ALL
+CADHOME=/opt/cadence
+VENDOR=unknown
+PERL_LOCAL_LIB_ROOT=:/home/user04/perl5
+MACHTYPE=x86_64
+DVT_LICENSE_FILE=/opt/dvt/lic/dvt.lic
+MGC_LIB_PATH=/opt/mentor/calibre2022.2/aoj_cal_2022.2_38.20/lib
+LOGNAME=user04
+SPYGLASS_HOME=/opt/Synopsys_2022/spyglass/T-2022.06-1/SPYGLASS_HOME
+QTLIB=/usr/lib64/qt-3.3/lib
+MGLS_LICENSE_FILE=/opt/mentor/license/license.dat
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-HVBvjkMUmS,guid=d9b5f8c8f6260e4d5ef1510e69ae5b1c
+SSH_CONNECTION=10.180.220.175 58597 10.181.10.18 2022
+XDG_DATA_DIRS=/home/user04/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+NOVASHLPPATH=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/doc
+SPS_RGB_PATH=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/etc/rgb
+CDS_LIC_FILE=/opt/cadence/license/license.dat
+SYNOPSPS_LC_ROOT=/opt/Synopsys_2022/lc/U-2022.12-SP6/linux64/lc/shlib/
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SCL_HOME=/opt/Synopsys_2022/scl/2022.12
+OA_UNSUPPORTED_PLAT=linux_rhel60
+CDS_ENABLE_VMS=1
+LD_NOVERSION=1
+YSYXSOC_HOME=/home/user04/workspace/our_CPU/share_work/sim_platform/ysyxSoC
+MGC_CALIBRE_REALTIME_VIRTUOSO_ENABLED=1
+DISPLAY=:10
+XDG_RUNTIME_DIR=/run/user/1005
+CDS_LIC_ONLY=1
+LC_HOME=/opt/Synopsys_2022/lc/U-2022.12-SP6
+CDS_ROOT=/opt/cadence/IC618
+QT_PLUGIN_PATH=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/platform/LINUXAMD64/lib/Qt/plugins
+VERILATOR_ROOT=/home/user04/toolchain/verilator
+XDG_CURRENT_DESKTOP=GNOME
+CDS_SPECTRE_FBENABLE=1
+PERL_MM_OPT=INSTALL_BASE=/home/user04/perl5
+CALIBRE_ENABLE_SKILL_PEXBA_MODE=1
+CDS_INST_DIR=/opt/cadence/IC618
+COLORTERM=truecolor
+NOVAS_LC_ALL=C
+SIMV_DAIDIR_PATH=/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/./output/simvcssvlog.daidir
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+SIGNAL_BASE_EXTRACTION=1
+NOVAS_VERDI_SVTB_BETA=1
+VERDI_SVTB_BETA=1
+NOVAS_VERDI_SVTB_ALPHA=1
+VERDI_SVTB_ALPHA=1
+NOVAS_VERDI_TB_HT=1
+VERDI_TB_HT=1
+NOVAS_WAVE_REDRAW_ALLVC=1
+WAVE_REDRAW_ALLVC=1
+NOVAS_TCL_LIBRARY=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/etc/access/tcl86_library
+TCL_LIBRARY=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/etc/access/tcl86_library
+XKEYSYMDB=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/etc/access/XKeysymDB2.1
+XLOCALEDIR=/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/etc/access/locale
+NOVAS_SIGNAL_BASED_BA=0
+SIGNAL_BASED_BA=0
+SNPS_SIM_DEFAULT_GUI=verdi
+FSDB_FILE=/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb
+TBSIM_SIM_LOG_PATH=/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/./logs/simulate__base_test.log
+VCS_UCLI_STDIN_BLOCKING=1
+FSDB_VHDL_PROTECTED=1
+FSDB_RD_IR_ENABLE=1
+FSDB_SVA_STATUS=1
+VCS_STOP_SAFE=1
+DVE_SIM_SELECT_LOOP=on
+FLEXLM_BORROWFILE=/home/user04/.centos-borrow.txt
+Runtime command line arguments:
+argv[0]=/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog
+argv[1]=+UVM_TESTNAME=base_test
+argv[2]=+UVM_MAX_QUIT_COUNT=10,1
+argv[3]=+fsdb+sva_success
+argv[4]=+UVM_VERDI_TRACE=UVM_AWARE+RAL+HIER+COMPWAVE
+argv[5]=+UVM_TR_RECORD
+argv[6]=+UVM_LOG_RECORD
+argv[7]=+fsdb+gate=off
+argv[8]=-ucli2Proc
+argv[9]=-ucli
+argv[10]=-l
+argv[11]=/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/verdiLog/sim.log
+385 profile - 100
+          CPU/Mem usage: 0.100 sys,  1.030 user,  570.24M mem
+386 Elapsed time:    0:00:02    Tue May 26 22:18:47 2026
+387 User CPU time used: 1 seconds
+388 System CPU time used: 0 seconds
+389 pliAppInit
+390 ndpGetenv(FSDB_FILE): /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb
+391 ndpGetenv(FSDB_SVA_STATUS): 1
+392 ndpGetenv(FSDB_VHDL_PROTECTED): 1
+393 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+394 FSDB_GATE & FSDB_RTL is disabled.
+395 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+396 Enable Parallel Dumping.
+397 pliAppMiscSet: New Sim Round
+398 pliEntryInit
+399 LIBSSCORE=found /opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/lib/LINUXAMD64/libsscore_vcs202206.so through $NOVAS_HOME setting.
+400 FSDB Dumper for VCS, Release Verdi_T-2022.06-SP2-10, Linux x86_64/64bit, 02/29/2024
+401 (C) 1996 - 2024 by Synopsys, Inc.
+402 sps_tcl_fsdbDumpfile_main at 0
+403 argv[0]: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb
+404 *Verdi* : Create FSDB file '/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb'
+405 [spi_vcs_vd_ppi_create_root]: no upf option
+406 compile option from '/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/output/simvcssvlog.daidir/vcs_rebuild'.
+407   "vcs '-l' './logs/compile.log' '-q' '-kdb' '-Mdir=./output/csrc' '+incdir+/home/user04/workspace/vip_prj/spi_test/src/sverilog/vcs' '+incdir+/home/user04/workspace/vip_prj/spi_test/include/sverilog' '+incdir+/home/user04/workspace/vip_prj/spi_test/src/verilog/vcs' '+incdir+/home/user04/workspace/vip_prj/spi_test/include/verilog' '-ntb_opts' 'uvm' '-full64' '-sverilog' '-timescale=1ns/1ps' '+define+SVT_SPI' '+define+UVM_PACKER_MAX_BYTES=1500000' '+define+SVT_SPI_DATA_WIDTH=8' '+define+SVT_MEM_ENABLE_DEPTH_INDEPENDENT_VALUES' '+define+SVT_FSDB_ENABLE' '+define+WAVES_FSDB' '+define+WAVES="fsdb"' '+plusarg_save' '-debug_access+all' '-debug_region=cell+encrypt' '-notice' '-P' '/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/novas.tab' '/opt/Synopsys_2022/verdi/T-2022.06-SP2-10/share/PLI/VCS/LINUX64/pli.a' '+define+SVT_UVM_TECHNOLOGY' '+define+SYNOPSYS_SV' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/.' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/../../env' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/../env' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/env' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/dut' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/hdl_interconnect' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/lib' '+incdir+/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/tests' '-o' './output/simvcssvlog' '-f' 'top_files' '-f' 'hdl_files' 2>&1"
+408 sps_tcl_fsdbDumpflush_vd_main at 0 : N/A(0)
+409 *Verdi* : Flush all FSDB Files at 0 ps.
+410 sps_tcl_fsdbDumpflush_vd_main at 0 : N/A(0)
+411 *Verdi* : Flush all FSDB Files at 0 ps.
+412 sps_call_fsdbDumpClassObjectByFile at 0 : /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(456)
+413 argv[0]: (handle) uvm_custom_install_verdi_recording.\uvm_verdi_pli::dump_comp_object_by_file .file_name
+414 *Verdi* : Begin dumping the Class Object by file (/opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm-1.1/verdi/component.config).
+415 pliEntry_fsdbDumpClassObject_singletask at 0
+416 argv[0]: *uvm_pkg*.uvm_component
+417 pliAppDumpClassObject_Begin: profile - 
+          CPU/Mem usage: 0.570 sys,  2.020 user,  728.65M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 0 var,  0 idcode,  0 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 0 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+418 Elapsed time:    0:00:21    Tue May 26 22:19:06 2026
+419 User CPU time used: 2 seconds
+420 System CPU time used: 0 seconds
+421 pliAppDumpClassObject_End: profile - 
+          CPU/Mem usage: 0.600 sys,  2.700 user,  855.79M mem
+                   incr: 0.030 sys,  0.680 user,  127.14M mem
+                   accu: 0.030 sys,  0.680 user,  127.14M mem
+              accu incr: 0.030 sys,  0.680 user,  127.14M mem
+
+          Count usage: 53 var,  92 idcode,  0 callback
+                 incr: 53 var,  92 idcode,  0 callback
+                 accu: 53 var,  92 idcode,  0 callback
+            accu incr: 53 var,  92 idcode,  0 callback
+422 Elapsed time:    0:00:22    Tue May 26 22:19:07 2026
+423 User CPU time used: 2 seconds
+424 System CPU time used: 0 seconds
+425 pliEntry_fsdbDumpClassObject_singletask at 0
+426 argv[0]: *uvm_port_base*
+427 pliAppDumpClassObject_Begin: profile - 
+          CPU/Mem usage: 0.600 sys,  2.700 user,  855.79M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 53 var,  92 idcode,  0 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 0 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+428 Elapsed time:    0:00:22    Tue May 26 22:19:07 2026
+429 User CPU time used: 2 seconds
+430 System CPU time used: 0 seconds
+431 pliAppDumpClassObject_End: profile - 
+          CPU/Mem usage: 0.610 sys,  2.720 user,  856.06M mem
+                   incr: 0.010 sys,  0.020 user,  0.27M mem
+                   accu: 0.010 sys,  0.020 user,  0.27M mem
+              accu incr: 0.010 sys,  0.020 user,  0.27M mem
+
+          Count usage: 53 var,  92 idcode,  0 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 0 var,  0 idcode,  0 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+432 Elapsed time:    0:00:22    Tue May 26 22:19:07 2026
+433 User CPU time used: 2 seconds
+434 System CPU time used: 0 seconds
+435 *Verdi* : End of class object dumping.
+436 sps_call_fsdbDumpfile_main at 0 : /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/top.sv(120)
+437 argv[0]: (test_top)
+438 *Verdi* WARNING: Env/runtime option has specified fsdbfile name as "/home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb". Fsdbfile name in task "test_top" is ignored.
+439 DVDI_is_vir_unload_enabled is enable
+440 FSDB_VCS_ENABLE_NATIVE_VC is enable
+441 sps_call_fsdbDumpvars_vd_main at 0 : /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/top.sv(121)
+442 *Verdi* : Begin traversing the scopes, layer (0).
+443 *Verdi* : End of traversing.
+444 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.610 sys,  2.730 user,  890.36M mem
+                   incr: 0.000 sys,  0.010 user,  17.91M mem
+                   accu: 0.000 sys,  0.010 user,  17.91M mem
+              accu incr: 0.000 sys,  0.010 user,  17.91M mem
+
+          Count usage: 611 var,  516 idcode,  351 callback
+                 incr: 558 var,  366 idcode,  351 callback
+                 accu: 558 var,  366 idcode,  351 callback
+            accu incr: 558 var,  366 idcode,  351 callback
+445 Elapsed time:    0:00:22    Tue May 26 22:19:07 2026
+446 User CPU time used: 2 seconds
+447 System CPU time used: 0 seconds
+448 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.610 sys,  2.730 user,  890.36M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.010 user,  17.91M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 611 var,  516 idcode,  351 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 558 var,  366 idcode,  351 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+449 Elapsed time:    0:00:22    Tue May 26 22:19:07 2026
+450 User CPU time used: 2 seconds
+451 System CPU time used: 0 seconds
+452 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (33760, 526) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+453 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (33824, 527) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+454 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (34272, 534) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+455 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (34528, 538) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+456 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (34912, 544) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+457 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (35168, 548) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+458 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (35552, 554) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+459 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (35808, 558) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+460 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (36192, 564) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+461 *Verdi* ERROR: Attribute name (slave_id) is not unique of event (36448, 568) in /opt/Synopsys_2022/vcs/T-2022.06-SP2-10/etc/uvm/verdi/uvm_verdi_pli.svh(340).
+462 sps_tcl_fsdbDumpflush_vd_main at 6133970000 : N/A(0)
+463 *Verdi* : Flush all FSDB Files at 6,133,970,000 ps.
+464 End of simulation at 6133970000
+465 Memory usage: 920.498 M
+466 Maximum resident set size: 576 MB
+467 Hard page faults: 2
+468 Soft page faults: 79204
+469 Elapsed time:   11:53:16    Wed May 27 10:12:01 2026
+470 User CPU time used: 5 seconds
+471 System CPU time used: 0 seconds
+472 Begin FSDB profile info:
+473 FSDB Writer : bc1(4909574) bcn(20572) mtf/stf(0/4)
+FSDB Writer elapsed time : flush(0.016648) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+474 End FSDB profile info
+475 FSDB closed. Name: /home/user04/workspace/vip_prj/spi_test/examples/sverilog/spi_svt/tb_spi_svt_uvm_basic_1m_1s_sys/inter.fsdb Size: 186497
+476 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+477                      - BlockUsed:36 Acquire:6158448 BufferUsed:64562859
+478                      - Flush:10 Expand:0 ProducerWait:0 ConsumerWait:22
+479                      - MainProducerTime:5.424267364 TotalConsumerTime:0.383766570
+480                      - ElapsedTime:42793.338398000
+481 Producer   0 profile - BlockUsed:36 Acquire:6158448 BufferUsed:64562859
+482 Consumer   0 profile - Affinity:-1 CPUTime:0.383766570 LifeTime:42773.119847146 (0.00%)
+483                      - BlockUsed:36 Acquire:6158448 BufferUsed:64562859
+484 SimExit
+485 Elapsed time:   11:53:16    Wed May 27 10:12:01 2026
+486 User CPU time used: 5 seconds
+487 System CPU time used: 0 seconds
+488 Sim process exit
